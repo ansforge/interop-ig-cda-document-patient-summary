@@ -1,16 +1,16 @@
 # Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
 
-id: ans.fhir.fr.[code]
-canonical: https://interop.esante.gouv.fr/ig/fhir/[code] # the last part of canonical and id must be the same
-name: ExampleIG # Should be an acronym
-title: ANS IG Example
-description: Description du projet
+id: ans.cda.fr.fr-patient-summary
+canonical: https://interop.esante.gouv.fr/ig/cda/fr-patient-summary # the last part of canonical and id must be the same
+name: CDAFRPatientSummary # Should be an acronym
+title: FR Patient Summary (CDA)
+description: Volet de Synthèse Médicale (International Patient Summary) - Spécifications CDA
 publisher:
   name: Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris
   url: https://esante.gouv.fr
 status: draft # draft | active | retired | unknown
 version: 0.1.0 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
-fhirVersion: 4.0.1
+fhirVersion: 5.0.0
 copyrightYear: 2020+
 releaseLabel: ci-build 
 # le release label doit être conforme au cycle de vie de la doctrine du ci-sis. Cf. https://interop.esante.gouv.fr/ig/documentation/mod_bonnes_pratiques.html#release-dun-ig-fhir colonne "label de publication"
@@ -38,6 +38,10 @@ parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/Code
     translation-sources:
       - input/translations/en
 
+
+dependencies:
+  hl7.cda.uv.core: 2.0.3-sd
+  ans.fr.terminologies: latest
 
 pages:
     index.md:
@@ -76,8 +80,8 @@ menu:
         Flux d'alimentation: spec-technique-flux-alimentation.html
         Flux de consommation: spec-technique-flux-consommation.html
     Vol. 3 - Annexes:
-        Sécurité: securite.html
-        Téléchargements et usage: downloads.html
+        Sécurité: annexe-securite.html
+        Téléchargements et usage: annexe-downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
     Ressources de conformité: artifacts.html
