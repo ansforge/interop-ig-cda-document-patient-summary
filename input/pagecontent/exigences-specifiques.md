@@ -68,4 +68,4 @@ Les **structures (personnes morales) non répertoriées** dans les référentiel
 
 Les terminologies et jeux de valeurs applicables à la Synthèse Médicale sont publiés sur le **Serveur Multi-terminologies (SMT)** de l'ANS.
 
-Consultez le guide dédié : [IG Terminologies de santé](https://ansforge.github.io/IG-terminologie-de-sante/ig/main/index.html)
+Consultez le guide dédié : [IG Terminologies de santé](https://interop.esante.gouv.fr/terminologies/index.html)
