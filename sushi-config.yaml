@@ -3,7 +3,7 @@
 id: ans.cda.fr.fr-patient-summary
 canonical: https://interop.esante.gouv.fr/ig/cda/fr-patient-summary # the last part of canonical and id must be the same
 name: CDAFRPatientSummary # Should be an acronym
-title: FR Patient Summary (CDA)
+title: Volet de Synthèse Médicale (International Patient Summary - CDA)
 description: Volet de Synthèse Médicale (International Patient Summary) - Spécifications CDA
 publisher:
   name: Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris
@@ -12,7 +12,7 @@ status: draft # draft | active | retired | unknown
 version: 0.1.0 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
 fhirVersion: 5.0.0
 copyrightYear: 2020+
-releaseLabel: ci-build 
+releaseLabel: ci-build
 # le release label doit être conforme au cycle de vie de la doctrine du ci-sis. Cf. https://interop.esante.gouv.fr/ig/documentation/mod_bonnes_pratiques.html#release-dun-ig-fhir colonne "label de publication"
 # Valeurs permises : ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 
@@ -39,30 +39,31 @@ parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/Code
       - input/translations/en
 
 
+# L'IG FHIR de la Synthèse Médicale est publié séparément (IG "interop-ig-fhir-document-patient-summary").
+# Cet IG (CDA) renvoie vers le modèle logique métier et le mapping ML/CDA/FHIR conservés dans l'IG FHIR.
 dependencies:
   hl7.cda.uv.core: 2.0.3-sd
   ans.fr.terminologies: latest
+  ans.cda.fr.document-core:
+    version: current
+    uri: https://ansforge.github.io/interop-IG-cda-document-core/main/ig/package.tgz
 
 pages:
     index.md:
         title: Accueil
-    spec-fonctionnelle-intro.md:
-        title: Vue d'ensemble
-        spec-fonctionnelle-alimentation.md:
-            title: Alimentation
-    spec-technique-intro.md:
-        title: Introduction
-        spec-technique-vue-ensemble.md:
-            title: Vue d'ensemble
-        spec-technique-flux-alimentation.md:
-            title: Flux d'alimentation
-        spec-technique-flux-consommation.md:
-            title: Flux de consommation
-    change-log.md:
-        title: Historique des versions
+    fonctionnel.md:
+        title: Fonctionnel
+        cas-usage.md:
+            title: Cas d'usage
+        exigences-specifiques.md:
+            title: Exigences spécifiques
+    implementations.md:
+        title: Implémentations
+        cda.md:
+            title: CDA
     autres_ressources.md:
         title: Autres Ressources
-        annexe-securite.md:
+        securite.md:
             title: Sécurité
         annexe-downloads.md:
             title: Téléchargements et usages
@@ -71,19 +72,41 @@ pages:
 
 menu:
     Accueil: index.html
-    Vol. 1 - Etude fonctionnelle: 
-        Introduction: spec-fonctionnelle-intro.html
-        Alimentation: spec-fonctionnelle-alimentation.html
-    Vol. 2 - Détail des transactions: 
-        Introduction: spec-technique-intro.html
-        Vue d'ensemble: spec-technique-vue-ensemble.html
-        Flux d'alimentation: spec-technique-flux-alimentation.html
-        Flux de consommation: spec-technique-flux-consommation.html
-    Vol. 3 - Annexes:
-        Sécurité: annexe-securite.html
-        Téléchargements et usage: annexe-downloads.html
-        "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
-        "Site de l'ANS ": new-tab https://esante.gouv.fr/
+    Fonctionnel:
+        Cas d'usage: cas-usage.html
+        Modèle logique métier: new-tab https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/StructureDefinition-fr-lm-patient-summary-document.html
+        Exigences spécifiques: exigences-specifiques.html
+    Implémentations:
+        CDA: cda.html
+        Mapping ML/CDA/FHIR: new-tab https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/mapping.html
     Ressources de conformité: artifacts.html
+    Autres ressources:
+        "IG Modèle logique métier": new-tab https://ansforge.github.io/interop-IG-metier-document-core/main/ig/fr/index.html
+        "IG FHIR": new-tab https://interop.esante.gouv.fr/ig/fhir/document-core/index.html
+        "IG CDA": new-tab https://interop.esante.gouv.fr/ig/cda/document-core/index.html
+        "Espace de publication du CI-SIS": new-tab https://esante.gouv.fr/offres-services/ci-sis/espace-publication
+        "Serveur Multi-terminologies": new-tab https://smt.esante.gouv.fr/
+        "IG terminologies et jeux de valeurs du CI-SIS": new-tab https://ansforge.github.io/IG-terminologie-de-sante/ig/main/index.html
+        "Espace de tests du CI-SIS": new-tab https://interop.esante.gouv.fr/
+        "testContenuCDA": new-tab https://github.com/ansforge/TestContenuCDA-3-0
+        Sécurité: securite.html
+        "Standard CDA": new-tab https://hl7.org/cda/stds/online-navigation/index.html
+        "Documentation des guides d'implémentation de l'ANS": new-tab https://interop.esante.gouv.fr/ig/documentation/index.html
+        Téléchargements et usage: annexe-downloads.html
     Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
-    Historique: change-log.html
+
+groups:
+  ressources-cda-ips:
+    name: Eléments CDA d'un document IPS
+    resources:
+      - StructureDefinition/fr-cda-clinical-document-ips
+
+resources:
+  Binary/patient-summary:
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical
+        valueCanonical: https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-clinical-document
+    name: Patient Summary
+    description: Volet International Patient Summary - France (IPS-FR)

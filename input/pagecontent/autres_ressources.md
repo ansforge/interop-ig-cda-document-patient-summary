@@ -1,3 +1,3 @@
-* [Téléchargements et usage](./downloads.html)
-* [Spécifications FHIR]({{site.data.fhir.path}}index.html)
+* [Téléchargements et usage](./annexe-downloads.html)
+* [Spécifications FHIR](https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/index.html)
 * [Site de l'ANS](https://esante.gouv.fr/)
