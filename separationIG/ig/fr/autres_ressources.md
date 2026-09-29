@@ -3,6 +3,6 @@
 ## Autres Ressources
 
 * [Téléchargements et usage](./annexe-downloads.md)
-* [Spécifications FHIR](https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/index.html)
+* [Spécifications FHIR](https://ansforge.github.io/interop-ig-fhir-document-patient-summary/main/ig/fr/index.html)
 * [Site de l'ANS](https://esante.gouv.fr/)
 

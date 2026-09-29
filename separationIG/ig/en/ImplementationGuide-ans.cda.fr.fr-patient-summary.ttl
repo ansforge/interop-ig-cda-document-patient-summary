@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "CDAFRPatientSummary"] ; # 
   fhir:title [ fhir:v "Volet de Synthèse Médicale (International Patient Summary - CDA)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-29T12:59:35+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-09-29T13:49:16+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
