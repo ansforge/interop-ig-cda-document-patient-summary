@@ -78,9 +78,10 @@ menu:
         Exigences spécifiques: exigences-specifiques.html
     Implémentations:
         CDA: cda.html
-        Mapping ML/CDA/FHIR: new-tab https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/mapping.html
+        Mapping ML/CDA/FHIR: new-tab https://ansforge.github.io/interop-ig-fhir-document-patient-summary/main/ig/fr/mapping.html
     Ressources de conformité: artifacts.html
     Autres ressources:
+        "IG FHIR IPS FR": new-tab https://ansforge.github.io/interop-ig-fhir-document-patient-summary/main/ig/fr/index.html
         "IG Modèle logique métier": new-tab https://ansforge.github.io/interop-IG-metier-document-core/main/ig/fr/index.html
         "IG FHIR": new-tab https://interop.esante.gouv.fr/ig/fhir/document-core/index.html
         "IG CDA": new-tab https://interop.esante.gouv.fr/ig/cda/document-core/index.html
