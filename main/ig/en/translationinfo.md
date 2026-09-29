@@ -1,4 +1,4 @@
-# Informations sur la traduction - FR Patient Summary (CDA) v0.1.0
+# Informations sur la traduction - Volet de Synthèse Médicale (International Patient Summary - CDA) v0.1.0
 
 ## Informations sur la traduction
 

@@ -1,4 +1,4 @@
-# Artifacts Summary - FR Patient Summary (CDA) v0.1.0
+# Artifacts Summary - Volet de Synthèse Médicale (International Patient Summary - CDA) v0.1.0
 
 ## Artifacts Summary
 

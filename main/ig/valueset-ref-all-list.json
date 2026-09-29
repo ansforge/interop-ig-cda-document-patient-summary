@@ -1,17 +1,75 @@
 {
   "codeSystems" : [{
-    "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "AdministrativeGender",
-    "title" : "AdministrativeGender",
-    "description" : "The gender of a person used for administrative purposes.",
-    "systems" : ["http://hl7.org/fhir/administrative-gender"],
-    "oids" : ["2.16.840.1.113883.4.642.3.1"],
-    "sources" : ["2.16.840.1.113883.4.642.3.1"],
+    "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAActClass",
+    "version" : "2.0.3-sd",
+    "status" : "draft",
+    "name" : "CDAActClass",
+    "title" : "CDAActClass",
+    "description" : "A code specifying the major type of Act that this Act-instance represents.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActClass"],
     "uses" : {
     },
-    "StructureDefinition-fr-patient.html" : "Patient français"
+    "StructureDefinition-fr-cda-clinical-document-ips.html" : "CDA - clinicalDocument IPS"
+  },
+  {
+    "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAActMood",
+    "version" : "2.0.3-sd",
+    "status" : "draft",
+    "name" : "CDAActMood",
+    "title" : "CDAActMood",
+    "description" : "A code distinguishing whether an Act is conceived of as a factual statement or in some other manner as a command, possibility, goal, etc.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActMood"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-cda-clinical-document-ips.html" : "CDA - clinicalDocument IPS"
+  },
+  {
+    "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAContextControl",
+    "version" : "2.0.3-sd",
+    "status" : "draft",
+    "name" : "CDAContextControl",
+    "title" : "CDAContextControl",
+    "description" : "A code that specifies how an ActRelationship or Participation contributes to the context of an Act, and whether it may be propagated to descendent Acts whose association allows such propagation.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ContextControl"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-cda-clinical-document-ips.html" : "CDA - clinicalDocument IPS"
+  },
+  {
+    "url" : "http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor",
+    "version" : "2.0.3-sd",
+    "status" : "draft",
+    "name" : "CDANullFlavor",
+    "title" : "CDANullFlavor",
+    "description" : "CDA NullFlavors - limited to values allowed in original CDA definition",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-cda-clinical-document-ips.html" : "CDA - clinicalDocument IPS"
+  },
+  {
+    "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAParticipationType",
+    "version" : "2.0.3-sd",
+    "status" : "draft",
+    "name" : "CDAParticipationType",
+    "title" : "CDAParticipationType",
+    "description" : "A code specifying the meaning and purpose of every Participation instance. Each of its values implies specific constraints on the Roles undertaking the participation. Limited to values allowed in original CDA definition",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-cda-clinical-document-ips.html" : "CDA - clinicalDocument IPS"
+  },
+  {
+    "url" : "http://hl7.org/cda/stds/core/ValueSet/CDASetOperator",
+    "version" : "2.0.3-sd",
+    "status" : "draft",
+    "name" : "CDASetOperator",
+    "title" : "CDASetOperator",
+    "description" : "Determins the intersectionality of multiple sets",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-SetOperator"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-cda-clinical-document-ips.html" : "CDA - clinicalDocument IPS"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/all-languages",
@@ -25,141 +83,82 @@
     "sources" : ["2.16.840.1.113883.4.642.3.21"],
     "uses" : {
     },
-    "StructureDefinition-fr-patient.html" : "Patient français"
+    "StructureDefinition-fr-cda-clinical-document-ips.html" : "CDA - clinicalDocument IPS"
   },
   {
-    "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
+    "url" : "http://hl7.org/fhir/ValueSet/doc-typecodes",
     "version" : "5.0.0",
-    "status" : "active",
-    "name" : "IdentifierTypeCodes",
-    "title" : "Identifier Type Codes",
-    "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
-    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
-    "oids" : ["2.16.840.1.113883.4.642.3.45"],
-    "sources" : ["2.16.840.1.113883.4.642.3.45"],
-    "uses" : {
-    },
-    "StructureDefinition-fr-patient.html" : "Patient français"
-  },
-  {
-    "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "IdentifierUse",
-    "title" : "IdentifierUse",
-    "description" : "Identifies the purpose for this identifier, if known .",
-    "systems" : ["http://hl7.org/fhir/identifier-use"],
-    "oids" : ["2.16.840.1.113883.4.642.3.57"],
-    "sources" : ["2.16.840.1.113883.4.642.3.57"],
-    "uses" : {
-    },
-    "StructureDefinition-fr-patient.html" : "Patient français"
-  },
-  {
-    "url" : "http://hl7.org/fhir/ValueSet/languages",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "CommonLanguages",
-    "title" : "Common Languages",
-    "description" : "This value set includes common codes from BCP-47 (see http://tools.ietf.org/html/bcp47)",
-    "systems" : ["urn:ietf:bcp:47"],
-    "oids" : ["2.16.840.1.113883.4.642.3.891",
-    "2.16.840.1.113883.4.642.3.20"],
-    "sources" : ["2.16.840.1.113883.4.642.3.891",
-    "2.16.840.1.113883.4.642.3.20"],
-    "uses" : {
-    },
-    "StructureDefinition-fr-patient.html" : "Patient français"
-  },
-  {
-    "url" : "http://hl7.org/fhir/ValueSet/link-type",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "LinkType",
-    "title" : "Link Type",
-    "description" : "The type of link between this Patient resource and another Patient/RelatedPerson resource.",
-    "systems" : ["http://hl7.org/fhir/link-type"],
-    "oids" : ["2.16.840.1.113883.4.642.2.234",
-    "2.16.840.1.113883.4.642.3.423",
-    "2.16.840.1.113883.4.642.3.412"],
-    "sources" : ["2.16.840.1.113883.4.642.2.234",
-    "2.16.840.1.113883.4.642.3.423",
-    "2.16.840.1.113883.4.642.3.412"],
-    "uses" : {
-    },
-    "StructureDefinition-fr-patient.html" : "Patient français"
-  },
-  {
-    "url" : "http://hl7.org/fhir/ValueSet/marital-status",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "MaritalStatusCodes",
-    "title" : "Marital Status Codes",
-    "description" : "This value set defines the set of codes that can be used to indicate the marital status of a person.",
-    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
-    "oids" : ["2.16.840.1.113883.4.642.3.29"],
-    "sources" : ["2.16.840.1.113883.4.642.3.29"],
-    "uses" : {
-    },
-    "StructureDefinition-fr-patient.html" : "Patient français"
-  },
-  {
-    "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "PatientContactRelationship",
-    "title" : "Patient Contact Relationship ",
-    "description" : "The nature of the relationship between the patient and the contact person.",
-    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131"],
-    "oids" : ["2.16.840.1.113883.4.642.3.1130"],
-    "sources" : ["2.16.840.1.113883.4.642.3.1130"],
-    "uses" : {
-    },
-    "StructureDefinition-fr-patient.html" : "Patient français"
-  },
-  {
-    "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/ValueSet/EyeColorVS",
-    "version" : "0.1.0",
     "status" : "draft",
-    "name" : "EyeColorVS",
-    "title" : "EyeColor Value Set",
-    "description" : "Different eye colors.",
-    "systems" : ["http://snomed.info/sct"],
+    "name" : "FHIRDocumentTypeCodes",
+    "title" : "FHIR Document Type Codes",
+    "description" : "FHIR Document Codes - all LOINC codes where scale type = 'DOC'.",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.4.642.3.235",
+    "2.16.840.1.113883.4.642.2.121",
+    "2.16.840.1.113883.4.642.3.240"],
+    "sources" : ["2.16.840.1.113883.4.642.3.235",
+    "2.16.840.1.113883.4.642.2.121",
+    "2.16.840.1.113883.4.642.3.240"],
     "uses" : {
     },
-    "StructureDefinition-EyeColor.html" : "EyeColor"
+    "StructureDefinition-fr-cda-clinical-document-ips.html" : "CDA - clinicalDocument IPS"
   },
   {
-    "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/ValueSet/MeltingPotVS",
-    "version" : "0.1.0",
-    "status" : "draft",
-    "name" : "MeltingPotVS",
-    "title" : "Melting Pot Value Set",
-    "description" : "Melting Pot Value Set.",
-    "systems" : ["https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/CodeSystem/type-carte-code-system",
-    "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/CodeSystem/competence-code-system",
-    "http://snomed.info/sct"]
-  },
-  {
-    "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/ValueSet/ModifiedAdministrativeGender",
-    "version" : "0.1.0",
-    "status" : "draft",
-    "name" : "ModifiedAdministrativeGender",
-    "title" : "ModifiedAdministrativeGender",
-    "description" : "AdministrativeGender without unknown code",
-    "systems" : ["http://hl7.org/fhir/administrative-gender"],
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActClassRecordOrganizer",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActClassRecordOrganizer",
+    "title" : "ActClassRecordOrganizer",
+    "description" : "***No description***",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActClass"],
+    "oids" : ["2.16.840.1.113883.1.11.20308"],
+    "sources" : ["2.16.840.1.113883.1.11.20308"],
     "uses" : {
     },
-    "StructureDefinition-fr-patient.html" : "Patient français"
+    "StructureDefinition-fr-cda-clinical-document-ips.html" : "CDA - clinicalDocument IPS"
   },
   {
-    "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/ValueSet/TypeCarteVS",
-    "version" : "0.1.0",
-    "status" : "draft",
-    "name" : "TypeCarteVS",
-    "title" : "Type Carte Value Set",
-    "description" : "Type Carte Value Set.",
-    "systems" : ["https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/CodeSystem/type-carte-code-system"]
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActRelationshipHasComponent",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActRelationshipHasComponent",
+    "title" : "ActRelationshipHasComponent",
+    "description" : "A collection of sub-services as steps or subtasks performed for the source service. Services may be performed sequentially or concurrently.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType"],
+    "oids" : ["2.16.840.1.113883.1.11.10318"],
+    "sources" : ["2.16.840.1.113883.1.11.10318"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-cda-clinical-document-ips.html" : "CDA - clinicalDocument IPS"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActStatus",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActStatus",
+    "title" : "ActStatus",
+    "description" : "Contains the names (codes) for each of the states in the state-machine of the RIM Act class.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActStatus"],
+    "oids" : ["2.16.840.1.113883.1.11.15933"],
+    "sources" : ["2.16.840.1.113883.1.11.15933"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-cda-clinical-document-ips.html" : "CDA - clinicalDocument IPS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS",
+    "version" : "20250523120000",
+    "status" : "active",
+    "name" : "JDV_J47_FunctionCode_CISIS",
+    "title" : null,
+    "description" : "Rôles fonctionnels",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge",
+    "https://mos.esante.gouv.fr/NOS/TRE_R258-RelationPriseCharge/FHIR/TRE-R258-RelationPriseCharge",
+    "https://mos.esante.gouv.fr/NOS/TRE_R259-HL7ParticipationFunction/FHIR/TRE-R259-HL7ParticipationFunction"],
+    "oids" : ["1.2.250.1.213.1.1.5.124"],
+    "sources" : ["1.2.250.1.213.1.1.5.124"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-cda-clinical-document-ips.html" : "CDA - clinicalDocument IPS"
   }]
 }

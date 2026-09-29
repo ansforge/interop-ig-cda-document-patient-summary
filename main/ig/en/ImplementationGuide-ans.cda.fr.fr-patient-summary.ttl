@@ -17,9 +17,9 @@
   fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/ImplementationGuide/ans.cda.fr.fr-patient-summary"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "CDAFRPatientSummary"] ; # 
-  fhir:title [ fhir:v "FR Patient Summary (CDA)"] ; # 
+  fhir:title [ fhir:v "Volet de Synthèse Médicale (International Patient Summary - CDA)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-28T10:48:11+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-09-29T13:10:58+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -84,7 +84,15 @@
        fhir:link <https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies>
      ] ;
      fhir:packageId [ fhir:v "ans.fr.terminologies" ] ;
-     fhir:version [ fhir:v "1.13.0" ]
+     fhir:version [ fhir:v "1.14.0" ]
+  ] [
+     fhir:id [ fhir:v "ans_cda_fr_document_core" ] ;
+     fhir:uri [
+       fhir:v "https://ansforge.github.io/interop-IG-cda-document-core/main/ig/package.tgz"^^xsd:anyURI ;
+       fhir:link <https://ansforge.github.io/interop-IG-cda-document-core/main/ig/package.tgz>
+     ] ;
+     fhir:packageId [ fhir:v "ans.cda.fr.document-core" ] ;
+     fhir:version [ fhir:v "current" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -101,145 +109,53 @@
          fhir:v "hl7.fhir.uv.tools.r5#1.1.2"
        ]
      ] ) ;
+     fhir:grouping ( [
+       fhir:id [ fhir:v "ressources-cda-ips" ] ;
+       fhir:name [ fhir:v "Eléments CDA d'un document IPS" ]
+     ] ) ;
      fhir:resource ( [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "CodeSystem"
+           fhir:v "StructureDefinition:logical"
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/CodeSystem/competence-code-system> ;
-         fhir:reference [ fhir:v "CodeSystem/competence-code-system" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-clinical-document-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-cda-clinical-document-ips" ]
        ] ;
-       fhir:name [ fhir:v "Compétences CodeSystem" ] ;
-       fhir:description [ fhir:v "Compétences des professionnels de santé." ] ;
-       fhir:isExample [ fhir:v false ]
+       fhir:name [ fhir:v "CDA - clinicalDocument IPS" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément racine d’un document médical IPS (International Patient Summary)." ] ;
+       fhir:isExample [ fhir:v false ] ;
+       fhir:groupingId [ fhir:v "ressources-cda-ips" ]
      ] [
        fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "application/xml"
+         ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:canonical ;
+           fhir:v "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-clinical-document|0.1.0"^^xsd:anyURI ;
+           fhir:link <https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-clinical-document|0.1.0>
+         ]
+       ] [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "StructureDefinition:extension"
+           fhir:v "Binary"
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/EyeColor> ;
-         fhir:reference [ fhir:v "StructureDefinition/EyeColor" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/Binary/patient-summary> ;
+         fhir:reference [ fhir:v "Binary/patient-summary" ]
        ] ;
-       fhir:name [ fhir:v "EyeColor" ] ;
-       fhir:description [ fhir:v "Eye color extension" ] ;
-       fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/ValueSet/EyeColorVS> ;
-         fhir:reference [ fhir:v "ValueSet/EyeColorVS" ]
-       ] ;
-       fhir:name [ fhir:v "EyeColor Value Set" ] ;
-       fhir:description [ fhir:v "Different eye colors." ] ;
-       fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "Patient"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/Patient/frpatient-exemple> ;
-         fhir:reference [ fhir:v "Patient/frpatient-exemple" ]
-       ] ;
-       fhir:name [ fhir:v "frpatient-exemple" ] ;
-       fhir:description [ fhir:v "Exemple d'un patient français" ] ;
-       fhir:isExample [ fhir:v true ] ;
-       fhir:profile ( [
-         fhir:v "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-patient|0.1.0"^^xsd:anyURI ;
-         fhir:link <https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-patient|0.1.0>
-       ] )
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/ValueSet/MeltingPotVS> ;
-         fhir:reference [ fhir:v "ValueSet/MeltingPotVS" ]
-       ] ;
-       fhir:name [ fhir:v "Melting Pot Value Set" ] ;
-       fhir:description [ fhir:v "Melting Pot Value Set." ] ;
-       fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/ValueSet/ModifiedAdministrativeGender> ;
-         fhir:reference [ fhir:v "ValueSet/ModifiedAdministrativeGender" ]
-       ] ;
-       fhir:name [ fhir:v "ModifiedAdministrativeGender" ] ;
-       fhir:description [ fhir:v "AdministrativeGender without unknown code" ] ;
-       fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:resource"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-patient> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-patient" ]
-       ] ;
-       fhir:name [ fhir:v "Patient français" ] ;
-       fhir:description [ fhir:v "Description du patient français" ] ;
-       fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/ValueSet/TypeCarteVS> ;
-         fhir:reference [ fhir:v "ValueSet/TypeCarteVS" ]
-       ] ;
-       fhir:name [ fhir:v "Type Carte Value Set" ] ;
-       fhir:description [ fhir:v "Type Carte Value Set." ] ;
-       fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "CodeSystem"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/CodeSystem/type-carte-code-system> ;
-         fhir:reference [ fhir:v "CodeSystem/type-carte-code-system" ]
-       ] ;
-       fhir:name [ fhir:v "Type de carte" ] ;
-       fhir:description [ fhir:v "Type de carte professionnelle et personnelle." ] ;
-       fhir:isExample [ fhir:v false ]
+       fhir:name [ fhir:v "Patient Summary" ] ;
+       fhir:description [ fhir:v "Volet International Patient Summary - France (IPS-FR)" ]
      ] ) ;
      fhir:page [
        fhir:source [
@@ -260,61 +176,45 @@
        ] [
          fhir:source [
            a fhir:url ;
-           fhir:v "spec-fonctionnelle-intro.html"^^xsd:anyURI
+           fhir:v "fonctionnel.html"^^xsd:anyURI
          ] ;
-         fhir:name [ fhir:v "spec-fonctionnelle-intro.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Vue d'ensemble" ] ;
+         fhir:name [ fhir:v "fonctionnel.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Fonctionnel" ] ;
          fhir:generation [ fhir:v "markdown" ] ;
          fhir:page ( [
            fhir:source [
              a fhir:url ;
-             fhir:v "spec-fonctionnelle-alimentation.html"^^xsd:anyURI
+             fhir:v "cas-usage.html"^^xsd:anyURI
            ] ;
-           fhir:name [ fhir:v "spec-fonctionnelle-alimentation.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Alimentation" ] ;
+           fhir:name [ fhir:v "cas-usage.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Cas d'usage" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:source [
+             a fhir:url ;
+             fhir:v "exigences-specifiques.html"^^xsd:anyURI
+           ] ;
+           fhir:name [ fhir:v "exigences-specifiques.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Exigences spécifiques" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
        ] [
          fhir:source [
            a fhir:url ;
-           fhir:v "spec-technique-intro.html"^^xsd:anyURI
+           fhir:v "implementations.html"^^xsd:anyURI
          ] ;
-         fhir:name [ fhir:v "spec-technique-intro.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Introduction" ] ;
+         fhir:name [ fhir:v "implementations.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Implémentations" ] ;
          fhir:generation [ fhir:v "markdown" ] ;
          fhir:page ( [
            fhir:source [
              a fhir:url ;
-             fhir:v "spec-technique-vue-ensemble.html"^^xsd:anyURI
+             fhir:v "cda.html"^^xsd:anyURI
            ] ;
-           fhir:name [ fhir:v "spec-technique-vue-ensemble.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Vue d'ensemble" ] ;
-           fhir:generation [ fhir:v "markdown" ]
-         ] [
-           fhir:source [
-             a fhir:url ;
-             fhir:v "spec-technique-flux-alimentation.html"^^xsd:anyURI
-           ] ;
-           fhir:name [ fhir:v "spec-technique-flux-alimentation.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Flux d'alimentation" ] ;
-           fhir:generation [ fhir:v "markdown" ]
-         ] [
-           fhir:source [
-             a fhir:url ;
-             fhir:v "spec-technique-flux-consommation.html"^^xsd:anyURI
-           ] ;
-           fhir:name [ fhir:v "spec-technique-flux-consommation.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Flux de consommation" ] ;
+           fhir:name [ fhir:v "cda.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "CDA" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
-       ] [
-         fhir:source [
-           a fhir:url ;
-           fhir:v "change-log.html"^^xsd:anyURI
-         ] ;
-         fhir:name [ fhir:v "change-log.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Historique des versions" ] ;
-         fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:source [
            a fhir:url ;
@@ -326,9 +226,9 @@
          fhir:page ( [
            fhir:source [
              a fhir:url ;
-             fhir:v "annexe-securite.html"^^xsd:anyURI
+             fhir:v "securite.html"^^xsd:anyURI
            ] ;
-           fhir:name [ fhir:v "annexe-securite.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "securite.html"^^xsd:anyURI ] ;
            fhir:title [ fhir:v "Sécurité" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [

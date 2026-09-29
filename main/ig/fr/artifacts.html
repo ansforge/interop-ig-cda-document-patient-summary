@@ -5,7 +5,7 @@
 <html xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml" lang="fr" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Résumé des artefacts - FR Patient Summary (CDA) v0.1.0</title>
+    <title>Résumé des artefacts - Volet de Synthèse Médicale (International Patient Summary - CDA) v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -48,8 +48,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"7"}
-    h3,h4,h5,h6{--heading-prefix:"7.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -67,7 +67,7 @@
 
 
         <div id="ig-status" data-fhir="generated">
-          <p><span style="font-size:12pt;font-weight:bold">FR Patient Summary (CDA)</span>
+          <p><span style="font-size:12pt;font-weight:bold">Volet de Synthèse Médicale (International Patient Summary - CDA)</span>
             <br/>
             <span style="display:inline-block;">0.1.0 - ci-build
 
@@ -107,64 +107,82 @@
     <a href="index.html">Accueil</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vol. 1 - Etude fonctionnelle
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Fonctionnel
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="spec-fonctionnelle-intro.html">Introduction</a>
+        <a href="cas-usage.html">Cas d&apos;usage</a>
       </li>
       <li>
-        <a href="spec-fonctionnelle-alimentation.html">Alimentation</a>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/StructureDefinition-fr-lm-patient-summary-document.html">Modèle logique métier</a>
+      </li>
+      <li>
+        <a href="exigences-specifiques.html">Exigences spécifiques</a>
       </li>
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vol. 2 - Détail des transactions
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implémentations
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="spec-technique-intro.html">Introduction</a>
+        <a href="cda.html">CDA</a>
       </li>
       <li>
-        <a href="spec-technique-vue-ensemble.html">Vue d&apos;ensemble</a>
-      </li>
-      <li>
-        <a href="spec-technique-flux-alimentation.html">Flux d&apos;alimentation</a>
-      </li>
-      <li>
-        <a href="spec-technique-flux-consommation.html">Flux de consommation</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vol. 3 - Annexes
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="annexe-securite.html">Sécurité</a>
-      </li>
-      <li>
-        <a href="annexe-downloads.html">Téléchargements et usage</a>
-      </li>
-      <li>
-        <a target="_blank" href="http://hl7.org/fhir/R5/index.html">Spécifications FHIR </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/mapping.html">Mapping ML/CDA/FHIR</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
   </li>
-  <li>
-    <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="https://ansforge.github.io/interop-IG-metier-document-core/main/ig/fr/index.html">IG Modèle logique métier</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/fhir/document-core/index.html">IG FHIR</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/cda/document-core/index.html">IG CDA</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://esante.gouv.fr/offres-services/ci-sis/espace-publication">Espace de publication du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://smt.esante.gouv.fr/">Serveur Multi-terminologies</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/index.html">IG terminologies et jeux de valeurs du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/">Espace de tests du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://github.com/ansforge/TestContenuCDA-3-0">testContenuCDA</a>
+      </li>
+      <li>
+        <a href="securite.html">Sécurité</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://hl7.org/cda/stds/online-navigation/index.html">Standard CDA</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/index.html">Documentation des guides d&apos;implémentation de l&apos;ANS</a>
+      </li>
+      <li>
+        <a href="annexe-downloads.html">Téléchargements et usage</a>
+      </li>
+    </ul>
   </li>
   <li>
-    <a href="change-log.html">Historique</a>
+    <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -204,7 +222,7 @@
 
             <a href="#bottom">bas de page</a>
 
-          | <a href="StructureDefinition-fr-patient.html">suivant &gt;</a>
+          | <a href="StructureDefinition-fr-cda-clinical-document-ips.html">suivant &gt;</a>
 
           </span>
 
@@ -226,7 +244,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">FR Patient Summary (CDA) - version de développement local (intégration continue v0.1.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Volet de Synthèse Médicale (International Patient Summary - CDA) - version de développement local (intégration continue v0.1.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
   <h2>Résumé des artefacts</h2>
   
   
@@ -335,7 +353,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="StructureDefinition-fr-patient.html">suivant ></a>
+                <a href="StructureDefinition-fr-cda-clinical-document-ips.html">suivant ></a>
 
               </td>
             </tr>
@@ -351,8 +369,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.cda.fr.fr-patient-summary#0.1.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
           Date de génération : 
-  <span title="2026-09-28 10:48:00 +0000">
-    2026-09-28
+  <span title="2026-09-29 13:10:00 +0000">
+    2026-09-29
   </span>
 
           <br/>

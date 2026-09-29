@@ -1,8 +1,8 @@
-# Autres Ressources - FR Patient Summary (CDA) v0.1.0
+# Autres Ressources - Volet de Synthèse Médicale (International Patient Summary - CDA) v0.1.0
 
 ## Autres Ressources
 
-* [Téléchargements et usage](./downloads.md)
-* [Spécifications FHIR](http://hl7.org/fhir/R5/index.html)
+* [Téléchargements et usage](./annexe-downloads.md)
+* [Spécifications FHIR](https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/index.html)
 * [Site de l'ANS](https://esante.gouv.fr/)
 

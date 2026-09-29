@@ -11,9 +11,9 @@
   <url value="https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/ImplementationGuide/ans.cda.fr.fr-patient-summary"/>
   <version value="0.1.0"/>
   <name value="CDAFRPatientSummary"/>
-  <title value="FR Patient Summary (CDA)"/>
+  <title value="Volet de Synthèse Médicale (International Patient Summary - CDA)"/>
   <status value="draft"/>
-  <date value="2026-09-28T10:48:11+00:00"/>
+  <date value="2026-09-29T13:10:58+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -57,7 +57,12 @@
   <dependsOn id="ans_fr_terminologies">
     <uri value="https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies"/>
     <packageId value="ans.fr.terminologies"/>
-    <version value="1.13.0"/>
+    <version value="1.14.0"/>
+  </dependsOn>
+  <dependsOn id="ans_cda_fr_document_core">
+    <uri value="https://ansforge.github.io/interop-IG-cda-document-core/main/ig/package.tgz"/>
+    <packageId value="ans.cda.fr.document-core"/>
+    <version value="current"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters">
@@ -68,105 +73,36 @@
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
       <valueCode value="hl7.fhir.uv.tools.r5#1.1.2"/>
     </extension>
+    <grouping id="ressources-cda-ips">
+      <name value="Eléments CDA d'un document IPS"/>
+    </grouping>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
+        <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/competence-code-system"/>
+        <reference value="StructureDefinition/fr-cda-clinical-document-ips"/>
       </reference>
-      <name value="Compétences CodeSystem"/>
-      <description value="Compétences des professionnels de santé."/>
+      <name value="CDA - clinicalDocument IPS"/>
+      <description value="L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément racine d’un document médical IPS (International Patient Summary)."/>
       <isExample value="false"/>
+      <groupingId value="ressources-cda-ips"/>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format">
+        <valueCode value="application/xml"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical">
+        <valueCanonical value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-clinical-document|0.1.0"/>
+      </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
+        <valueString value="Binary"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EyeColor"/>
+        <reference value="Binary/patient-summary"/>
       </reference>
-      <name value="EyeColor"/>
-      <description value="Eye color extension"/>
-      <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/EyeColorVS"/>
-      </reference>
-      <name value="EyeColor Value Set"/>
-      <description value="Different eye colors."/>
-      <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/frpatient-exemple"/>
-      </reference>
-      <name value="frpatient-exemple"/>
-      <description value="Exemple d'un patient français"/>
-      <isExample value="true"/>
-      <profile value="https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-patient|0.1.0"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/MeltingPotVS"/>
-      </reference>
-      <name value="Melting Pot Value Set"/>
-      <description value="Melting Pot Value Set."/>
-      <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/ModifiedAdministrativeGender"/>
-      </reference>
-      <name value="ModifiedAdministrativeGender"/>
-      <description value="AdministrativeGender without unknown code"/>
-      <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-patient"/>
-      </reference>
-      <name value="Patient français"/>
-      <description value="Description du patient français"/>
-      <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/TypeCarteVS"/>
-      </reference>
-      <name value="Type Carte Value Set"/>
-      <description value="Type Carte Value Set."/>
-      <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/type-carte-code-system"/>
-      </reference>
-      <name value="Type de carte"/>
-      <description value="Type de carte professionnelle et personnelle."/>
-      <isExample value="false"/>
+      <name value="Patient Summary"/>
+      <description value="Volet International Patient Summary - France (IPS-FR)"/>
     </resource>
     <page>
       <sourceUrl value="toc.html"/>
@@ -180,46 +116,34 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <sourceUrl value="spec-fonctionnelle-intro.html"/>
-        <name value="spec-fonctionnelle-intro.html"/>
-        <title value="Vue d'ensemble"/>
+        <sourceUrl value="fonctionnel.html"/>
+        <name value="fonctionnel.html"/>
+        <title value="Fonctionnel"/>
         <generation value="markdown"/>
         <page>
-          <sourceUrl value="spec-fonctionnelle-alimentation.html"/>
-          <name value="spec-fonctionnelle-alimentation.html"/>
-          <title value="Alimentation"/>
+          <sourceUrl value="cas-usage.html"/>
+          <name value="cas-usage.html"/>
+          <title value="Cas d'usage"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="exigences-specifiques.html"/>
+          <name value="exigences-specifiques.html"/>
+          <title value="Exigences spécifiques"/>
           <generation value="markdown"/>
         </page>
       </page>
       <page>
-        <sourceUrl value="spec-technique-intro.html"/>
-        <name value="spec-technique-intro.html"/>
-        <title value="Introduction"/>
+        <sourceUrl value="implementations.html"/>
+        <name value="implementations.html"/>
+        <title value="Implémentations"/>
         <generation value="markdown"/>
         <page>
-          <sourceUrl value="spec-technique-vue-ensemble.html"/>
-          <name value="spec-technique-vue-ensemble.html"/>
-          <title value="Vue d'ensemble"/>
+          <sourceUrl value="cda.html"/>
+          <name value="cda.html"/>
+          <title value="CDA"/>
           <generation value="markdown"/>
         </page>
-        <page>
-          <sourceUrl value="spec-technique-flux-alimentation.html"/>
-          <name value="spec-technique-flux-alimentation.html"/>
-          <title value="Flux d'alimentation"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <sourceUrl value="spec-technique-flux-consommation.html"/>
-          <name value="spec-technique-flux-consommation.html"/>
-          <title value="Flux de consommation"/>
-          <generation value="markdown"/>
-        </page>
-      </page>
-      <page>
-        <sourceUrl value="change-log.html"/>
-        <name value="change-log.html"/>
-        <title value="Historique des versions"/>
-        <generation value="markdown"/>
       </page>
       <page>
         <sourceUrl value="autres_ressources.html"/>
@@ -227,8 +151,8 @@
         <title value="Autres Ressources"/>
         <generation value="markdown"/>
         <page>
-          <sourceUrl value="annexe-securite.html"/>
-          <name value="annexe-securite.html"/>
+          <sourceUrl value="securite.html"/>
+          <name value="securite.html"/>
           <title value="Sécurité"/>
           <generation value="markdown"/>
         </page>
