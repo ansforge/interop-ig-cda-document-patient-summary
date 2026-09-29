@@ -3,7 +3,7 @@ CDAFRPatientSummary : Validation Results
 
 err = 26, warn = 120, info = 719
 IG Publisher Version: 2.3.4
-Generated Tue Sep 29 13:12:44 UTC 2026. FHIR version 5.0.0 for ans.cda.fr.fr-patient-summary#0.1.0 (canonical = https://interop.esante.gouv.fr/ig/cda/fr-patient-summary)
+Generated Tue Sep 29 13:57:20 UTC 2026. FHIR version 5.0.0 for ans.cda.fr.fr-patient-summary#0.1.0 (canonical = https://interop.esante.gouv.fr/ig/cda/fr-patient-summary)
  Build Errors : 3 / 1 / 1
  /__w/interop-ig-cda-document-patient-summary/interop-ig-cda-document-patient-summary/igSource/fsh-generated/resources/ImplementationGuide-ans.cda.fr.fr-patient-summary : 2 / 2 / 20
  /__w/interop-ig-cda-document-patient-summary/interop-ig-cda-document-patient-summary/igSource/fsh-generated/resources/StructureDefinition-fr-cda-clinical-document-ips : 1 / 82 / 373

@@ -26,7 +26,7 @@ Les profils CDA et les exemples sont présentés dans la page [Implémentation C
 
 #### Modèle logique métier
 
-Le modèle logique métier de la synthèse médicale n'est pas publié dans ce guide : il est publié dans le guide FHIR de la Synthèse Médicale, en complément de l'implémentation FHIR : [Modèle logique - Document Patient Summary](https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/StructureDefinition-fr-lm-patient-summary-document.html). Il formalise l'ensemble des données cliniques et administratives que doit contenir une synthèse médicale.
+Le modèle logique métier de la synthèse médicale n'est pas publié dans ce guide : il est publié dans le guide FHIR de la Synthèse Médicale, en complément de l'implémentation FHIR : [Modèle logique - Document Patient Summary](https://ansforge.github.io/interop-ig-fhir-document-patient-summary/main/ig/fr/StructureDefinition-fr-lm-patient-summary-document.html). Il formalise l'ensemble des données cliniques et administratives que doit contenir une synthèse médicale.
 
 Il est aligné avec les modèles métier européens (EHDS) et élaboré à partir de :
 
@@ -37,7 +37,7 @@ Il est aligné avec les modèles métier européens (EHDS) et élaboré à parti
 
 #### Mapping modèle logique et CDA/FHIR
 
-Un mapping détaillé, publié dans le guide FHIR de la Synthèse Médicale, établit la correspondance entre les éléments du modèle logique métier, les éléments du CDA et leur représentation en FHIR, assurant la cohérence sémantique de l'implémentation. Voir la page [Mapping ML/CDA/FHIR](https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/mapping.html).
+Un mapping détaillé, publié dans le guide FHIR de la Synthèse Médicale, établit la correspondance entre les éléments du modèle logique métier, les éléments du CDA et leur représentation en FHIR, assurant la cohérence sémantique de l'implémentation. Voir la page [Mapping ML/CDA/FHIR](https://ansforge.github.io/interop-ig-fhir-document-patient-summary/main/ig/fr/mapping.html).
 
 L'implémentation FHIR de la Synthèse médicale ne fait pas partie de ce guide : elle fait l'objet d'un guide d'implémentation distinct (interop-ig-fhir-document-patient-summary), qui s'appuie sur le même modèle logique métier et sur ce mapping.
 
