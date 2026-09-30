@@ -38,15 +38,12 @@ parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/Code
     translation-sources:
       - input/translations/en
 
-
 # L'IG FHIR de la Synthèse Médicale est publié séparément (IG "interop-ig-fhir-document-patient-summary").
 # Cet IG (CDA) renvoie vers le modèle logique métier et le mapping ML/CDA/FHIR conservés dans l'IG FHIR.
 dependencies:
   hl7.cda.uv.core: 2.0.3-sd
   ans.fr.terminologies: latest
-  ans.cda.fr.document-core:
-    version: current
-    uri: https://ansforge.github.io/interop-IG-cda-document-core/main/ig/package.tgz
+  ans.cda.fr.document-core: current
 
 pages:
     index.md:
