@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "CDAFRPatientSummary"] ; # 
   fhir:title [ fhir:v "Volet de Synthèse Médicale (International Patient Summary - CDA)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-29T14:19:09+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-09-30T08:05:35+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -88,8 +88,8 @@
   ] [
      fhir:id [ fhir:v "ans_cda_fr_document_core" ] ;
      fhir:uri [
-       fhir:v "https://ansforge.github.io/interop-IG-cda-document-core/main/ig/package.tgz"^^xsd:anyURI ;
-       fhir:link <https://ansforge.github.io/interop-IG-cda-document-core/main/ig/package.tgz>
+       fhir:v "https://interop.esante.gouv.fr/ig/cda/document-core/ImplementationGuide/ans.cda.fr.document-core"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/cda/document-core/ImplementationGuide/ans.cda.fr.document-core>
      ] ;
      fhir:packageId [ fhir:v "ans.cda.fr.document-core" ] ;
      fhir:version [ fhir:v "current" ]

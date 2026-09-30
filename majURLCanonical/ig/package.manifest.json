@@ -1,7 +1,7 @@
 {
   "version" : "0.1.0",
   "fhirVersion" : ["5.0.0"],
-  "date" : "20260929141909",
+  "date" : "20260930080535",
   "name" : "ans.cda.fr.fr-patient-summary",
   "jurisdiction" : "urn:iso:std:iso:3166#FR"
 }
