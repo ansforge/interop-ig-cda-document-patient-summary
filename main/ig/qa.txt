@@ -1,19 +1,17 @@
 CDAFRPatientSummary : Validation Results
 =========================================
 
-err = 26, warn = 120, info = 719
+err = 24, warn = 118, info = 718
 IG Publisher Version: 2.3.4
-Generated Tue Sep 29 14:23:29 UTC 2026. FHIR version 5.0.0 for ans.cda.fr.fr-patient-summary#0.1.0 (canonical = https://interop.esante.gouv.fr/ig/cda/fr-patient-summary)
- Build Errors : 3 / 1 / 1
- /__w/interop-ig-cda-document-patient-summary/interop-ig-cda-document-patient-summary/igSource/fsh-generated/resources/ImplementationGuide-ans.cda.fr.fr-patient-summary : 2 / 2 / 20
+Generated Wed Sep 30 20:24:38 UTC 2026. FHIR version 5.0.0 for ans.cda.fr.fr-patient-summary#0.1.0 (canonical = https://interop.esante.gouv.fr/ig/cda/fr-patient-summary)
+ Build Errors : 3 / 0 / 0
+ /__w/interop-ig-cda-document-patient-summary/interop-ig-cda-document-patient-summary/igSource/fsh-generated/resources/ImplementationGuide-ans.cda.fr.fr-patient-summary : 0 / 1 / 20
  /__w/interop-ig-cda-document-patient-summary/interop-ig-cda-document-patient-summary/igSource/fsh-generated/resources/StructureDefinition-fr-cda-clinical-document-ips : 1 / 82 / 373
  /__w/interop-ig-cda-document-patient-summary/interop-ig-cda-document-patient-summary/igSource/input/resources/Binary-patient-summary : 20 / 35 / 717
 </table>
 == n/a ==
 ERROR: ImplementationGuide/ans.cda.fr.fr-patient-summary: This IG is version 5.0.0, while the IG 'ans.fr.terminologies' is from version 4.0.1
 ERROR: ImplementationGuide/ans.cda.fr.fr-patient-summary: This IG is for FHIR version 5.0.0, while the package 'hl7.fhir.uv.ips#1.1.0' is for FHIR version 4.0.1
-WARNING: ImplementationGuide.dependency[4].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
-INFORMATION: ImplementationGuide.dependency[4].url: The correct canonical URL for this dependency is https://interop.esante.gouv.fr/ig/cda/document-core/ImplementationGuide/ans.cda.fr.document-core
 ERROR: ImplementationGuide/ans.cda.fr.fr-patient-summary: This IG is for FHIR version 5.0.0, while the package 'ans.fr.terminologies#1.11.1' is for FHIR version 4.0.1
 == fsh-generated/resources/ImplementationGuide-ans.cda.fr.fr-patient-summary.json ==
 INFORMATION: ImplementationGuide/ans.cda.fr.fr-patient-summary: ImplementationGuide.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
@@ -34,9 +32,6 @@ INFORMATION: ImplementationGuide/ans.cda.fr.fr-patient-summary: ImplementationGu
 INFORMATION: ImplementationGuide/ans.cda.fr.fr-patient-summary: ImplementationGuide.definition.parameter[32].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
 INFORMATION: ImplementationGuide/ans.cda.fr.fr-patient-summary: ImplementationGuide.definition.parameter[38].code: Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
 WARNING: ImplementationGuide/ans.cda.fr.fr-patient-summary: ImplementationGuide.dependsOn[3]: The ImplementationGuide is based on FHIR version 5.0.0 but package ans.fr.terminologies#1.14.0 is based on FHIR version 4.0.1. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
-ERROR: ImplementationGuide/ans.cda.fr.fr-patient-summary: ImplementationGuide.dependsOn[4]: The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
-WARNING: ImplementationGuide/ans.cda.fr.fr-patient-summary: ImplementationGuide.dependsOn[4]: The canonical URL https://ansforge.github.io/interop-IG-cda-document-core/main/ig/package.tgz doesn't point to an actual ImplementationGuide resource
-ERROR: ImplementationGuide/ans.cda.fr.fr-patient-summary: ImplementationGuide.dependsOn[4]: The packageId ans.cda.fr.document-core points to the canonical https://interop.esante.gouv.fr/ig/cda/document-core which is inconsistent with the stated canonical of https://ansforge.github.io/interop-IG-cda-document-core/main/ig/package.tgz
 INFORMATION: Resource: The resource ImplementationGuide/ans.cda.fr.fr-patient-summary could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-fr-cda-clinical-document-ips.json ==
 INFORMATION: StructureDefinition/fr-cda-clinical-document-ips: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
