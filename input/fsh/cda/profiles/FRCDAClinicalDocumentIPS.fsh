@@ -35,7 +35,7 @@ and conformiteVoletIPS 1..1
 * documentationOf 1..1
 
 * participant ^slicing.discriminator.type = #value
-* participant ^slicing.discriminator.path = "url"
+* participant ^slicing.discriminator.path = "functionCode.code"
 * participant ^slicing.rules = #open
 * participant contains medecinTraitant 0..1 and
 contactEHPAD 0..1 and etabPreference 0..1 and etabReference 0..* and autrePS 0..* and autreCorrespondant 0..*
