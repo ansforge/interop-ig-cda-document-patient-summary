@@ -2,9 +2,6 @@
 
 ## Logical Model: CDA - clinicalDocument IPS 
 
- 
-L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément racine d’un document médical IPS (International Patient Summary). 
-
 **Usages:**
 
 * This Logical Model Profile is not used by any profiles in this Specification
@@ -57,7 +54,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-cda-clinical-d
   "name" : "FRCDAClinicalDocumentIPS",
   "title" : "CDA - clinicalDocument IPS",
   "status" : "draft",
-  "date" : "2026-09-30T20:23:06+00:00",
+  "date" : "2026-10-06T10:21:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -203,7 +200,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-cda-clinical-d
       "slicing" : {
         "discriminator" : [{
           "type" : "value",
-          "path" : "url"
+          "path" : "functionCode.code"
         }],
         "rules" : "open"
       }
@@ -325,8 +322,8 @@ Other representations of profile: [CSV](../StructureDefinition-fr-cda-clinical-d
       "path" : "ClinicalDocument.component.structuredBody.component",
       "slicing" : {
         "discriminator" : [{
-          "type" : "value",
-          "path" : "section.templateId/root"
+          "type" : "profile",
+          "path" : "section"
         }],
         "ordered" : false,
         "rules" : "open"
@@ -573,13 +570,6 @@ Other representations of profile: [CSV](../StructureDefinition-fr-cda-clinical-d
         "code" : "http://hl7.org/cda/stds/core/StructureDefinition/Section",
         "profile" : ["https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-plan-de-soins|0.1.0"]
       }]
-    },
-    {
-      "id" : "ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees",
-      "path" : "ClinicalDocument.component.structuredBody.component",
-      "sliceName" : "sectionDirectivesAnticipees",
-      "min" : 0,
-      "max" : "1"
     },
     {
       "id" : "ClinicalDocument.component.structuredBody.component:sectionResultats",
