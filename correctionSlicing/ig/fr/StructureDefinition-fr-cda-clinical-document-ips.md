@@ -149,7 +149,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-cda-clinical
   "name" : "FRCDAClinicalDocumentIPS",
   "title" : "CDA - clinicalDocument IPS",
   "status" : "draft",
-  "date" : "2026-10-06T09:25:27+00:00",
+  "date" : "2026-10-06T09:30:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -665,13 +665,6 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-cda-clinical
         "code" : "http://hl7.org/cda/stds/core/StructureDefinition/Section",
         "profile" : ["https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-plan-de-soins|0.1.0"]
       }]
-    },
-    {
-      "id" : "ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees",
-      "path" : "ClinicalDocument.component.structuredBody.component",
-      "sliceName" : "sectionDirectivesAnticipees",
-      "min" : 0,
-      "max" : "1"
     },
     {
       "id" : "ClinicalDocument.component.structuredBody.component:sectionResultats",

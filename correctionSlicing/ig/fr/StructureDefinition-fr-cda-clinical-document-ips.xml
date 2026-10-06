@@ -83,11 +83,10 @@
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000340.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-fr-cda-clinical-document-ips-definitions.html#ClinicalDocument.component.structuredBody.component:sectionHistoriqueDesGrossesses.section">section</a><a name="ClinicalDocument.component.structuredBody.component:sectionHistoriqueDesGrossesses.section"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-historique-des-grossesses.html" title="http://hl7.org/cda/stds/core/StructureDefinition/Section">FRCDASectionHistoriqueDesGrossesses(0.1.0)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00035.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Élément de Slice" class="hierarchy"/> <a href="StructureDefinition-fr-cda-clinical-document-ips-definitions.html#ClinicalDocument.component.structuredBody.component:sectionPlanDeSoins" title="Slice sectionPlanDeSoins">component:sectionPlanDeSoins</a><a name="ClinicalDocument.component.structuredBody.component:sectionPlanDeSoins"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.3-sd/StructureDefinition-InfrastructureRoot.html">InfrastructureRoot</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000340.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-fr-cda-clinical-document-ips-definitions.html#ClinicalDocument.component.structuredBody.component:sectionPlanDeSoins.section">section</a><a name="ClinicalDocument.component.structuredBody.component:sectionPlanDeSoins.section"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-plan-de-soins.html" title="http://hl7.org/cda/stds/core/StructureDefinition/Section">FRCDASectionPlanDeSoins(0.1.0)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00034.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Élément de Slice" class="hierarchy"/> <a href="StructureDefinition-fr-cda-clinical-document-ips-definitions.html#ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees" title="Slice sectionDirectivesAnticipees">component:sectionDirectivesAnticipees</a><a name="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.3-sd/StructureDefinition-InfrastructureRoot.html">InfrastructureRoot</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00035.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Élément de Slice" class="hierarchy"/> <a href="StructureDefinition-fr-cda-clinical-document-ips-definitions.html#ClinicalDocument.component.structuredBody.component:sectionResultats" title="Slice sectionResultats">component:sectionResultats</a><a name="ClinicalDocument.component.structuredBody.component:sectionResultats"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.3-sd/StructureDefinition-InfrastructureRoot.html">InfrastructureRoot</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000340.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-fr-cda-clinical-document-ips-definitions.html#ClinicalDocument.component.structuredBody.component:sectionResultats.section">section</a><a name="ClinicalDocument.component.structuredBody.component:sectionResultats.section"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-section-resultats.html" title="http://hl7.org/cda/stds/core/StructureDefinition/Section">FRCDASectionResultats(0.1.0)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00025.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Élément de Slice" class="hierarchy"/> <a href="StructureDefinition-fr-cda-clinical-document-ips-definitions.html#ClinicalDocument.component.structuredBody.component:sectionDocumentsAjoutes" title="Slice sectionDocumentsAjoutes">component:sectionDocumentsAjoutes</a><a name="ClinicalDocument.component.structuredBody.component:sectionDocumentsAjoutes"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.3-sd/StructureDefinition-InfrastructureRoot.html">InfrastructureRoot</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000240.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-fr-cda-clinical-document-ips-definitions.html#ClinicalDocument.component.structuredBody.component:sectionDocumentsAjoutes.section">section</a><a name="ClinicalDocument.component.structuredBody.component:sectionDocumentsAjoutes.section"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-documents-ajoutes.html" title="http://hl7.org/cda/stds/core/StructureDefinition/Section">FRCDASectionDocumentsAjoutes(0.1.0)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00035.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Élément de Slice" class="hierarchy"/> <a href="StructureDefinition-fr-cda-clinical-document-ips-definitions.html#ClinicalDocument.component.structuredBody.component:sectionResultats" title="Slice sectionResultats">component:sectionResultats</a><a name="ClinicalDocument.component.structuredBody.component:sectionResultats"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.3-sd/StructureDefinition-InfrastructureRoot.html">InfrastructureRoot</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000340.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-fr-cda-clinical-document-ips-definitions.html#ClinicalDocument.component.structuredBody.component:sectionResultats.section">section</a><a name="ClinicalDocument.component.structuredBody.component:sectionResultats.section"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-section-resultats.html" title="http://hl7.org/cda/stds/core/StructureDefinition/Section">FRCDASectionResultats(0.1.0)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00025.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Élément de Slice" class="hierarchy"/> <a href="StructureDefinition-fr-cda-clinical-document-ips-definitions.html#ClinicalDocument.component.structuredBody.component:sectionDocumentsAjoutes" title="Slice sectionDocumentsAjoutes">component:sectionDocumentsAjoutes</a><a name="ClinicalDocument.component.structuredBody.component:sectionDocumentsAjoutes"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.3-sd/StructureDefinition-InfrastructureRoot.html">InfrastructureRoot</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000240.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-fr-cda-clinical-document-ips-definitions.html#ClinicalDocument.component.structuredBody.component:sectionDocumentsAjoutes.section">section</a><a name="ClinicalDocument.component.structuredBody.component:sectionDocumentsAjoutes.section"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-documents-ajoutes.html" title="http://hl7.org/cda/stds/core/StructureDefinition/Section">FRCDASectionDocumentsAjoutes(0.1.0)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr></table></div>
   </text>
   <extension url="http://hl7.org/fhir/tools/StructureDefinition/logical-target">
@@ -114,7 +113,7 @@
   <name value="FRCDAClinicalDocumentIPS"/>
   <title value="CDA - clinicalDocument IPS"/>
   <status value="draft"/>
-  <date value="2026-10-06T09:25:27+00:00"/>
+  <date value="2026-10-06T09:30:18+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -9257,227 +9256,6 @@
         <profile value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-plan-de-soins|0.1.0"/>
       </type>
     </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees">
-      <path value="ClinicalDocument.component.structuredBody.component"/>
-      <sliceName value="sectionDirectivesAnticipees"/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="StructuredBody.component"/>
-        <min value="1"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="http://hl7.org/cda/stds/core/StructureDefinition/InfrastructureRoot"/>
-      </type>
-    </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees.nullFlavor">
-      <path value="ClinicalDocument.component.structuredBody.component.nullFlavor"/>
-      <representation value="xmlAttr"/>
-      <label value="Exceptional Value Detail"/>
-      <definition value="If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="ANY.nullFlavor"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="code"/>
-        <profile value="http://hl7.org/cda/stds/core/StructureDefinition/cs-simple|2.0.3-sd"/>
-      </type>
-      <binding>
-        <strength value="required"/>
-        <valueSet value="http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor|2.0.3-sd"/>
-      </binding>
-    </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees.realmCode">
-      <path value="ClinicalDocument.component.structuredBody.component.realmCode"/>
-      <definition value="When valued in an instance, this attribute signals the imposition of realm-specific constraints. The value of this attribute identifies the realm in question"/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="InfrastructureRoot.realmCode"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="http://hl7.org/cda/stds/core/StructureDefinition/CS"/>
-      </type>
-    </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees.typeId">
-      <path value="ClinicalDocument.component.structuredBody.component.typeId"/>
-      <definition value="When valued in an instance, this attribute signals the imposition of constraints defined in an HL7-specified message type. This might be a common type (also known as CMET in the messaging communication environment), or content included within a wrapper. The value of this attribute provides a unique identifier for the type in question."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="InfrastructureRoot.typeId"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="http://hl7.org/cda/stds/core/StructureDefinition/II"/>
-      </type>
-      <constraint>
-        <key value="II-1"/>
-        <severity value="error"/>
-        <human value="An II instance must have either a root or an nullFlavor."/>
-        <expression value="root.exists() or nullFlavor.exists()"/>
-        <source value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-clinical-document|0.1.0"/>
-      </constraint>
-    </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees.typeId.nullFlavor">
-      <path value="ClinicalDocument.component.structuredBody.component.typeId.nullFlavor"/>
-      <representation value="xmlAttr"/>
-      <label value="Exceptional Value Detail"/>
-      <definition value="If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="ANY.nullFlavor"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="code"/>
-        <profile value="http://hl7.org/cda/stds/core/StructureDefinition/cs-simple|2.0.3-sd"/>
-      </type>
-      <binding>
-        <strength value="required"/>
-        <valueSet value="http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor|2.0.3-sd"/>
-      </binding>
-    </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees.typeId.assigningAuthorityName">
-      <path value="ClinicalDocument.component.structuredBody.component.typeId.assigningAuthorityName"/>
-      <representation value="xmlAttr"/>
-      <label value="Assigning Authority Name"/>
-      <definition value="A human readable name or mnemonic for the assigning authority. The Assigning Authority Name has no computational value. The purpose of a Assigning Authority Name is to assist an unaided human interpreter of an II value to interpret the authority. Note: no automated processing must depend on the assigning authority name to be present in any form."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="II.assigningAuthorityName"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-        <profile value="http://hl7.org/cda/stds/core/StructureDefinition/st-simple|2.0.3-sd"/>
-      </type>
-    </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees.typeId.displayable">
-      <path value="ClinicalDocument.component.structuredBody.component.typeId.displayable"/>
-      <representation value="xmlAttr"/>
-      <label value="Displayable"/>
-      <definition value="Specifies if the identifier is intended for human display and data entry (displayable = true) as opposed to pure machine interoperation (displayable = false)."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="II.displayable"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="boolean"/>
-        <profile value="http://hl7.org/cda/stds/core/StructureDefinition/bl-simple|2.0.3-sd"/>
-      </type>
-    </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees.typeId.root">
-      <path value="ClinicalDocument.component.structuredBody.component.typeId.root"/>
-      <representation value="xmlAttr"/>
-      <label value="Root"/>
-      <definition value="Identifies the type as an HL7 Registered model"/>
-      <min value="1"/>
-      <max value="1"/>
-      <base>
-        <path value="II.root"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-        <profile value="http://hl7.org/cda/stds/core/StructureDefinition/oid|2.0.3-sd"/>
-        <profile value="http://hl7.org/cda/stds/core/StructureDefinition/uuid|2.0.3-sd"/>
-        <profile value="http://hl7.org/cda/stds/core/StructureDefinition/ruid|2.0.3-sd"/>
-      </type>
-      <fixedString value="2.16.840.1.113883.1.3"/>
-    </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees.typeId.extension">
-      <path value="ClinicalDocument.component.structuredBody.component.typeId.extension"/>
-      <representation value="xmlAttr"/>
-      <label value="Extension"/>
-      <definition value="A character string as a unique identifier within the scope of the identifier root."/>
-      <min value="1"/>
-      <max value="1"/>
-      <base>
-        <path value="II.extension"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-        <profile value="http://hl7.org/cda/stds/core/StructureDefinition/st-simple|2.0.3-sd"/>
-      </type>
-    </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees.templateId">
-      <path value="ClinicalDocument.component.structuredBody.component.templateId"/>
-      <definition value="When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question"/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="InfrastructureRoot.templateId"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="http://hl7.org/cda/stds/core/StructureDefinition/II"/>
-      </type>
-    </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees.typeCode">
-      <path value="ClinicalDocument.component.structuredBody.component.typeCode"/>
-      <representation value="xmlAttr"/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="StructuredBody.component.typeCode"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="code"/>
-        <profile value="http://hl7.org/cda/stds/core/StructureDefinition/cs-simple|2.0.3-sd"/>
-      </type>
-      <fixedCode value="COMP"/>
-    </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees.contextConductionInd">
-      <path value="ClinicalDocument.component.structuredBody.component.contextConductionInd"/>
-      <representation value="xmlAttr"/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="StructuredBody.component.contextConductionInd"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="boolean"/>
-        <profile value="http://hl7.org/cda/stds/core/StructureDefinition/bl-simple|2.0.3-sd"/>
-      </type>
-      <fixedBoolean value="true"/>
-    </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees.section">
-      <path value="ClinicalDocument.component.structuredBody.component.section"/>
-      <min value="1"/>
-      <max value="1"/>
-      <base>
-        <path value="StructuredBody.component.section"/>
-        <min value="1"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="http://hl7.org/cda/stds/core/StructureDefinition/Section"/>
-      </type>
-    </element>
     <element id="ClinicalDocument.component.structuredBody.component:sectionResultats">
       <path value="ClinicalDocument.component.structuredBody.component"/>
       <sliceName value="sectionResultats"/>
@@ -10339,12 +10117,6 @@
         <code value="http://hl7.org/cda/stds/core/StructureDefinition/Section"/>
         <profile value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-plan-de-soins|0.1.0"/>
       </type>
-    </element>
-    <element id="ClinicalDocument.component.structuredBody.component:sectionDirectivesAnticipees">
-      <path value="ClinicalDocument.component.structuredBody.component"/>
-      <sliceName value="sectionDirectivesAnticipees"/>
-      <min value="0"/>
-      <max value="1"/>
     </element>
     <element id="ClinicalDocument.component.structuredBody.component:sectionResultats">
       <path value="ClinicalDocument.component.structuredBody.component"/>
