@@ -105,6 +105,6 @@ resources:
       - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
         valueCode: application/xml
       - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical
-        valueCanonical: https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-clinical-document-ips
+        valueCanonical: https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-clinical-document-ips
     name: Patient Summary
     description: Volet International Patient Summary - France (IPS-FR)
