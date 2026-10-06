@@ -60,8 +60,8 @@ contactEHPAD 0..1 and etabPreference 0..1 and etabReference 0..* and autrePS 0..
 
 * component.structuredBody ^short = "Structure du document IPS."
 * component.structuredBody.component ^short = "Composants contenant les sections du document IPS."
-* component.structuredBody.component ^slicing.discriminator[0].type = #value
-* component.structuredBody.component ^slicing.discriminator[0].path = "section.templateId/root"
+* component.structuredBody.component ^slicing.discriminator[0].type = #profile
+* component.structuredBody.component ^slicing.discriminator[0].path = "section"
 * component.structuredBody.component ^slicing.rules = #open
 * component.structuredBody.component ^slicing.ordered = false
 
