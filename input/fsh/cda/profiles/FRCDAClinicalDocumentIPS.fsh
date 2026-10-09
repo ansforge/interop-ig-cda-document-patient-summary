@@ -34,8 +34,10 @@ and conformiteVoletIPS 1..1
 * effectiveTime ^short = "Date de création du document Synthèse Médicale."
 * documentationOf 1..1
 
-* participant ^slicing.discriminator.type = #value
-* participant ^slicing.discriminator.path = "functionCode.code"
+* participant ^slicing.discriminator[0].type = #value
+* participant ^slicing.discriminator[0].path = "functionCode.code"
+* participant ^slicing.discriminator[+].type = #value
+* participant ^slicing.discriminator[=].path = "typeCode"
 * participant ^slicing.rules = #open
 * participant contains medecinTraitant 0..1 and
 contactEHPAD 0..1 and etabPreference 0..1 and etabReference 0..* and autrePS 0..* and autreCorrespondant 0..*
