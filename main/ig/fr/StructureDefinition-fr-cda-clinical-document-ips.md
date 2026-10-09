@@ -57,7 +57,7 @@ Cette structure fait référence à ces autres structures:
 Cette structure définit les [slices](http://hl7.org/fhir/R5/profiling.html#slices) suivantes:
 
 * The element 1 is sliced based on the value of ClinicalDocument.templateId
-* The element 1 is sliced based on the value of ClinicalDocument.participant
+* The element 2 is sliced based on the values of ClinicalDocument.participant
 * The element 1 is sliced based on the value of ClinicalDocument.component.structuredBody.component
 
  **Vue différentielle** 
@@ -104,7 +104,7 @@ Cette structure fait référence à ces autres structures:
 Cette structure définit les [slices](http://hl7.org/fhir/R5/profiling.html#slices) suivantes:
 
 * The element 1 is sliced based on the value of ClinicalDocument.templateId
-* The element 1 is sliced based on the value of ClinicalDocument.participant
+* The element 2 is sliced based on the values of ClinicalDocument.participant
 * The element 1 is sliced based on the value of ClinicalDocument.component.structuredBody.component
 
  
@@ -149,7 +149,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-cda-clinical
   "name" : "FRCDAClinicalDocumentIPS",
   "title" : "CDA - clinicalDocument IPS",
   "status" : "draft",
-  "date" : "2026-10-06T10:21:27+00:00",
+  "date" : "2026-10-09T13:56:06+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -296,6 +296,10 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-cda-clinical
         "discriminator" : [{
           "type" : "value",
           "path" : "functionCode.code"
+        },
+        {
+          "type" : "value",
+          "path" : "typeCode"
         }],
         "rules" : "open"
       }

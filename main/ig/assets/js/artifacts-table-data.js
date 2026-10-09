@@ -4,7 +4,8 @@ window.artifactsTableData = {
       "type":        "Type",
       "category":    "Category",
       "useGrouping": "Use grouping",
-      "clearAll":    "Clear all"
+      "clearAll":      "Clear all",
+      "linkToSection": "Link to this section"
     },
     "groupDescriptions": {
       "-other": "<p>Il s'agit de ressources utilisées dans le cadre de ce guide d'implémentation qui n'entrent pas dans l'une des autres catégories.</p>\n"
@@ -19,7 +20,8 @@ window.artifactsTableData = {
       "type":        "Type",
       "category":    "Category",
       "useGrouping": "Use grouping",
-      "clearAll":    "Clear all"
+      "clearAll":      "Clear all",
+      "linkToSection": "Link to this section"
     },
     "groupDescriptions": {
       "-other": "<p>These are resources that are used within this implementation guide that do not fit into one of the other categories.</p>\n"

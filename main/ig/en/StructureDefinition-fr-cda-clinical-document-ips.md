@@ -54,7 +54,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-cda-clinical-d
   "name" : "FRCDAClinicalDocumentIPS",
   "title" : "CDA - clinicalDocument IPS",
   "status" : "draft",
-  "date" : "2026-10-06T10:21:27+00:00",
+  "date" : "2026-10-09T13:56:06+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -201,6 +201,10 @@ Other representations of profile: [CSV](../StructureDefinition-fr-cda-clinical-d
         "discriminator" : [{
           "type" : "value",
           "path" : "functionCode.code"
+        },
+        {
+          "type" : "value",
+          "path" : "typeCode"
         }],
         "rules" : "open"
       }
