@@ -4,7 +4,7 @@ Cette section présente l'implémentation CDA (Clinical Document Architecture) d
 
 #### Vue d'ensemble
 
-Les modèles CDA définis dans ce guide permettent de représenter les synthèses médicales en utilisant la norme HL7 CDA R2. Ces définitions garantissent l'interopérabilité entre les systèmes d'information de santé et la compatibilité avec les infrastructures d'échange de documents en France.
+Les modèles CDA définis dans ce guide permettent de représenter les synthèses médicales en utilisant la norme HL7 CDA R2.
 
 #### Structure du document IPS
 
