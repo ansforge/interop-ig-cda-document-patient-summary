@@ -64,6 +64,8 @@ pages:
             title: Sécurité
         annexe-downloads.md:
             title: Téléchargements et usages
+        changelog.md:
+            title: Historique des modifications
     translationinfo.md:
         title: Informations sur la traduction
 
@@ -91,6 +93,7 @@ menu:
         "Standard CDA": new-tab https://hl7.org/cda/stds/online-navigation/index.html
         "Documentation des guides d'implémentation de l'ANS": new-tab https://interop.esante.gouv.fr/ig/documentation/index.html
         Téléchargements et usage: annexe-downloads.html
+        Historique des modifications: changelog.html
     Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
 
 groups:
