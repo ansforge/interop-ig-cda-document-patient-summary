@@ -4,6 +4,10 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/). La ve
 
 ## [Non publié]
 
+### Ajouté
+
+- Page « Historique des modifications » (`changelog.md`), déclarée dans les pages et le menu « Autres ressources » de `sushi-config.yaml`
+
 ### Modifié
 
 - Profil IPS : slicing des `participant` par `functionCode.code` et `typeCode` (au lieu de `url`).
