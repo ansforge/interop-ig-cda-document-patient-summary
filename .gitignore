@@ -37,3 +37,12 @@ target/*
 .mvn/wrapper/maven-wrapper.jar
 
 /translations/*
+
+# Fichiers de configuration des agents IA (locaux)
+.github/copilot-instructions.md
+.github/workflows/copilot-setup-steps.yml
+AGENTS.md
+CLAUDE.md
+
+.claude/
+.githooks/
