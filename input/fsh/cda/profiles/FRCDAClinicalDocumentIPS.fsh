@@ -34,8 +34,10 @@ and conformiteVoletIPS 1..1
 * effectiveTime ^short = "Date de création du document Synthèse Médicale."
 * documentationOf 1..1
 
-* participant ^slicing.discriminator.type = #value
-* participant ^slicing.discriminator.path = "url"
+* participant ^slicing.discriminator[0].type = #value
+* participant ^slicing.discriminator[0].path = "functionCode.code"
+* participant ^slicing.discriminator[+].type = #value
+* participant ^slicing.discriminator[=].path = "typeCode"
 * participant ^slicing.rules = #open
 * participant contains medecinTraitant 0..1 and
 contactEHPAD 0..1 and etabPreference 0..1 and etabReference 0..* and autrePS 0..* and autreCorrespondant 0..*
@@ -60,8 +62,8 @@ contactEHPAD 0..1 and etabPreference 0..1 and etabReference 0..* and autrePS 0..
 
 * component.structuredBody ^short = "Structure du document IPS."
 * component.structuredBody.component ^short = "Composants contenant les sections du document IPS."
-* component.structuredBody.component ^slicing.discriminator[0].type = #value
-* component.structuredBody.component ^slicing.discriminator[0].path = "section.templateId/root"
+* component.structuredBody.component ^slicing.discriminator[0].type = #profile
+* component.structuredBody.component ^slicing.discriminator[0].path = "section"
 * component.structuredBody.component ^slicing.rules = #open
 * component.structuredBody.component ^slicing.ordered = false
 
@@ -82,7 +84,7 @@ contactEHPAD 0..1 and etabPreference 0..1 and etabReference 0..* and autrePS 0..
     sectionVaccinations 0..1 and
     sectionHistoriqueDesGrossesses 0..1 and
     sectionPlanDeSoins 0..1 and
-    sectionDirectivesAnticipees 0..1 and
+  //  sectionDirectivesAnticipees 0..1 and
     sectionResultats 0..1 and
     sectionDocumentsAjoutes 0..1
 
