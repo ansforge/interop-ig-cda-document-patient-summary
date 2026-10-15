@@ -11,6 +11,7 @@
 * [Autres Ressources](fr/autres_ressources.md)
 * [Exigences spécifiques](fr/exigences-specifiques.md)
 * [Sécurité](fr/securite.md)
+* [Historique des modifications](fr/changelog.md)
 * [Implémentations](fr/implementations.md)
 * [CDA](fr/cda.md)
 

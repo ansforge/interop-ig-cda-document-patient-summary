@@ -14,7 +14,7 @@
   "name" : "CDAFRPatientSummary",
   "title" : "Volet de Synthèse Médicale (International Patient Summary - CDA)",
   "status" : "draft",
-  "date" : "2026-10-15T12:50:40+00:00",
+  "date" : "2026-10-15T13:42:26+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -183,6 +183,12 @@
           "sourceUrl" : "annexe-downloads.html",
           "name" : "annexe-downloads.html",
           "title" : "Téléchargements et usages",
+          "generation" : "markdown"
+        },
+        {
+          "sourceUrl" : "changelog.html",
+          "name" : "changelog.html",
+          "title" : "Historique des modifications",
           "generation" : "markdown"
         }]
       },

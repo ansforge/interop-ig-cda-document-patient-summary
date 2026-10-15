@@ -6,8 +6,8 @@
   "status" : "draft",
   "package-id" : "ans.cda.fr.fr-patient-summary",
   "ig-ver" : "0.1.0",
-  "date" : "Thu, 15 Oct, 2026 12:50:40 +0000",
-  "dateISO8601" : "2026-10-15T12:50:40+00:00",
+  "date" : "Thu, 15 Oct, 2026 13:42:26 +0000",
+  "dateISO8601" : "2026-10-15T13:42:26+00:00",
   "errs" : 20,
   "warnings" : 117,
   "hints" : 741,
@@ -15,5 +15,5 @@
   "suppressed-warnings" : 0,
   "version" : "5.0.0",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 3770104936
+  "maxMemory" : 3958804504
 }
