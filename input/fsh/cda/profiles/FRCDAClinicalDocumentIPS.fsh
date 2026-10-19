@@ -8,8 +8,8 @@ Description: "L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément
 * templateId ^slicing.discriminator.path = "root"
 * templateId ^slicing.rules = #open
 * templateId contains conformiteSpecificationsHL7 1..1
-and conformiteSpecificationsCISIS 0..1
-and conformiteSpecificationsIHEPCCIPS 0..1
+and conformiteSpecificationsCISIS 1..1
+and conformiteSpecificationsIHEPCCIPS 1..1
 and conformiteVoletIPS 1..1
 * templateId[conformiteSpecificationsHL7] 1..1
 * templateId[conformiteSpecificationsHL7].root = "2.16.840.1.113883.2.8.2.1"
@@ -17,13 +17,13 @@ and conformiteVoletIPS 1..1
 * templateId[conformiteSpecificationsCISIS] 1..1
 * templateId[conformiteSpecificationsCISIS].root = "1.2.250.1.213.1.1.1.1"
 * templateId[conformiteSpecificationsCISIS] ^short = "Conformité spécifications au CI-SIS"
-* templateId[conformiteSpecificationsIHEPCCIPS] 0..1
+* templateId[conformiteSpecificationsIHEPCCIPS] 1..1
 * templateId[conformiteSpecificationsIHEPCCIPS].root = "2.16.840.1.113883.10.22.1.1"
 * templateId[conformiteSpecificationsIHEPCCIPS] ^short = "Conformité spécifications IHE PCC IPS"
 * templateId[conformiteVoletIPS] 1..1
 * templateId[conformiteVoletIPS].root = "1.2.250.1.213.1.1.1.51"
 * templateId[conformiteVoletIPS].extension = "2024.01"
-* templateId[conformiteVoletIPS] ^short = "Conformité au Volet de l'International Patient Summary fr (IPS-FR_2023.01)"
+* templateId[conformiteVoletIPS] ^short = "Conformité au Volet de l'International Patient Summary fr (IPS-FR_2024.01)"
 
 * code ^short = "Type de document : Synthèse Médicale (code LOINC 60591-5)."
 * code.code = #60591-5
@@ -42,28 +42,44 @@ and conformiteVoletIPS 1..1
 * participant contains medecinTraitant 0..1 and
 contactEHPAD 0..1 and etabPreference 0..1 and etabReference 0..* and autrePS 0..* and autreCorrespondant 0..*
 // médecin traitant
+* participant[medecinTraitant] ^short = "Médecin traitant"
 * participant[medecinTraitant].typeCode = #INF
 * participant[medecinTraitant].functionCode.code = #PCP
-// Contact EHPAD
+* participant[medecinTraitant].functionCode.codeSystem = "2.16.840.1.113883.5.88"
+// [DLU] Contact 24h/24h en EHPAD
+* participant[contactEHPAD] ^short = "[DLU] Contact 24h/24h en EHPAD"
 * participant[contactEHPAD].typeCode = #PRF
 * participant[contactEHPAD].functionCode.code = #CORRE
-// etablissement de préférence
+* participant[contactEHPAD].functionCode.codeSystem = "1.2.250.1.213.1.1.4.2.280"
+* participant[contactEHPAD].functionCode.originalText 0..1
+// [DLU] Établissement de santé de préférence
+* participant[etabPreference] ^short = "[DLU] Établissement de santé de préférence"
 * participant[etabPreference].typeCode = #INF
 * participant[etabPreference].functionCode.code = #ES-PREF
-// etablissement de référence
+* participant[etabPreference].functionCode.codeSystem = "1.2.250.1.213.1.1.4.2.280"
+// Établissement de santé de référence
+* participant[etabReference] ^short = "Établissement de santé de référence"
 * participant[etabReference].typeCode = #INF
 * participant[etabReference].functionCode.code = #ES-REF
+* participant[etabReference].functionCode.codeSystem = "1.2.250.1.213.1.1.4.2.280"
+* participant[etabReference].functionCode.originalText 0..1
 // Autre professionnel de santé
+* participant[autrePS] ^short = "Autre professionnel de santé"
 * participant[autrePS].typeCode = #PRF
 * participant[autrePS].functionCode.code = #353
+* participant[autrePS].functionCode.codeSystem = "1.2.250.1.213.1.6.1.107"
+* participant[autrePS].functionCode.originalText 0..1
 // Autre correspondant
+* participant[autreCorrespondant] ^short = "Autre correspondant participant à la prise en charge ou au suivi du patient"
 * participant[autreCorrespondant].typeCode = #CON
 * participant[autreCorrespondant].functionCode.code = #CORRE
+* participant[autreCorrespondant].functionCode.codeSystem = "1.2.250.1.213.1.1.4.2.280"
+* participant[autreCorrespondant].functionCode.originalText 0..1
 
 * component.structuredBody ^short = "Structure du document IPS."
 * component.structuredBody.component ^short = "Composants contenant les sections du document IPS."
-* component.structuredBody.component ^slicing.discriminator[0].type = #profile
-* component.structuredBody.component ^slicing.discriminator[0].path = "section"
+* component.structuredBody.component ^slicing.discriminator[0].type = #value
+* component.structuredBody.component ^slicing.discriminator[0].path = "section.code.code"
 * component.structuredBody.component ^slicing.rules = #open
 * component.structuredBody.component ^slicing.ordered = false
 
@@ -84,7 +100,7 @@ contactEHPAD 0..1 and etabPreference 0..1 and etabReference 0..* and autrePS 0..
     sectionVaccinations 0..1 and
     sectionHistoriqueDesGrossesses 0..1 and
     sectionPlanDeSoins 0..1 and
-  //  sectionDirectivesAnticipees 0..1 and
+    sectionDirectivesAnticipees 0..1 and
     sectionResultats 0..1 and
     sectionDocumentsAjoutes 0..1
 
@@ -104,6 +120,35 @@ contactEHPAD 0..1 and etabPreference 0..1 and etabReference 0..* and autrePS 0..
 * component.structuredBody.component[sectionVaccinations].section only FRCDASectionVaccinations
 * component.structuredBody.component[sectionHistoriqueDesGrossesses].section only FRCDASectionHistoriqueDesGrossesses
 * component.structuredBody.component[sectionPlanDeSoins].section only FRCDASectionPlanDeSoins
-//* component.structuredBody.component[sectionDirectivesAnticipees].section only FRCDASectionDirectivesAnticipees
+* component.structuredBody.component[sectionDirectivesAnticipees].section only FRCDASectionDirectivesAnticipees
 * component.structuredBody.component[sectionResultats].section only FRCDASectionResultats
 * component.structuredBody.component[sectionDocumentsAjoutes].section only FRCDASectionDocumentsAjoutes
+// Contraintes propres à la synthèse médicale du DLU (même modèle, mêmes templateId que l'IPS-FR)
+// Traitements : un traitement au long cours (42.3) ou aigu (42.4) par entrée
+* component.structuredBody.component[sectionTraitements] obeys dlu-traitement-type
+// Statut fonctionnel : groupes d'évaluations propres au DLU
+* component.structuredBody.component[sectionStatutFonctionnel] obeys dlu-statut-fonctionnel-evaluations
+* component.structuredBody.component[sectionStatutFonctionnel].section.entry ^slicing.discriminator.type = #value
+* component.structuredBody.component[sectionStatutFonctionnel].section.entry ^slicing.discriminator.path = "organizer.code.code"
+* component.structuredBody.component[sectionStatutFonctionnel].section.entry ^slicing.rules = #open
+* component.structuredBody.component[sectionStatutFonctionnel].section.entry contains
+    etatPsychique 0..1 and
+    handicapsDeficits 0..1 and
+    deplacements 0..1 and
+    autresRisques 0..1 and
+    scores 0..2
+* component.structuredBody.component[sectionStatutFonctionnel].section.entry[etatPsychique].organizer only FRCDAGroupeEvaluationEtatPsychiqueDLU
+* component.structuredBody.component[sectionStatutFonctionnel].section.entry[handicapsDeficits].organizer only FRCDAGroupeEvaluationHandicapsDLU
+* component.structuredBody.component[sectionStatutFonctionnel].section.entry[deplacements].organizer only FRCDAGroupeEvaluationDeplacementsDLU
+* component.structuredBody.component[sectionStatutFonctionnel].section.entry[autresRisques].organizer only FRCDAGroupeEvaluationAutresRisquesDLU
+* component.structuredBody.component[sectionStatutFonctionnel].section.entry[scores].organizer only FRCDAGroupeEvaluationScoreDLU
+
+Invariant: dlu-traitement-type
+Description: "Dans la section Traitements, chaque traitement porte exactement un templateId parmi traitement au long cours (1.2.250.1.213.1.1.3.42.3) et traitement aigu (1.2.250.1.213.1.1.3.42.4). Pour une synthèse médicale hors DLU, seul le traitement au long cours est utilisé"
+Severity: #error
+Expression: "section.entry.substanceAdministration.all(templateId.where(root = '1.2.250.1.213.1.1.3.42.3').count() + templateId.where(root = '1.2.250.1.213.1.1.3.42.4').count() = 1)"
+
+Invariant: dlu-statut-fonctionnel-evaluations
+Description: "Pour la synthèse médicale d'un DLU, la liste des évaluations est fixée : dès qu'un groupe d'évaluations LOINC propre au DLU est présent (état psychique 54511-1, handicaps / déficits 52621-0, déplacements / transferts 32452-5), les trois groupes doivent être présents. Le groupe « autres risques » n'est pas vérifié ici : le tableau du volet (GEN-092.01.24) et l'exemple publié par l'ANS (GEN-092.04.24) divergent sur son code"
+Severity: #error
+Expression: "(section.entry.organizer.code.code contains '54511-1' or section.entry.organizer.code.code contains '52621-0' or section.entry.organizer.code.code contains '32452-5') implies (section.entry.organizer.code.code contains '54511-1' and section.entry.organizer.code.code contains '52621-0' and section.entry.organizer.code.code contains '32452-5')"

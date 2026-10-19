@@ -12,6 +12,7 @@ Ensemble des ressources téléchargeables :
 #### Exemples
 
 * [Exemple IPS-FR 2024.01 (XML CDA)](Binary-patient-summary.html)
+* [Exemple IPS-FR 2024.01 DLU (XML CDA)](Binary-patient-summary-dlu.html)
 
 ### Usage
 
