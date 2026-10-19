@@ -43,7 +43,9 @@ parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/Code
 dependencies:
   hl7.cda.uv.core: 2.0.3-sd
   ans.fr.terminologies: latest
-  ans.cda.fr.document-core: current
+  ans.cda.fr.document-core:
+    uri: https://interop.esante.gouv.fr/ig/cda/document-core/ImplementationGuide/ans.cda.fr.document-core
+    version: current
 
 pages:
     index.md:
@@ -101,6 +103,17 @@ groups:
     name: Eléments CDA d'un document IPS
     resources:
       - StructureDefinition/fr-cda-clinical-document-ips
+  ressources-cda-ips-dlu:
+    name: Eléments CDA propres à la synthèse médicale du DLU
+    resources:
+      - StructureDefinition/fr-cda-groupe-evaluation-etat-psychique-dlu
+      - StructureDefinition/fr-cda-groupe-evaluation-handicaps-dlu
+      - StructureDefinition/fr-cda-groupe-evaluation-deplacements-dlu
+      - StructureDefinition/fr-cda-groupe-evaluation-autres-risques-dlu
+      - StructureDefinition/fr-cda-groupe-evaluation-score-dlu
+      - StructureDefinition/fr-cda-evaluation-etat-psychique-dlu
+      - StructureDefinition/fr-cda-evaluation-deplacements-dlu
+      - StructureDefinition/fr-cda-evaluation-autres-risques-dlu
 
 resources:
   Binary/patient-summary:
@@ -111,3 +124,11 @@ resources:
         valueCanonical: https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-clinical-document-ips
     name: Patient Summary
     description: Volet International Patient Summary - France (IPS-FR)
+  Binary/patient-summary-dlu:
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/xml
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical
+        valueCanonical: https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-clinical-document-ips
+    name: Patient Summary DLU
+    description: Exemple de synthèse médicale d'un Dossier de Liaison d'Urgence (DLU) - IPS-FR 2024.01

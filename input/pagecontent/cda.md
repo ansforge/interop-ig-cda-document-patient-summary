@@ -12,6 +12,7 @@ Les modèles CDA définis dans ce guide permettent de représenter les synthèse
 
 #### Exemples CDA
 * **[Exemple IPS-FR 2024.01](Binary-patient-summary.html)** - Voici des instances concrètes qui illustrent à quoi ressemblent les documents CDA IPS produits et consommés par les systèmes conformes à ce guide d'implémentation.
+* **[Exemple IPS-FR 2024.01 DLU](Binary-patient-summary-dlu.html)** - Exemple de synthèse médicale d'un Dossier de Liaison d'Urgence (DLU), avec traitements aigus et évaluations du statut fonctionnel.
 
 Ces exemples peuvent être utilisés pour :
 
