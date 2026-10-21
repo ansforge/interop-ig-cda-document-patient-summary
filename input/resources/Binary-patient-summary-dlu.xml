@@ -2414,7 +2414,7 @@
           <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.19"/>
           <!-- Conformité FR-Traitements (FR CI-SIS) -->
           <templateId root="1.2.250.1.213.1.1.2.143"/>
-          <code code="10160-0" displayName="Historique de la prise médicamenteuse"
+          <code code="10160-0" displayName="Traitements"
             codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
           <title>Traitements</title>
           <text>            
@@ -3515,7 +3515,7 @@
                   <!-- FR-Evaluation (FR CI-SIS) -->
                   <templateId root="1.2.250.1.213.1.1.3.25"/>
                   <id root="FB97F8B7-7D3D-474A-B6A6-7D55D4DA3AFD"/>
-                  <code xsi:type="CD" code="62476001" displayName="désorienté(e)"
+                  <code xsi:type="CD" code="62476001" displayName="désorientation"
                     codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>                    
                   <text><reference value="#statut-fonctionnel-03"/></text>
                   <statusCode code="completed"/>
@@ -3904,7 +3904,7 @@
                   <!-- FR-Evaluation (FR CI-SIS) -->
                   <templateId root="1.2.250.1.213.1.1.3.25"/>
                   <id root="582BB12C-7B63-11EB-9439-0242AC130003"/>
-                  <code xsi:type="CD" code="248046000" displayName="fugue" codeSystem="2.16.840.1.113883.6.96"
+                  <code xsi:type="CD" code="248046000" displayName="en fugue" codeSystem="2.16.840.1.113883.6.96"
                     codeSystemName="SNOMED_CT"/>
                   <text><reference value="#statut-fonctionnel-12"/></text>
                   <statusCode code="completed"/>
