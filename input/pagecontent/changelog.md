@@ -18,6 +18,8 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/). La ve
 - `sushi-config.yaml` : le modèle logique de l'exemple `Binary-patient-summary.xml` référence désormais le profil `fr-cda-clinical-document-ips` de cet IG (et non `fr-cda-clinical-document` de document-core).
 - Exemple CDA : corrections des références et identifiants de la partie narrative.
 - Exemple CDA DLU : références narratives des résultats d'imagerie alignées sur l'exemple IPS (`resultat-imagerie-02`, `resultat-02`), référence `#med-03` corrigée et libellé du code de la section Traitements aligné sur `Traitements`, libellé `Sœur` (relation `SIS`) corrigé, templateId `1.2.250.1.213.1.1.3.42.4` (traitement aigu) retiré de l'entrée « Autre traitement » du plan de soins qui portait aussi `.42.3` (un seul type par entrée).
+- Exemple CDA IPS `Binary-patient-summary.xml` : mise à jour du contenu (en-tête, identifiants du document, auteur et participants, commentaires sur les cardinalités, sections)
+- Exemple CDA DLU `Binary-patient-summary-dlu.xml` : libellé `Soeur` (relation `SIS`), libellé du code de la section Traitements (`Historique de la prise médicamenteuse`), référence `#med-003` et références narratives des résultats d'imagerie (`resultat-imagerie-01`) modifiés ; templateId `1.2.250.1.213.1.1.3.42.4` présent à nouveau sur l'entrée « Autre traitement »
 - `sushi-config.yaml` : la dépendance `ans.cda.fr.document-core` est déclarée avec l'URL de sa ressource `ImplementationGuide`.
 - Profil `FRCDAGroupeEvaluationHandicapsDLU` : libellé du code du groupe « Déficience auditive, visuelle ou de communication » corrigé.
 
