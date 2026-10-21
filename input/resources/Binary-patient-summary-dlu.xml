@@ -173,7 +173,7 @@
   <!-- Personne à prévenir en cas d'urgence -->
   <informant>
     <relatedEntity classCode="ECON">
-      <code code="SIS" displayName="Sœur" codeSystem="2.16.840.1.113883.5.111"/>
+      <code code="SIS" displayName="Soeur" codeSystem="2.16.840.1.113883.5.111"/>
       <addr nullFlavor="NAV"/>
       <telecom value="tel:0647150100" use="MC"/>
       <relatedPerson>
@@ -188,7 +188,7 @@
   <!-- Personne de confiance -->
   <informant>
     <relatedEntity classCode="NOK">
-      <code code="SIS" displayName="Sœur" codeSystem="2.16.840.1.113883.5.111"/>
+      <code code="SIS" displayName="Soeur" codeSystem="2.16.840.1.113883.5.111"/>
       <addr nullFlavor="NAV"/>
       <telecom value="tel:0647150100" use="MC"/>
       <relatedPerson>
@@ -2414,7 +2414,7 @@
           <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.19"/>
           <!-- Conformité FR-Traitements (FR CI-SIS) -->
           <templateId root="1.2.250.1.213.1.1.2.143"/>
-          <code code="10160-0" displayName="Traitements"
+          <code code="10160-0" displayName="Historique de la prise médicamenteuse"
             codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
           <title>Traitements</title>
           <text>            
@@ -2873,7 +2873,7 @@
                     <!-- Code CIS du médicament -->
                     <code code="63107752" displayName="PARACETAMOL VIATRIS 500 mg, comprimé"
                       codeSystem="1.2.250.1.213.2.3.1" codeSystemName="CIS">
-                      <originalText><reference value="#med-03"/></originalText>
+                      <originalText><reference value="#med-003"/></originalText>
                       <!-- Code MV Médicabase du médicament -->
                       <translation code="MV00002306" displayName="Paracétamol 500 mg comprimé"
                         codeSystem="1.2.250.1.213.2.59" codeSystemName="MEDICABASE"/>
@@ -5121,6 +5121,8 @@
               <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
               <!-- Conformité Traitement au long cours -->
               <templateId root="1.2.250.1.213.1.1.3.42.3"/>
+              <!-- Conformité Traitement aigu -->
+              <templateId root="1.2.250.1.213.1.1.3.42.4"/>
               <id root="05F1A242-28EC-45A8-B6C4-3F39646041A6"/>
               <text><reference value="#plan-med-02-code"/></text>
               <statusCode code="completed"/>
@@ -6039,7 +6041,7 @@
               </tbody>
             </table>
             
-            <paragraph><content styleCode="Emphasis" ID="resultat-02">Imagerie :</content></paragraph>
+            <paragraph><content styleCode="Emphasis">Imagerie :</content></paragraph>
             <table border="0">
               <thead>
                 <tr>
@@ -6307,17 +6309,17 @@
                   <code code="24979-7" 
                     displayName="CT rachis dorsal avec contraste IV"   
                     codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                  <text><reference value="#resultat-imagerie-02"/></text>
+                  <text><reference value="#resultat-imagerie-01"/></text>
                   <statusCode code="completed"/>
                   <effectiveTime value="20240329"/>
                   <value xsi:type="CD">
-                    <originalText><reference value="#resultat-imagerie-02-resultat"/></originalText>
+                    <originalText><reference value="#resultat-imagerie-01-resultat"/></originalText>
                   </value>                  
                   <!-- [0..1] Localisation anatomique -->
                   <targetSiteCode xsi:type="CD" code="302551006" displayName="thorax entier"
                     codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT">
                     <originalText mediaType="text/xml">
-                      <reference value="#resultat-imagerie-02-localisation"/>
+                      <reference value="#resultat-imagerie-01-localisation"/>
                     </originalText>                
                   </targetSiteCode>                  
                   <!-- Entrée FR-Commentaire-ER -->
@@ -6332,7 +6334,7 @@
                       <code code="48767-8" displayName="Commentaire"
                         codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
                       <text>
-                        <reference value="#resultat-imagerie-02-commentaire"/>
+                        <reference value="#resultat-imagerie-01-commentaire"/>
                       </text>
                       <statusCode code="completed"/>
                     </act>
