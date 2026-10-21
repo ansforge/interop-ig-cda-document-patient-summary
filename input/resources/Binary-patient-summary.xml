@@ -15,12 +15,10 @@
       format HL7 - CDA Release 2 - selon schéma XML (CDA.xsd) du standard ANSI/HL7 CDA, R2-2005 4/21/2005
       **********************************************************************************************************
       Historique :
-      30/05/2024 : Création IPS-FR_2024.01 (conforme IPS) pour un résident en EHPAD (synthèse médicale DLU)
+      02/04/2024 : Création IPS-FR_2023.01 (conforme IPS) 
       21/08/2025 : Maj des codeSystemName en fonction de la nouvelle règle de nommage
       25/08/2025 : Maj des références parties narratives / entrées
-      29/08/2025 : Corrections : 
-        - id dans Entrée FR-Effet-indesirable
-        - ajout typeCode="COMP" dans le component contenant une entrée FR-Evaluation
+      26/03/2026 : Ajout exemple d'allergie à une substance non présente dans SMS (en texte libre)
       **********************************************************************************************************
    -->
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -42,7 +40,7 @@
   <!-- Conformité au Volet International Patient Summary - France (IPS-FR_2024.01)-->
   <templateId root="1.2.250.1.213.1.1.1.51" extension="2024.01"/>
   <!-- Identifiant unique du document -->
-  <id root="1.2.250.1.213.1.1.1.51.2024.2.1"/>
+  <id root="1.2.250.1.213.1.1.1.51.2024.1.1"/>
   <!-- Type de document -->
   <code code="60591-5" displayName="Synthèse médicale" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
   <!-- Titre du document -->
@@ -50,12 +48,11 @@
   <!-- Date de création du document -->
   <effectiveTime value="20240402111700+0100"/>
   <!-- Niveau de confidentialité du document -->
-  <confidentialityCode code="N" displayName="Normal" codeSystem="2.16.840.1.113883.5.25"
-    codeSystemName="Confidentiality"/>
+  <confidentialityCode code="N" displayName="Normal" codeSystem="2.16.840.1.113883.5.25"/>
   <!-- Langue du document -->
   <languageCode code="fr-FR"/>
   <!-- Identifiant commun à toutes les versions successives du document -->
-  <setId root="1.2.250.1.213.1.1.1.51.2024.2"/>
+  <setId root="1.2.250.1.213.1.1.1.51.2024.1"/>
   <!-- Numéro de la version du présent document (entier positif) -->
   <versionNumber value="2"/>
 
@@ -127,45 +124,48 @@
   <!-- Auteur du document -->
   <author>
     <!-- [0..1] Rôle fonctionnel de l'auteur -->
-    <functionCode code="ATTPHYS" displayName="Référent - Responsable du patient dans la structure de soins" codeSystem="2.16.840.1.113883.5.88"/>
+    <functionCode code="PCP" displayName="Médecin traitant" codeSystem="2.16.840.1.113883.5.88"/>
     <!-- [1..1] Horodatage de la validation par l'auteur -->
-    <time value="20240402111700+0100"/>
+    <time value="20240402"/>
+<!--    <time value="20240402111700+0100"/>-->
     <!-- [1..1] Identification de l'auteur -->
     <assignedAuthor>
-      <!-- PS identifié par son N°RPPS -->
+      <!-- [1..1] Identifiant de l'auteur (Id RPPS du PS obligatoire pour les PS) -->
       <id root="1.2.250.1.71.4.2.1" extension="801234567897"/>
-      <code code="G15_10/SM26" codeSystem="1.2.250.1.213.1.1.4.5"
-        displayName="Médecin - Qualifié en Médecine Générale (SM)"/>
+      <!-- [1..1] Profession / spécialité du PS (obligatoire pour les PS) -->
+      <code code="G15_10/SM26" displayName="Médecin - Qualifié en Médecine Générale (SM)"
+        codeSystem="1.2.250.1.213.1.1.4.5"/>
+      <!-- [0..*] Adresse du PS-->
       <addr>
-        <houseNumber>142</houseNumber>
-        <streetName>Rue du Belvédère</streetName>
-        <postalCode>92100</postalCode>
-        <city>BOULOGNE-BILLANCOURT</city>
+        <houseNumber>3</houseNumber>
+        <streetName>Rue Petit Pont</streetName>
+        <postalCode>75005</postalCode>
+        <city>PARIS</city>
       </addr>
-      <telecom value="tel:0131931902" use="DIR"/>
-      <telecom value="tel:0605061902" use="EC"/>
+      <!-- [0..*] Coordonnées télécom du PS-->
+      <telecom value="tel:0147150000" use="WP"/>
+      <telecom value="mailto:stephane.medioni@mssante.fr"/>
+      <!-- [0..1] Identité du PS -->
       <assignedPerson>
         <name>
           <prefix>M</prefix>
+          <given>Stéphane</given>
+          <family>MEDIONI</family>
           <suffix>DR</suffix>
-          <given>Charles</given>
-          <family>BOILEAU</family>
         </name>
       </assignedPerson>
-      <!-- ES de rattachement du PS -->
+      <!-- Etablissement de rattachement du PS -->
       <representedOrganization>
-        <id root="1.2.250.1.71.4.2.2" extension="1750803447"/>
-        <name>EHPAD DE BOULOGNE-BILLANCOURT</name>
-        <telecom value="tel:0131931902" use="DIR"/>
-        <telecom value="tel:0605061902" use="EC"/>
+        <id root="1.2.250.1.71.4.2.2" extension="2801234567"/>
+        <name>Centre de soins le Belvédère</name>
         <addr>
-          <houseNumber>142</houseNumber>
-          <streetName>Rue du Belvédère</streetName>
-          <postalCode>92100</postalCode>
-          <city>BOULOGNE-BILLANCOURT</city>
+          <houseNumber>3</houseNumber>
+          <streetName>Rue Petit Pont</streetName>
+          <postalCode>75005</postalCode>
+          <city>PARIS</city>
         </addr>
         <standardIndustryClassCode code="ETABLISSEMENT" displayName="Etablissement de santé"
-          codeSystem="1.2.250.1.213.1.1.4.9" codeSystemName="TRE_A01_CadreExercice"/>
+          codeSystem="1.2.250.1.213.1.1.4.9"/>
       </representedOrganization>
     </assignedAuthor>
   </author>
@@ -173,7 +173,7 @@
   <!-- Personne à prévenir en cas d'urgence -->
   <informant>
     <relatedEntity classCode="ECON">
-      <code code="SIS" displayName="Sœur" codeSystem="2.16.840.1.113883.5.111"/>
+      <code code="SIS" displayName="Soeur" codeSystem="2.16.840.1.113883.5.111"/>
       <addr nullFlavor="NAV"/>
       <telecom value="tel:0647150100" use="MC"/>
       <relatedPerson>
@@ -188,7 +188,7 @@
   <!-- Personne de confiance -->
   <informant>
     <relatedEntity classCode="NOK">
-      <code code="SIS" displayName="Sœur" codeSystem="2.16.840.1.113883.5.111"/>
+      <code code="SIS" displayName="Soeur" codeSystem="2.16.840.1.113883.5.111"/>
       <addr nullFlavor="NAV"/>
       <telecom value="tel:0647150100" use="MC"/>
       <relatedPerson>
@@ -205,17 +205,17 @@
     <assignedCustodian>
       <representedCustodianOrganization>
         <!-- Identifiant de l'organisation -->
-        <id root="1.2.250.1.71.4.2.2" extension="1750803447"/>
+        <id root="1.2.250.1.71.4.2.2" extension="1120456789"/>
         <!-- Nom de l'organisation -->
-        <name>EHPAD DE BOULOGNE-BILLANCOURT</name>
+        <name>Centre de soins le Belvédère</name>
         <!-- Coordonnées télécom de l'organisation -->
-        <telecom value="tel:0131931902" use="DIR"/>
+        <telecom value="tel:0242515151" use="WP"/>
         <!-- Adresse de l'organisation -->
         <addr>
-          <houseNumber>142</houseNumber>
-          <streetName>Rue du Belvédère</streetName>
-          <postalCode>92100</postalCode>
-          <city>BOULOGNE-BILLANCOURT</city>
+          <houseNumber>3</houseNumber>
+          <streetName>Rue Petit Pont</streetName>
+          <postalCode>75005</postalCode>
+          <city>PARIS</city>
         </addr>
       </representedCustodianOrganization>
     </assignedCustodian>
@@ -229,44 +229,47 @@
     <assignedEntity>
       <!-- PS identifié par son N°RPPS -->
       <id root="1.2.250.1.71.4.2.1" extension="801234567897"/>
-      <code code="G15_10/SM26" codeSystem="1.2.250.1.213.1.1.4.5"
-        displayName="Médecin - Qualifié en Médecine Générale (SM)"/>
+      <!-- Profession / spécialité du PS -->
+      <code code="G15_10/SM26" displayName="Médecin - Qualifié en Médecine Générale (SM)"
+        codeSystem="1.2.250.1.213.1.1.4.5"/>
+      <!-- Adresse du PS-->
       <addr>
-        <houseNumber>142</houseNumber>
-        <streetName>Rue du Belvédère</streetName>
-        <postalCode>92100</postalCode>
-        <city>BOULOGNE-BILLANCOURT</city>
+        <houseNumber>3</houseNumber>
+        <streetName>Rue Petit Pont</streetName>
+        <postalCode>75005</postalCode>
+        <city>PARIS</city>
       </addr>
-      <telecom value="tel:0131931902" use="DIR"/>
-      <telecom value="tel:0605061902" use="EC"/>
+      <!-- Coordonnées télécom du PS-->
+      <telecom value="tel:0147150000" use="WP"/>
+      <telecom value="mailto:stephane.medioni@mssante.fr"/>
+      <!-- Identité du PS -->
       <assignedPerson>
         <name>
+          <prefix>M</prefix>
+          <given>Stéphane</given>
+          <family>MEDIONI</family>
           <suffix>DR</suffix>
-          <given>Charles</given>
-          <family>BOILEAU</family>
         </name>
       </assignedPerson>
-      <!-- ES de rattachement du PS -->
+      <!-- Etablissement de rattachement du PS -->
       <representedOrganization>
-        <id root="1.2.250.1.71.4.2.2" extension="1750803447"/>
-        <name>EHPAD DE BOULOGNE-BILLANCOURT</name>
-        <telecom value="tel:0131931902" use="DIR"/>
-        <telecom value="tel:0605061902" use="EC"/>
+        <id root="1.2.250.1.71.4.2.2" extension="2801234567"/>
+        <name>Centre de soins le Belvédère</name>
         <addr>
-          <houseNumber>142</houseNumber>
-          <streetName>Rue du Belvédère</streetName>
-          <postalCode>92100</postalCode>
-          <city>BOULOGNE-BILLANCOURT</city>
+          <houseNumber>3</houseNumber>
+          <streetName>Rue Petit Pont</streetName>
+          <postalCode>75005</postalCode>
+          <city>PARIS</city>
         </addr>
         <standardIndustryClassCode code="ETABLISSEMENT" displayName="Etablissement de santé"
-          codeSystem="1.2.250.1.213.1.1.4.9" codeSystemName="TRE_A01_CadreExercice"/>
+          codeSystem="1.2.250.1.213.1.1.4.9"/>
       </representedOrganization>
     </assignedEntity>
   </legalAuthenticator>
 
   <!-- Médecin traitant -->
   <participant typeCode="INF">
-    <functionCode code="PCP" codeSystem="2.16.840.1.113883.5.88" displayName="Médecin Traitant"/>
+    <functionCode code="PCP" codeSystem="2.16.840.1.113883.5.88" displayName="Médecin traitant"/>
     <time xsi:type="IVL_TS">
       <low value="20240402"/>
     </time>
@@ -306,170 +309,50 @@
       </scopingOrganization>
     </associatedEntity>
   </participant>
-  
-  <!-- Contact 24h/24h en EHPAD -->
-  <participant typeCode="PRF">
-    <functionCode code="CORRE" codeSystem="1.2.250.1.213.1.1.4.2.280" displayName="Correspondant">
-      <originalText>Contact 24h/24h en EHPAD</originalText>
-    </functionCode>
-    <time xsi:type="IVL_TS">
-      <low value="20240402"/>
-    </time>
-    <!-- EHPAD -->
-    <associatedEntity classCode="PROV">   
-      <scopingOrganization>
-        <id root="1.2.250.1.71.4.2.2" extension="1750803447"/>
-        <name>EHPAD DE BOULOGNE-BILLANCOURT</name>
-        <telecom value="tel:0131931902" use="DIR"/>
-        <telecom value="tel:0605061902" use="EC"/>
-        <addr>
-          <houseNumber>142</houseNumber>
-          <streetName>Rue du Belvédère</streetName>
-          <postalCode>92100</postalCode>
-          <city>BOULOGNE-BILLANCOURT</city>
-        </addr>
-        <standardIndustryClassCode code="ETABLISSEMENT" displayName="Etablissement de santé"
-          codeSystem="1.2.250.1.213.1.1.4.9"/>
-      </scopingOrganization>
-    </associatedEntity>
-  </participant>
-  
-  <!-- Établissement de santé de préférence -->
-  <participant typeCode="INF">
-    <functionCode code="ES-PREF" codeSystem="1.2.250.1.213.1.1.4.2.280" displayName="Etablissement de santé de préférence"/>
-    <time xsi:type="IVL_TS">
-      <low value="20240402"/>
-    </time>
-    <!-- Établissement de santé de préférence -->
-    <associatedEntity classCode="PROV">   
-      <scopingOrganization>
-        <id root="1.2.250.1.71.4.2.2" extension="1750803447"/>
-        <name>GRP HOSP UNIVERSITAIRE PARIS OUEST SITE G POMPIDOU APHP</name>        
-        <addr>
-          <houseNumber>20</houseNumber>
-          <streetName>Rue Leblanc</streetName>
-          <postalCode>75015</postalCode>
-          <city>PARIS</city>
-        </addr>
-        <standardIndustryClassCode code="ETABLISSEMENT" displayName="Etablissement de santé"
-          codeSystem="1.2.250.1.213.1.1.4.9"/>
-      </scopingOrganization>
-    </associatedEntity>
-  </participant>
-  
-  <!-- Masseur-Kinésithérapeute -->
-  <participant typeCode="PRF">
-    <functionCode code="353" codeSystem="1.2.250.1.213.1.6.1.107" displayName="Membre de l'équipe de soins">
-      <originalText>Masseur-Kinésithérapeute</originalText>
-    </functionCode>
-    <time xsi:type="IVL_TS">
-      <low value="20240402"/>
-    </time>
-    <!-- Masseur-Kinésithérapeute -->
-    <associatedEntity classCode="PROV">
-      <id root="1.2.250.1.71.4.2.1" extension="801234567801"/>
-      <!-- Adresse du PS-->
-      <addr>
-        <houseNumber>65</houseNumber>
-        <streetName>Rue de Versailles</streetName>
-        <postalCode>75005</postalCode>
-        <city>PARIS</city>
-      </addr>
-      <!-- Coordonnées télécom du PS-->
-      <telecom value="tel:0147120001" use="WP"/>
-      <telecom value="mailto:pierre.pilon@mssante.fr"/>
-      <!-- Identité du PS -->
-      <associatedPerson>
-        <name>
-          <prefix>M</prefix>
-          <given>Pierre</given>
-          <family>PILON</family>
-        </name>
-      </associatedPerson>
-      <!-- Etablissement de rattachement du PS -->
-      <scopingOrganization>
-        <id root="1.2.250.1.71.4.2.2" extension="2801234562345"/>
-        <name>Cabinet de kiné</name>
-        <addr>
-          <houseNumber>65</houseNumber>
-          <streetName>Rue de Versailles</streetName>
-          <postalCode>75005</postalCode>
-          <city>PARIS</city>
-        </addr>
-        <standardIndustryClassCode code="ETABLISSEMENT" displayName="Etablissement de santé"
-          codeSystem="1.2.250.1.213.1.1.4.9"/>
-      </scopingOrganization>
-    </associatedEntity>
-  </participant>
-  
-  <!-- Établissement de santé de référence -->
-  <participant typeCode="INF">
-    <functionCode code="ES-REF" codeSystem="1.2.250.1.213.1.1.4.2.280" displayName="Etablissement de santé de référence">
-      <originalText>Centre de référence pour la maladie rare (texte libre)</originalText>
-    </functionCode>
-    <time xsi:type="IVL_TS">
-      <low value="20240402"/>
-    </time>
-    <!-- Établissement de santé de préférence -->
-    <associatedEntity classCode="PROV">   
-      <scopingOrganization>
-        <id root="1.2.250.1.71.4.2.2" extension="1750803447"/>
-        <name>GRP HOSP UNIVERSITAIRE PARIS OUEST SITE G POMPIDOU APHP</name>        
-        <addr>
-          <houseNumber>20</houseNumber>
-          <streetName>Rue Leblanc</streetName>
-          <postalCode>75015</postalCode>
-          <city>PARIS</city>
-        </addr>
-        <standardIndustryClassCode code="ETABLISSEMENT" displayName="Etablissement de santé"
-          codeSystem="1.2.250.1.213.1.1.4.9"/>
-      </scopingOrganization>
-    </associatedEntity>
-  </participant>
-  
+
   <!-- Evènement documenté -->
   <documentationOf>
     <serviceEvent>
-      <!-- Date de l'évènement -->
+      <!-- Date de la synthèse -->
       <effectiveTime>
         <low value="20240402111700+0100"/>
       </effectiveTime>
-      <!-- Exécutant -->
+      <!-- Exécutant (auteur de la synthèse) -->
       <performer typeCode="PRF">
         <assignedEntity>
           <!-- PS identifié par son N°RPPS -->
-          <id root="1.2.250.1.71.4.2.1" extension="801234567897"/>          
+          <id root="1.2.250.1.71.4.2.1" extension="801234567897"/>
           <!-- Profession / spécialité du PS -->
-          <code code="G15_10/SM26" codeSystem="1.2.250.1.213.1.1.4.5"
-            displayName="Médecin - Qualifié en Médecine Générale (SM)"/>
+          <code code="G15_10/SM26" displayName="Médecin - Qualifié en Médecine Générale (SM)"
+            codeSystem="1.2.250.1.213.1.1.4.5"/>
           <!-- Adresse du PS-->
           <addr>
-            <houseNumber>142</houseNumber>
-            <streetName>Rue du Belvédère</streetName>
-            <postalCode>92100</postalCode>
-            <city>BOULOGNE-BILLANCOURT</city>
+            <houseNumber>3</houseNumber>
+            <streetName>Rue Petit Pont</streetName>
+            <postalCode>75005</postalCode>
+            <city>PARIS</city>
           </addr>
           <!-- Coordonnées télécom du PS-->
-          <telecom value="tel:0131931902" use="DIR"/>
-          <telecom value="tel:0605061902" use="EC"/>
+          <telecom value="tel:0147150000" use="WP"/>
+          <telecom value="mailto:stephane.medioni@mssante.fr"/>
           <!-- Identité du PS -->
           <assignedPerson>
             <name>
               <prefix>M</prefix>
+              <given>Stéphane</given>
+              <family>MEDIONI</family>
               <suffix>DR</suffix>
-              <given>Charles</given>
-              <family>BOILEAU</family>
             </name>
           </assignedPerson>
           <!-- Etablissement de rattachement du PS -->
           <representedOrganization>
-            <id root="1.2.250.1.71.4.2.2" extension="1750803447"/>
-            <name>EHPAD DE BOULOGNE-BILLANCOURT</name>
+            <id root="1.2.250.1.71.4.2.2" extension="2801234567"/>
+            <name>Centre de soins le Belvédère</name>
             <addr>
-              <houseNumber>142</houseNumber>
-              <streetName>Rue du Belvédère</streetName>
-              <postalCode>92100</postalCode>
-              <city>BOULOGNE-BILLANCOURT</city>
+              <houseNumber>3</houseNumber>
+              <streetName>Rue Petit Pont</streetName>
+              <postalCode>75005</postalCode>
+              <city>PARIS</city>
             </addr>
             <standardIndustryClassCode code="ETABLISSEMENT" displayName="Etablissement de santé"
               codeSystem="1.2.250.1.213.1.1.4.9"/>
@@ -482,7 +365,7 @@
   <!-- Document remplacé -->
   <relatedDocument typeCode="RPLC">
     <parentDocument>
-      <id root="AA2F476F-CA64-47BF-AED1-852692B493D9"/>
+      <id root="8D5E778C-E155-4685-95C6-5FF65A362964"/>
       <versionNumber value="1"/>
     </parentDocument>
   </relatedDocument>
@@ -495,8 +378,8 @@
       <!-- Modalité d’exercice -->
       <location>
         <healthCareFacility>          
-          <code code="SA17" displayName="Etablissement pour personnes âgées"
-            codeSystem="1.2.250.1.71.4.2.4"/>
+          <code code="SA04" displayName="Etablissement privé non PSPH"
+            codeSystem="1.2.250.1.71.4.2.4"> </code>
         </healthCareFacility>
       </location>
     </encompassingEncounter>
@@ -1633,75 +1516,28 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>06/12/2024</td>
-                  <td>
-                    <content ID="acte-01">Soins palliatifs</content></td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td><content ID="acte-01-motif">-</content></td>
-                  <td><content ID="acte-01-commentaire">(texte libre)</content></td>
-                </tr>
-                <tr>
                   <td>14/01/2018</td>
                   <td>
-                    <content ID="acte-02">Dilatation intraluminale de 2 vaisseaux coronaires avec
+                    <content ID="acte-01">Dilatation intraluminale de 2 vaisseaux coronaires avec
                       pose d'endoprothèse, par voie artérielle transcutanée</content></td>
                   <td>Voie intraartérielle</td>
                   <td>artère coronaire</td>
-                  <td><content ID="acte-02-motif">Infarctus inférieur transmural</content></td>
-                  <td><content ID="acte-02-commentaire">(texte libre)</content></td>
+                  <td><content ID="acte-01-motif">Infarctus inférieur transmural</content></td>
+                  <td><content ID="acte-01-commentaire">(texte libre)</content></td>
                 </tr>
                 <tr>
                   <td>08/12/2016</td>
                   <td>
-                    <content ID="acte-03">Autre acte (texte libre)</content></td>
+                    <content ID="acte-02">Autre acte (texte libre)</content></td>
                   <td>-</td>
                   <td>-</td>
-                  <td><content ID="acte-03-motif">-</content></td>
-                  <td><content ID="acte-03-commentaire">(texte libre)</content></td>
+                  <td><content ID="acte-02-motif">-</content></td>
+                  <td><content ID="acte-02-commentaire">(texte libre)</content></td>
                 </tr>
               </tbody>
             </table>
           </text>
-          
-          <!-- [0..*] Entrée FR-Acte (codé) : soins palliatifs (oui) -->
-          <entry>
-            <procedure classCode="PROC" moodCode="INT" negationInd="false">
-              <!-- Conformité Procedure Entry (IHE PCC) -->
-              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
-              <!-- Conformité Plan of care activity (CCD) = acte prévu -->
-              <templateId root="2.16.840.1.113883.10.20.1.25"/>
-              <!-- Conformité FR-Acte (CI-SIS) -->
-              <templateId root="1.2.250.1.213.1.1.3.62"/>
-              <id root="A6BC7FD2-EC3F-4E01-B567-854B087D1D9B"/>
-              <!-- Code de l'acte -->
-              <code code="103735009" displayName="Soins palliatifs"
-                codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT">
-                <originalText><reference value="#acte-01"/></originalText>
-              </code>
-              <text><reference value="#acte-01"/></text>
-              <!-- valeur issue du jdv-hl7-v3-ActStatus-cisis (2.16.840.1.113883.1.11.15933) -->
-              <statusCode code="active"/>
-              <!-- Date de l'acte -->
-              <effectiveTime value="20241206"/>                       
-              <!-- Entrée FR-Commentaire-ER -->
-              <entryRelationship typeCode="SUBJ" inversionInd="true">
-                <act classCode="ACT" moodCode="EVN">
-                  <!-- Conformité Comment (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                  <!-- Conformité Comment Entry (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                  <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.32"/>
-                  <code code="48767-8" displayName="Commentaire" codeSystem="2.16.840.1.113883.6.1"
-                    codeSystemName="LOINC"/>
-                  <text><reference value="#acte-01-commentaire"/></text>
-                  <statusCode code="completed"/>
-                </act>
-              </entryRelationship>
-            </procedure>
-          </entry>
-          
+
           <!-- [1..*] Entrée FR-Acte (Dilatation intraluminale de 2 vaisseaux coronaires) -->
           <entry>
             <procedure classCode="PROC" moodCode="EVN">
@@ -1716,9 +1552,11 @@
               <code code="DDAF004"
                 displayName="Dilatation intraluminale de 2 vaisseaux coronaires avec pose d'endoprothèse, par voie artérielle transcutanée"
                 codeSystem="1.2.250.1.215.300.1" codeSystemName="CCAM">
-                <originalText><reference value="acte-02"/></originalText>
+                <originalText><reference value="acte-01"/></originalText>
               </code>
-              <text><reference value="#acte-02"/></text>
+              <text>
+                <reference value="#acte-01"/>
+              </text>
               <statusCode code="completed"/>
               <!-- Date de l'acte -->
               <effectiveTime value="20180114"/>
@@ -1761,7 +1599,7 @@
                   <code code="I21.1" displayName="Infarctus transmural aigu du myocarde, de la paroi inférieure"
                     codeSystem="2.16.840.1.113883.6.3" codeSystemName="CIM10FRPMSI">
                     <originalText>
-                      <reference value="#acte-02-motif"/>
+                      <reference value="#acte-01-motif"/>
                     </originalText>
                   </code>
                 </act>
@@ -1778,7 +1616,7 @@
                   <code code="48767-8" displayName="Commentaire" codeSystem="2.16.840.1.113883.6.1"
                     codeSystemName="LOINC"/>
                   <text>
-                    <reference value="#acte-02-commentaire"/>
+                    <reference value="#acte-01-commentaire"/>
                   </text>
                   <statusCode code="completed"/>
                 </act>
@@ -1795,14 +1633,14 @@
               <templateId root="2.16.840.1.113883.10.20.1.29"/>
               <!-- FR-Acte (CI-SIS) -->
               <templateId root="1.2.250.1.213.1.1.3.62"/>
-              <id root="A6BC7FD2-EC3F-4E01-B567-854B087D1D9B"/>
+              <id root="E5FE348E-12D8-412A-BB45-43D05F21F50A"/>
               <!-- Code de l'acte -->
               <code code="GEN-092.04.13" displayName="Autre acte"
                 codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TerminologieCISIS">
-                <originalText><reference value="acte-03"/></originalText>
+                <originalText><reference value="acte-02"/></originalText>
               </code>
               <text>
-                <reference value="#acte-03"/>
+                <reference value="#acte-02"/>
               </text>
               <statusCode code="completed"/>
               <!-- Date de l'acte -->
@@ -1822,14 +1660,13 @@
                   <code code="48767-8" displayName="Commentaire" codeSystem="2.16.840.1.113883.6.1"
                     codeSystemName="LOINC"/>
                   <text>
-                    <reference value="#acte-03-commentaire"/>
+                    <reference value="#acte-02-commentaire"/>
                   </text>
                   <statusCode code="completed"/>
                 </act>
               </entryRelationship>
             </procedure>
           </entry>
-                   
         </section>
       </component>
 
@@ -1866,7 +1703,7 @@
                   <td>04/12/2021</td>
                   <td><content ID="allergie-01-type">Allergie médicamenteuse</content></td>
                   <td><content ID="allergie-01-agent">Paracétamol</content></td>
-                  <td><content ID="allergie-statut-01">Actif</content></td>
+                  <td><content ID="allergie-01-statut">Actif</content></td>
                   <td><content ID="allergie-01-criticite">Bas</content></td>
                   <td><content ID="allergie-01-certitude">Confirmé</content></td>
                   <td>
@@ -1881,9 +1718,25 @@
                   </td>
                   <td><content ID="allergie-01-commentaire">(texte libre)</content></td>
                 </tr>
+                <tr>
+                  <td>04/12/2021</td>
+                  <td><content ID="allergie-02-type">Allergie médicamenteuse</content></td>
+                  <td><content ID="allergie-02-agent">feuille de millepertuis</content></td>
+                  <td><content ID="allergie-02-statut">Actif</content></td>
+                  <td><content ID="allergie-02-criticite">Bas</content></td>
+                  <td><content ID="allergie-02-certitude">Confirmé</content></td>
+                  <td>
+                    <content ID="allergie-02-reaction-1">Troubles allergiques ou d'hypersensibilité de la peau ou des muqueuses</content>
+                  </td>
+                  <td>
+                    <content ID="allergie-02-reaction-1-severite">léger</content>
+                  </td>
+                  <td><content ID="allergie-02-commentaire">(texte libre)</content></td>
+                </tr>
               </tbody>
             </table>
           </text>
+          
           <!-- Entrée FR-Liste-des-allergies-et-hypersensibilites -->
           <entry>
             <act classCode="ACT" moodCode="EVN">
@@ -1917,7 +1770,7 @@
                   <templateId root="1.2.250.1.213.1.1.3.41"/>
                   <id root="C64C6013-C8AF-4938-AD10-1B7D26DEE2A0"/>
                   <!-- Type d'allergie / hypersensibilité -->
-                  <!-- valeur issue de jdv-type-evenement-indesirable-previsible-cisis  (1.2.250.1.213.1.1.5.794). -->
+                  <!-- valeur issue de jdv-type-evenement-indesirable-previsible-cisis (1.2.250.1.213.1.1.5.794). -->
                   <code code="416098002" displayName="allergie médicamenteuse"
                     codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
                   <text>
@@ -1946,6 +1799,7 @@
                       </playingEntity>
                     </participantRole>
                   </participant>
+
                   <!-- Entrée FR-Statut-du-probleme : Statut clinique de l'allergie -->
                   <entryRelationship typeCode="REFR" inversionInd="false">
                     <observation classCode="OBS" moodCode="EVN" negationInd="false">
@@ -1960,7 +1814,7 @@
                       <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"
                         codeSystemName="LOINC"/>
                       <text>
-                        <reference value="#allergie-statut-01"/>
+                        <reference value="#allergie-01-statut"/>
                       </text>
                       <statusCode code="completed"/>
                       <!-- valeur du jdv-hl7-allergyintolerance-clinical-cisis (2.16.840.1.113883.4.642.3.1372) -->
@@ -1975,6 +1829,10 @@
                     <observation classCode="OBS" moodCode="EVN" negationInd="false">
                       <!-- Conformité FR-Criticite (FR CI-SIS) -->
                       <templateId root="1.2.250.1.213.1.1.3.172"/>
+                      <!-- Simple Observation (IHE PCC) -->
+                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+                      <!-- Conformité Simple Observation (CI-SIS) -->
+                      <templateId root="1.2.250.1.213.1.1.3.48"/>
                       <id root="B6B00F3F-40A0-419F-847F-FDA1E0908EC8"/>
                       <code code="82606-5" displayName="Criticité"
                         codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
@@ -1995,6 +1853,10 @@
                     <observation classCode="OBS" moodCode="EVN" negationInd="false">
                       <!-- Conformité FR-Certitude (FR CI-SIS) -->
                       <templateId root="1.2.250.1.213.1.1.3.171"/>
+                      <!-- Simple Observation (IHE PCC) -->
+                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+                      <!-- Conformité Simple Observation (CI-SIS) -->
+                      <templateId root="1.2.250.1.213.1.1.3.48"/>
                       <id root="BC6A2067-884F-4D55-8B27-E8C2BE276F29"/>
                       <code code="66455-7" displayName="Certitude"
                         codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
@@ -2005,8 +1867,8 @@
                       <effectiveTime nullFlavor="NA"/>
                       <!-- valeur du jdv-hl7-condition-ver-status-cisis (2.16.840.1.113883.4.642.3.166) -->
                       <value xsi:type="CE" code="confirmed" displayName="Confirmé"
-                        codeSystem="2.16.840.1.113883.4.642.1.1075"
-                        codeSystemName="HL7_ConditionVerificationStatus"/>
+                        codeSystem="2.16.840.1.113883.4.642.4.130"
+                        codeSystemName="HL7_AllergyIntoleranceCriticality"/>
                     </observation>
                   </entryRelationship>
 
@@ -2090,8 +1952,6 @@
                       <!-- [0..1] Entrée FR-Severite : Sévérité de la réaction -->
                       <entryRelationship typeCode="SUBJ" inversionInd="true">
                         <observation classCode="OBS" moodCode="EVN">
-                          <!-- Conformité Severity Observation (IPS) -->
-                          <templateId root="2.16.840.1.113883.10.22.4.25"/>
                           <!-- Conformité Severity observation (CCD) -->
                           <templateId root="2.16.840.1.113883.10.20.1.55"/>
                           <!-- Conformité Severity Entry (IHE PCC) -->
@@ -2130,6 +1990,193 @@
                     </act>
                   </entryRelationship>
 
+                </observation>
+              </entryRelationship>
+              
+              <!-- [1..*] Entrée FR-Allergie-ou-hypersensibilites (feuille de millepertuis) -->
+              <entryRelationship typeCode="SUBJ" inversionInd="false">
+                <observation classCode="OBS" moodCode="EVN" negationInd="false">
+                  <!-- Conformité Alert observation (CCD) -->
+                  <templateId root="2.16.840.1.113883.10.20.1.18"/>
+                  <!-- Conformité Problem observation (CCD) -->
+                  <templateId root="2.16.840.1.113883.10.20.1.28"/>
+                  <!-- Conformité Problem Entry (IHE PCC) -->
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+                  <!-- Conformité Allergies And Intolerances Entry (IHE PCC) -->
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.6"/>
+                  <!-- Conformité FR-Allergie-ou-hypersensibilite (CI-SIS) -->
+                  <templateId root="1.2.250.1.213.1.1.3.41"/>
+                  <id root="C64C6013-C8AF-4938-AD10-1B7D26DEE2A2"/>
+                  <!-- Type d'allergie / hypersensibilité -->
+                  <!-- valeur issue de jdv-type-evenement-indesirable-previsible-cisis (1.2.250.1.213.1.1.5.794). -->
+                  <code code="416098002" displayName="allergie médicamenteuse"
+                    codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
+                  <text>
+                    <reference value="#allergie-02-type"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <!-- Date de l'allergie / hypersensibilité -->
+                  <effectiveTime xsi:type="IVL_TS">
+                    <low value="20211204"/>
+                  </effectiveTime>
+                  <!-- Description clinique de l'allergie / hypersensibilité : non renseigné -->
+                  <value xsi:type="CD">
+                    <originalText>
+                      <reference value="noref"/>
+                    </originalText>
+                  </value>
+                  <!-- Agent responsable de l'allergie / hypersensibilité -->
+                  <participant typeCode="CSM">
+                    <participantRole classCode="MANU">
+                      <playingEntity classCode="MMAT">
+                        <code>
+                          <originalText><reference value="#allergie-02-agent"/></originalText>
+                        </code>
+                        <name>feuille de millepertuis</name>
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                  
+                  <!-- Entrée FR-Statut-du-probleme : Statut clinique de l'allergie -->
+                  <entryRelationship typeCode="REFR" inversionInd="false">
+                    <observation classCode="OBS" moodCode="EVN" negationInd="false">
+                      <!-- Conformité Problem status observation (CCD) -->
+                      <templateId root="2.16.840.1.113883.10.20.1.50"/>
+                      <!-- Conformité Status observation (CCD) -->
+                      <templateId root="2.16.840.1.113883.10.20.1.57"/>
+                      <!-- Conformité Problem Status Observation (IHE PCC) -->
+                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1.1"/>
+                      <!-- Conformité FR-Statut-du-probleme (FR CI-SIS) -->
+                      <templateId root="1.2.250.1.213.1.1.3.30"/>
+                      <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"
+                        codeSystemName="LOINC"/>
+                      <text>
+                        <reference value="#allergie-02-statut"/>
+                      </text>
+                      <statusCode code="completed"/>
+                      <!-- valeur du jdv-hl7-allergyintolerance-clinical-cisis (2.16.840.1.113883.4.642.3.1372) -->
+                      <value xsi:type="CE" code="active" displayName="Actif"
+                        codeSystem="2.16.840.1.113883.4.642.4.1373"
+                        codeSystemName="HL7_AllergyIntoleranceClinicalStatusCodes"/>
+                    </observation>
+                  </entryRelationship>
+                  
+                  <!-- Entrée FR-Criticite : Criticité de l'allergie -->
+                  <entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <observation classCode="OBS" moodCode="EVN" negationInd="false">
+                      <!-- Conformité FR-Criticite (FR CI-SIS) -->
+                      <templateId root="1.2.250.1.213.1.1.3.172"/>
+                      <!-- Simple Observation (IHE PCC) -->
+                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+                      <!-- Conformité Simple Observation (CI-SIS) -->
+                      <templateId root="1.2.250.1.213.1.1.3.48"/>
+                      <id root="B6B00F3F-40A0-419F-847F-FDA1E0908EC8"/>
+                      <code code="82606-5" displayName="Criticité"
+                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                      <text>
+                        <reference value="#allergie-02-criticite"/>
+                      </text>
+                      <statusCode code="completed"/>
+                      <effectiveTime nullFlavor="NA"/>
+                      <!-- valeur du jdv-hl7-allergy-intolerance-criticality-cisis (2.16.840.1.113883.4.642.3.129) -->
+                      <value xsi:type="CE" code="low" displayName="Bas"
+                        codeSystem="2.16.840.1.113883.4.642.4.130"
+                        codeSystemName="HL7_AllergyIntoleranceCriticality"/>
+                    </observation>
+                  </entryRelationship>
+                  
+                  <!-- Entrée FR-Certitude : Certitude de l'allergie -->
+                  <entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <observation classCode="OBS" moodCode="EVN" negationInd="false">
+                      <!-- Conformité FR-Certitude (FR CI-SIS) -->
+                      <templateId root="1.2.250.1.213.1.1.3.171"/>
+                      <!-- Simple Observation (IHE PCC) -->
+                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+                      <!-- Conformité Simple Observation (CI-SIS) -->
+                      <templateId root="1.2.250.1.213.1.1.3.48"/>
+                      <id root="BC6A2067-884F-4D55-8B27-E8C2BE276F29"/>
+                      <code code="66455-7" displayName="Certitude"
+                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                      <text>
+                        <reference value="#allergie-02-certitude"/>
+                      </text>
+                      <statusCode code="completed"/>
+                      <effectiveTime nullFlavor="NA"/>
+                      <!-- valeur du jdv-hl7-condition-ver-status-cisis (2.16.840.1.113883.4.642.3.166) -->
+                      <value xsi:type="CE" code="confirmed" displayName="Confirmé"
+                        codeSystem="2.16.840.1.113883.4.642.4.130"
+                        codeSystemName="HL7_AllergyIntoleranceCriticality"/>
+                    </observation>
+                  </entryRelationship>
+                  
+                  <!-- [0..*] Entrée FR-Probleme : Réaction 1 observée -->
+                  <entryRelationship typeCode="MFST">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <!-- Conformité Problem observation (CCD) -->
+                      <templateId root="2.16.840.1.113883.10.20.1.28"/>
+                      <!-- Conformité Problem Entry (IHE PCC) -->
+                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+                      <!-- Conformité Reaction (IHE PCC) -->
+                      <templateId root="2.16.840.1.113883.10.20.1.54"/>
+                      <!-- Conformité FR-Probleme (FR CI-SIS) -->
+                      <templateId root="1.2.250.1.213.1.1.3.37"/>
+                      <id root="C64C6013-C8AF-4938-AD10-1B7D26DEE2B1"/>
+                      <code code="418799008" displayName="symptôme rapporté par le patient ou le répondant"
+                        codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
+                      <text><reference value="#allergie-02-reaction-1"/></text>
+                      <statusCode code="completed"/>
+                      <effectiveTime xsi:type="IVL_TS">
+                        <low value="20211204"/>
+                      </effectiveTime>
+                      <!-- valeur issue de la CIM-11 / Chapitre 04 Maladies du système immunitaire / Bloc Affections allergiques ou d'hypersensibilité -->
+                      <value xsi:type="CD" code="4A82"
+                        displayName="Troubles allergiques ou d'hypersensibilité de la peau ou des muqueuses"
+                        codeSystem="2.16.840.1.113883.6.347" codeSystemName="CIM11MMS">
+                        <originalText>
+                          <reference value="#allergie-02-reaction-1"/>
+                        </originalText>
+                      </value>
+                      <!-- [0..1] Entrée FR-Severite : Sévérité de la réaction -->
+                      <entryRelationship typeCode="SUBJ" inversionInd="true">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <!-- Conformité Severity observation (CCD) -->
+                          <templateId root="2.16.840.1.113883.10.20.1.55"/>
+                          <!-- Conformité Severity Entry (IHE PCC) -->
+                          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1"/>
+                          <!-- Conformité FR-Severite (FR CI-SIS) -->
+                          <templateId root="1.2.250.1.213.1.1.3.29"/>
+                          <code code="SEV" displayName="Sévérité" codeSystem="2.16.840.1.113883.5.4"
+                            codeSystemName="HL7_ActCode"/>
+                          <text>
+                            <reference value="#allergie-02-reaction-1-severite"/>
+                          </text>
+                          <statusCode code="completed"/>
+                          <!-- valeur issue du jdv-severite-observation-cisis (1.2.250.1.213.1.1.5.675) -->
+                          <value xsi:type="CD" code="255604002" displayName="léger"
+                            codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
+                        </observation>
+                      </entryRelationship>
+                    </observation>
+                  </entryRelationship>
+                  
+                  <!-- Entrée FR-Commentaire-ER -->
+                  <entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <act classCode="ACT" moodCode="EVN">
+                      <!-- Conformité Comment (CCD) -->
+                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
+                      <!-- Conformité Comment Entry (IHE PCC) -->
+                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+                      <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
+                      <templateId root="1.2.250.1.213.1.1.3.32"/>
+                      <code code="48767-8" displayName="Commentaire"
+                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                      <text>
+                        <reference value="#allergie-02-commentaire"/>
+                      </text>
+                      <statusCode code="completed"/>
+                    </act>
+                  </entryRelationship>
+                  
                 </observation>
               </entryRelationship>
             </act>
@@ -2191,7 +2238,7 @@
               <!-- Conformité Problem Entry (IHE PCC) -->
               <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>              
               <!-- Conformité FR-Effet-indesirable (CI-SIS) -->
-              <templateId root="1.2.250.1.213.1.1.3.210"/>         
+              <templateId root="1.2.250.1.213.1.1.3.210"/>
               <id root="C64C6013-C8AF-4938-AD10-1B7D26DEE3B1"/>
               <!-- Type d'effet indésirable -->
               <!-- valeur issue de jdv-origine-effet-indesirable-cisis (1.2.250.1.213.1.1.5.785) -->
@@ -2210,7 +2257,7 @@
                 <originalText>
                   <reference value="#effet-indesirable-01-type"></reference>
                 </originalText>
-              </value>
+              </value>                
               <!-- Médicament, substance incriminée, posologie -->
               <entryRelationship typeCode="COMP">
                 <substanceAdministration classCode="SBADM" moodCode="EVN">
@@ -2338,8 +2385,8 @@
                   <text><reference value="#effet-indesirable-01-imputabilite"/></text>
                   <statusCode code="completed"/>
                   <!-- valeur du jdv-imputabilite-cisis (1.2.250.1.213.1.1.5.786) -->
-                  <value xsi:type="CD" code="17162000" displayName="certain(e)"
-                         codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT">
+                  <value xsi:type="CD" code="certain" displayName="certain"
+                    codeSystem="2.16.840.1.113883.4.642.4.1254" codeSystemName="HL7_AdverseEventCausalityAssessment">
                     <originalText><reference value="#effet-indesirable-01-imputabilite"/></originalText>
                   </value>
                 </observation>
@@ -2350,12 +2397,10 @@
                 <observation classCode="OBS" moodCode="EVN">
                   <!-- Conformité FR-Gravite-effet-indesirable (FR CI-SIS) -->
                   <templateId root="1.2.250.1.213.1.1.3.212"/>
-                  <id root="B6B00F3F-40A0-419F-847F-FDA1E0908DE5"/>
                   <code code="94030-4" displayName="Gravité de l'effet indésirable"
                     codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>                  
                   <text><reference value="#effet-indesirable-01-gravite"/></text>
                   <statusCode code="completed"/>
-                  <effectiveTime nullFlavor="NA"/>
                   <!-- valeur du jdv-gravite-cisis (1.2.250.1.213.1.1.5.787) -->
                   <value xsi:type="CD" code="255604002" displayName="gravité légère"
                          codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT">
@@ -2369,13 +2414,11 @@
                 <observation classCode="OBS" moodCode="EVN" negationInd="false">
                   <!-- Conformité FR-Evolution-effet-indesirable (FR CI-SIS) -->
                   <templateId root="1.2.250.1.213.1.1.3.213"/>
-                  <id root="BC6A2067-884F-4D55-8B27-E8C2BE275H76"/>
                   <code code="GEN-319" displayName="Evolution de l'effet indésirable"
                     codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TerminologieCISIS"/>
                   <text><reference value="#effet-indesirable-01-evolution"/></text>
                   <statusCode code="completed"/>
-                  <effectiveTime nullFlavor="NA"/>
-                  <!-- valeur du jdv-evolution-cisis (1.2.250.1.213.1.1.5.788) / code : (Demande de création SNOMED CT en cours)-->
+                  <!-- valeur du jdv-evolution-cisis (1.2.250.1.213.1.1.5.788) code : (Demande de création SNOMED CT en cours)-->
                   <value xsi:type="CD" code="1352007006" displayName="Guérison sans séquelle"
                     codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT">
                     <originalText><reference value="#effet-indesirable-01-evolution"/></originalText>
@@ -2404,7 +2447,7 @@
         </section>
       </component>
 
-      <!-- [1..1] Section FR-Traitements -->
+      <!-- [1..1] Section FR-Traitements : Traitements au long cours -->
       <component>
         <section>
           <!-- Conformité Medications Section (CCD) -->
@@ -2445,67 +2488,9 @@
                   <td><content ID="med-01-commentaire">(texte libre)</content></td>
                 </tr>                            
               </tbody>
-            </table>
-            
-            <paragraph><content styleCode="Emphasis">Traitements aigus :</content></paragraph>
-            <table border="0">
-              <thead>
-                <tr>
-                  <th>Date de début</th>
-                  <th>Date de fin</th>
-                  <th>Médicament</th>
-                  <th>Fréquence</th>
-                  <th>Dose prescrite</th>
-                  <th>Rythme</th>
-                  <th>Voie d'administration</th>
-                  <th>Motif</th>
-                  <th>Commentaire</th>
-                </tr>
-              </thead>
-              <tbody>                
-                <tr>
-                  <td>11/02/2022</td>
-                  <td>-</td>
-                  <td><content ID="med-02">COUMADINE 5mg, comprimé sécable </content></td>
-                  <td><content ID="med-02-doseMin-1">1 cp</content><content ID="med-02-doseMax-1"></content></td>
-                  <td><content ID="med-02-frequence">4 fois/j</content></td>
-                  <td>-</td>
-                  <td><content ID="med-02-voie">Voie orale</content></td>
-                  <td><content ID="med-02-motif">Accident Ischémique Cérébral Transitoire</content></td>
-                  <td><content ID="med-02-commentaire">(texte libre)</content></td>
-                </tr>
-                <tr>
-                  <td>01/12/2021</td>
-                  <td>06/12/2021</td>
-                  <td>
-                    <content ID="med-03">PARACETAMOL MYLAN 500 mg, comprimé</content>
-                  </td>
-                  <td>
-                    <content ID="med-03-doseMin-1">1 cp</content> à <content ID="med-03-doseMax-1">2 cp</content><br/><br/><br/>
-                    <content ID="med-03-doseMin-2">1 cp</content> à <content ID="med-03-doseMax-2">2 cp</content>
-                  </td>
-                  <td>
-                    <content ID="med-03-frequence-1">3 fois/j à partir du 01/12/2021 pendant 2 jours</content>
-                    <br/>
-                    <br/>
-                    <content ID="med-03-frequence-2">2 fois/j à partir du 03/12/2021 pendant 4 jours</content>
-                  </td>
-                  <td>
-                    <content ID="med-03-rateMin-1">1500 mg/j</content> à <content ID="med-03-rateMax-1">3000 mg/j</content>
-                    <br/>
-                    <br/>
-                    <content ID="med-03-rateMin-2">1000 mg/j</content> à <content ID="med-03-rateMax-2">2000 mg/j</content>
-                  </td>
-                  <td><content ID="med-03-voie">Voie orale</content></td>
-                  <td>-</td>
-                  <td><content ID="med-03-commentaire">(texte libre)</content></td>
-                </tr>
-              </tbody>
-            </table>            
+            </table>                    
           </text>
-          
-          <!-- Traitements au long cours -->
-          
+                    
           <!-- [1..*] Entrée FR-Traitement (Levothyrox pour Thyroïdite auto-immune) -->
           <entry typeCode="DRIV">
             <substanceAdministration classCode="SBADM" moodCode="EVN">
@@ -2631,10 +2616,6 @@
                       <reference value="#med-01-motif"/>
                     </originalText>
                   </code>
-                  <statusCode code="completed"/>
-                  <effectiveTime xsi:type="IVL_TS">
-                    <low value="20240111"/>
-                  </effectiveTime>
                 </act>
               </entryRelationship>
               <!-- Entrée FR-Commentaire-ER -->
@@ -2650,444 +2631,6 @@
                     codeSystemName="LOINC"/>
                   <text>
                     <reference value="#med-01-commentaire"/>
-                  </text>
-                  <statusCode code="completed"/>
-                </act>
-              </entryRelationship>
-            </substanceAdministration>
-          </entry>
-
-          <!-- Traitements aigus -->
-          
-          <!-- [1..*] Entrée FR-Traitement (Coumadine pour AIT) -->
-          <entry typeCode="DRIV">
-            <substanceAdministration classCode="SBADM" moodCode="EVN">
-              <!-- Conformité Medication Activity (CCD) -->
-              <templateId root="2.16.840.1.113883.10.20.1.24"/>
-              <!-- Conformité Medications Entry (IHE PCC) -->
-              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7"/>
-              <!-- Conformité FR-Traitement (FR CI-SIS) -->
-              <templateId root="1.2.250.1.213.1.1.3.42"/>
-              <!-- Conformité Mode d'administration (normal) -->
-              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
-              <!-- Conformité Traitement aigu -->
-              <templateId root="1.2.250.1.213.1.1.3.42.4"/>
-              <id root="8609F763-4F75-4FB5-A1A3-A6A269D15F4A"/>
-              <code code="DRUG" displayName="Médicament" codeSystem="2.16.840.1.113883.5.4"
-                codeSystemName="HL7_ActCode"/>
-              <text><reference value="#med-02"/></text>
-              <statusCode code="completed"/>
-              <!-- Durée du traitement -->
-              <effectiveTime xsi:type="IVL_TS">
-                <low value="20220211"/>
-                <high nullFlavor="UNK"/>
-              </effectiveTime>
-              <!-- Fréquence du traitement -->
-              <effectiveTime xsi:type="PIVL_TS" operator="A">
-                <period value="6" unit="h">
-                  <translation>
-                    <originalText>
-                      <reference value="#med-02-frequence"/>
-                    </originalText>
-                  </translation>
-                </period>
-              </effectiveTime>
-              <!-- Voie d'administration -->
-              <routeCode code="20053000" displayName="Voie orale"
-                codeSystem="0.4.0.127.0.16.1.1.2.1" codeSystemName="StandardTermsEDQM">
-                <originalText><reference value="#med-02-voie"/></originalText>
-              </routeCode>
-              <!-- Dose à administrer -->
-              <doseQuantity>
-                <low value="1" unit="{tablet}">
-                  <translation>
-                    <originalText>
-                      <reference value="#med-02-doseMin-1"/>
-                    </originalText>
-                  </translation>
-                </low>
-                <high value="1" unit="{tablet}">
-                  <translation>
-                    <originalText>
-                      <reference value="#med-02-doseMax-1"/>
-                    </originalText>
-                  </translation>
-                </high>
-              </doseQuantity>
-              <!-- Rythme d'administration -->
-              <rateQuantity nullFlavor="NAV"/>
-              <!-- [1..1] Entrée FR-Produit-de-sante -->
-              <consumable>
-                <manufacturedProduct classCode="MANU">
-                  <!-- Conformité Product (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.53"/>
-                  <!-- Conformité Product Entry (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
-                  <!-- Conformité FR-Produit-de-sante (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.43"/>
-                  <manufacturedMaterial>
-                    <!-- Code CIS du produit -->
-                    <code code="63245753" displayName="COUMADINE 5mg, comprimé sécable"
-                      codeSystem="1.2.250.1.213.2.3.1" codeSystemName="CIS">
-                      <originalText mediaType="text/xml">
-                        <reference value="#med-02"/>
-                      </originalText>
-                      <!-- Code CIP du produit -->
-                      <translation code="3400935693099"
-                        displayName="COUMADINE 5 mg, comprimé sécable -  TEOFARMA [Autorisation active, 02/05/2001] plaquette(s) thermoformée(s) PVC-aluminium de 30 comprimé(s)"
-                        codeSystem="1.2.250.1.213.2.3.2" codeSystemName="CIP">
-                        <originalText mediaType="text/xml">
-                          <reference value="#med-02"/>
-                        </originalText>
-                      </translation>
-                    </code>
-                    <name>COUMADINE 5mg</name>
-                    <!-- [0..1] Équivalent générique -->
-                    <pharm:asSpecializedKind classCode="GRIC">
-                      <pharm:generalizedMedicineClass classCode="MMAT">
-                        <pharm:code code="B01AA03" displayName="warfarine"
-                          codeSystem="2.16.840.1.113883.6.73" codeSystemName="ATC"/>
-                        <pharm:name>warfarine</pharm:name>
-                      </pharm:generalizedMedicineClass>
-                    </pharm:asSpecializedKind>
-                    <!-- [0..*] Substances actives -->
-                    <pharm:ingredient classCode="ACTI">
-                      <pharm:quantity>
-                        <numerator xsi:type="PQ" value="5" unit="mg"/>
-                        <denominator xsi:type="PQ" value="1"/>
-                      </pharm:quantity>
-                      <pharm:ingredient classCode="MMAT" determinerCode="KIND">
-                        <pharm:code code="100000092049" displayName="Warfarin sodium"
-                          codeSystem="2.16.840.1.113883.3.6905.2" codeSystemName="SMS"/>
-                        <pharm:name>Warfarin sodium</pharm:name>
-                      </pharm:ingredient>
-                    </pharm:ingredient>
-                  </manufacturedMaterial>
-                </manufacturedProduct>
-              </consumable>              
-              <!-- Entrée FR-Reference-interne : Motif du traitement -->
-              <entryRelationship typeCode="RSON">
-                <act classCode="ACT" moodCode="EVN">
-                  <!-- Conformité Internal References (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.4.1"/>
-                  <!-- Conformité FR-Reference-interne (FR CI-SISI) -->
-                  <templateId root="1.2.250.1.213.1.1.3.36"/>
-                  <id root="21872220-FBDF-4BCC-85B1-61D1BBB420A5"/>
-                  <code code="G45.9" displayName="Accident ischémique cérébral transitoire, sans précision"
-                    codeSystem="2.16.840.1.113883.6.3" codeSystemName="CIM10FRPMSI">
-                    <originalText mediaType="text/xml">
-                      <reference value="#med-02-motif"/>
-                    </originalText>
-                  </code>
-                  <statusCode code="completed"/>
-                  <effectiveTime xsi:type="IVL_TS">
-                    <low value="20220211"/>
-                  </effectiveTime>
-                </act>
-              </entryRelationship>
-              <!-- Entrée FR-Commentaire-ER -->
-              <entryRelationship typeCode="SUBJ" inversionInd="true">
-                <act classCode="ACT" moodCode="EVN">
-                  <!-- Conformité Comment (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                  <!-- Conformité Comment Entry (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                  <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.32"/>
-                  <code code="48767-8" displayName="Commentaire" codeSystem="2.16.840.1.113883.6.1"
-                    codeSystemName="LOINC"/>
-                  <text>
-                    <reference value="#med-02-commentaire"/>
-                  </text>
-                  <statusCode code="completed"/>
-                </act>
-              </entryRelationship>
-            </substanceAdministration>
-          </entry>
-
-          <!-- [1..*] Entrée FR-Traitement (Paracétamol) -->
-          <entry typeCode="DRIV">
-            <substanceAdministration classCode="SBADM" moodCode="INT">
-              <!-- Conformité Medication Activity (CCD) -->
-              <templateId root="2.16.840.1.113883.10.20.1.24"/>
-              <!-- Conformité Medications Entry (IHE PCC) -->
-              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7"/>
-              <!-- Conformité FR-Traitement (FR CI-SIS) -->
-              <templateId root="1.2.250.1.213.1.1.3.42"/>
-              <!-- [0..1] Conformité Posologie structurée : uniquement si posologie structurée -->
-              <templateId root="1.3.6.1.4.1.19376.1.9.1.3.6"/>
-              <!-- [0..1] Conformité Mode d'administration : Doses progressives (avec FR-Traitement-prescrit-subordonnee) -->
-              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.8"/>
-              <!-- Conformité Traitement aigu -->
-              <templateId root="1.2.250.1.213.1.1.3.42.4"/>
-              <id root="AADC9C14-F1CA-4177-B2C8-A5178D5B3CA0"/>
-              <code code="DRUG" codeSystem="2.16.840.1.113883.5.4" displayName="Médicament"
-                codeSystemName="HL7_ActCode"/>
-              <text><reference value="#med-03"/></text>
-              <statusCode code="completed"/>
-              <!-- [0..1] Durée du traitement -->
-              <effectiveTime xsi:type="IVL_TS">
-                <low value="20211201"/>
-                <high value="20211206"/>
-              </effectiveTime>
-
-              <!-- [0..1] Fréquence d'administration : uniquement si posologie structurée -->
-              <!-- non renseigné ici car doses progressives décrites dans des <substanceAdministration> subordonnés -->
-              <!-- <effectiveTime xsi:type="PIVL_TS" operator="A"> -->
-
-              <!-- [0..1] Voie d'administration : uniquement si posologie structurée -->
-              <!-- valeur issue de la terminologie EDQM (0.4.0.127.0.16.1.1.2.1) -->
-              <routeCode code="20053000" displayName="Voie orale"
-                codeSystem="0.4.0.127.0.16.1.1.2.1" codeSystemName="StandardTermsEDQM">
-                <originalText><reference value="#med-03-voie"/></originalText>
-              </routeCode>
-
-              <!-- [0..1] Région anatomique d'administration : uniquement si posologie structurée -->
-              <!-- valeur issue du jdv-human-substance-administration-site-cisis (1.2.250.1.213.1.1.5.686) -->
-              <!-- <approachSiteCode> </approachSiteCode> -->
-
-              <!-- [0..1] Dose à administrer : uniquement si posologie structurée -->
-              <!-- non renseigné ici car doses progressives décrites dans des <substanceAdministration> subordonnés -->
-              <!-- <doseQuantity>  </doseQuantity> -->
-
-              <!-- [0..1] Rythme d'administration : uniquement si posologie structurée -->
-              <!-- <rateQuantity>  </rateQuantity> -->
-
-              <!-- [0..*] Dose maximale d'administration : uniquement si posologie structurée -->
-              <maxDoseQuantity>
-                <numerator value="4"/>
-                <denominator value="1" unit="d"/>
-              </maxDoseQuantity>
-
-              <!-- [1..1] Entrée FR-Produit-de-sante -->
-              <consumable>
-                <manufacturedProduct classCode="MANU">
-                  <!-- Conformité Product (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.53"/>
-                  <!-- Conformité Product Entry (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
-                  <!-- Conformité FR-Produit-de-sante (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.43"/>
-                  <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
-                    <!-- Code CIS du médicament -->
-                    <code code="63107752" displayName="PARACETAMOL VIATRIS 500 mg, comprimé"
-                      codeSystem="1.2.250.1.213.2.3.1" codeSystemName="CIS">
-                      <originalText><reference value="#med-03"/></originalText>
-                      <!-- Code MV Médicabase du médicament -->
-                      <translation code="MV00002306" displayName="Paracétamol 500 mg comprimé"
-                        codeSystem="1.2.250.1.213.2.59" codeSystemName="MEDICABASE"/>
-                      <!-- Code CIP du médicament -->
-                      <translation code="3400933516390"
-                        displayName="PARACETAMOL VIATRIS 500 mg, comprimé - plaquette(s) thermoformée(s) PVC-aluminium de 16 comprimé(s)"
-                        codeSystem="1.2.250.1.213.2.3.2" codeSystemName="CIP"/>
-                    </code>
-                    <!-- Nom de la marque -->
-                    <name>PARACETAMOL VIA 500MG CPR BT16</name>
-                    <!-- Forme galénique : EDQM (0.4.0.127.0.16.1.1.2.1) Pharmaceutical Dose Forms -->
-                    <pharm:formCode code="10219000" displayName="Comprimé"
-                      codeSystem="0.4.0.127.0.16.1.1.2.1" codeSystemName="StandardTermsEDQM"/>
-                    <!-- [0..1] Équivalent générique -->
-                    <pharm:asSpecializedKind classCode="GRIC">
-                      <pharm:generalizedMedicineClass classCode="MMAT">
-                        <pharm:code code="N02BE01" displayName="paracetamol"
-                          codeSystem="2.16.840.1.113883.6.73" codeSystemName="ATC"/>
-                        <pharm:name>paracetamol</pharm:name>
-                      </pharm:generalizedMedicineClass>
-                    </pharm:asSpecializedKind>
-                    <!-- [0..*] Substances actives -->
-                    <pharm:ingredient classCode="ACTI">
-                      <pharm:quantity>
-                        <numerator xsi:type="PQ" value="500" unit="mg"/>
-                        <denominator xsi:type="PQ" value="1"/>
-                      </pharm:quantity>
-                      <pharm:ingredient classCode="MMAT" determinerCode="KIND">
-                        <pharm:code code="100000090270" displayName="Paracetamol"
-                          codeSystem="2.16.840.1.113883.3.6905.2" codeSystemName="SMS"/>
-                        <pharm:name>paracetamol</pharm:name>
-                      </pharm:ingredient>
-                    </pharm:ingredient>
-                  </manufacturedMaterial>
-                </manufacturedProduct>
-              </consumable>
-
-              <!-- [0..*] Entrée FR-Traitement-subordonnee (pour indiquer les changements de fréquence et/ou de dose) -->
-              <!-- si doses progressives (tapered dose), fractionnées (split dose) et conditionnelles (conditional dose)-->
-              <entryRelationship typeCode="COMP">
-                <sequenceNumber value="1"/>
-                <substanceAdministration classCode="SBADM" moodCode="INT">
-                  <!-- Conformité FR-Traitement-subordonne (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.42.1"/>
-                  <!-- Conformité Modalité : Doses progressives (IHE PCC)-->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.8"/>
-                  <id root="C93DE620-3722-11EC-8D3D-0242AC130003"/>
-                  <text><reference value="noref"/></text>
-                  <statusCode code="completed"/>
-                  <!-- Fréquence d'administration : toutes les 8h (3 fois/j) à partir du 01/12/2021 pendant 2 jours -->
-                  <effectiveTime xsi:type="SXPR_TS">
-                    <comp xsi:type="IVL_TS" operator="A">
-                      <low value="20211201"/>
-                      <width value="2" unit="d"/>
-                    </comp>
-                    <comp xsi:type="PIVL_TS" operator="A">
-                      <period value="8" unit="h">
-                        <translation>
-                          <originalText>
-                            <reference value="#med-03-frequence-1"/>
-                          </originalText>
-                        </translation>
-                      </period>
-                    </comp>
-                  </effectiveTime>
-                  <!-- Dose à administrer : 1 cp -->
-                  <doseQuantity>
-                    <low value="1" unit="{tablet}">
-                      <translation>
-                        <originalText>
-                          <reference value="#med-03-doseMin-1"/>
-                        </originalText>
-                      </translation>
-                    </low>
-                    <high value="1" unit="{tablet}">
-                      <translation>
-                        <originalText>
-                          <reference value="#med-03-doseMax-1"/>
-                        </originalText>
-                      </translation>
-                    </high>
-                  </doseQuantity>
-                  <!-- [0..1] Rythme d'administration : uniquement si posologie structurée -->
-                  <rateQuantity>
-                    <low value="1500" unit="mg/d">
-                      <translation>
-                        <originalText>
-                          <reference value="#med-03-rateMin-1"/>
-                        </originalText>
-                      </translation>
-                    </low>
-                    <high value="3000" unit="mg/d">
-                      <translation>
-                        <originalText>
-                          <reference value="#med-03-rateMax-1"/>
-                        </originalText>
-                      </translation>
-                    </high>
-                  </rateQuantity>
-
-                  <!-- Produit de santé à nullFlavor="NA" -->
-                  <consumable>
-                    <manufacturedProduct classCode="MANU">
-                      <!-- Conformité Product (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.53"/>
-                      <!-- Conformité Product Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
-                      <!-- Conformité FR-Produit-de-sante (FR CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.43"/>
-                      <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
-                        <!-- Code du médicament -->
-                        <code nullFlavor="NA"/>
-                        <!-- Nom de la marque -->
-                        <name nullFlavor="NA"/>
-                      </manufacturedMaterial>
-                    </manufacturedProduct>
-                  </consumable>
-                </substanceAdministration>
-              </entryRelationship>
-
-              <!-- [0..*] Entrée FR-Traitement-subordonnee (pour indiquer les changements de fréquence et/ou de dose) -->
-              <!-- si doses progressives (tapered dose), fractionnées (split dose) et conditionnelles (conditional dose)-->
-              <entryRelationship typeCode="COMP">
-                <sequenceNumber value="2"/>
-                <substanceAdministration classCode="SBADM" moodCode="INT">
-                  <!-- Conformité FR-Traitement-subordonne (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.42.1"/>
-                  <!-- Conformité Modalité : Doses progressives (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.8"/>
-                  <id root="3FDCAA46-3723-11EC-8D3D-0242AC130003"/>
-                  <text><reference value="noref"/></text>
-                  <statusCode code="completed"/>
-                  <!-- Fréquence d'administration : toutes les 12h (2 fois/j) à partir du 03/12/2021 pendant 4 jours -->
-                  <effectiveTime xsi:type="SXPR_TS">
-                    <comp xsi:type="IVL_TS" operator="A">
-                      <low value="20211203"/>
-                      <width value="4" unit="d"/>
-                    </comp>
-                    <comp xsi:type="PIVL_TS" operator="A">
-                      <period value="12" unit="h">
-                        <translation>
-                          <originalText>
-                            <reference value="#med-03-frequence-2"/>
-                          </originalText>
-                        </translation>
-                      </period>
-                    </comp>
-                  </effectiveTime>
-                  <!-- Dose à administrer : 1 comprimé -->
-                  <doseQuantity>
-                    <low value="1" unit="{tablet}">
-                      <translation>
-                        <originalText>
-                          <reference value="#med-03-doseMin-2"/>
-                        </originalText>
-                      </translation>
-                    </low>
-                    <high value="1" unit="{tablet}">
-                      <translation>
-                        <originalText>
-                          <reference value="#med-03-doseMax-2"/>
-                        </originalText>
-                      </translation>
-                    </high>
-                  </doseQuantity>
-                  <!-- [0..1] Rythme d'administration : uniquement si posologie structurée -->
-                  <rateQuantity>
-                    <low value="1000" unit="mg/d">
-                      <translation>
-                        <originalText>
-                          <reference value="#med-03-rateMin-2"/>
-                        </originalText>
-                      </translation>
-                    </low>
-                    <high value="2000" unit="mg/d">
-                      <translation>
-                        <originalText>
-                          <reference value="#med-03-rateMax-2"/>
-                        </originalText>
-                      </translation>
-                    </high>
-                  </rateQuantity>
-                  <!-- Produit de santé à nullFlavor="NA" -->
-                  <consumable>
-                    <manufacturedProduct classCode="MANU">
-                      <!-- Conformité Product (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.53"/>
-                      <!-- Conformité Product Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
-                      <!-- Conformité FR-Produit-de-sante (FR CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.43"/>
-                      <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
-                        <!-- Code du médicament -->
-                        <code nullFlavor="NA"/>
-                        <!-- Nom de la marque -->
-                        <name nullFlavor="NA"/>
-                      </manufacturedMaterial>
-                    </manufacturedProduct>
-                  </consumable>
-                </substanceAdministration>
-              </entryRelationship>
-              
-              <!-- Entrée FR-Commentaire-ER -->
-              <entryRelationship typeCode="SUBJ" inversionInd="true">
-                <act classCode="ACT" moodCode="EVN">
-                  <!-- Conformité Comment (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                  <!-- Conformité Comment Entry (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                  <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.32"/>
-                  <code code="48767-8" displayName="Commentaire" codeSystem="2.16.840.1.113883.6.1"
-                    codeSystemName="LOINC"/>
-                  <text>
-                    <reference value="#med-03-commentaire"/>
                   </text>
                   <statusCode code="completed"/>
                 </act>
@@ -3263,7 +2806,6 @@
       <!-- [0..1] Section FR-Statut-fonctionnel -->
       <component>
         <section>
-          <templateId root="2.16.840.1.113883.10.20.1.5"/>
           <!-- Functional Status Section (HL7 IPS) -->
           <templateId root="2.16.840.1.113883.10.22.3.8"/>          
           <!-- FR-Statut-fonctionnel (CI-SIS) -->
@@ -3273,10 +2815,10 @@
             codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
           <title>Statut fonctionnel</title>
           <text>
-            <paragraph>Etat psychique du patient</paragraph>
             <table border="0">
               <thead>
                 <tr>
+                  <th>Date</th>
                   <th>Type</th>
                   <th>Observation</th>
                   <th>Commentaire</th>
@@ -3284,131 +2826,29 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><content ID="statut-fonctionnel-01">Peut alerter</content></td>
-                  <td>oui</td>
+                  <td>14/01/2018</td>
+                  <td><content ID="statut-fonctionnel-01">Score de performance ECOG</content></td>
+                  <td><content ID="statut-fonctionnel-01-value">Capable d’une activité
+                    identique à celle précédant la maladie sans aucune restriction (LOINC : LA9622-7)</content></td>
                   <td><content ID="statut-fonctionnel-01-commentaire">(texte libre)</content></td>
                 </tr>
                 <tr>
-                  <td><content ID="statut-fonctionnel-02">Orienté</content></td>
-                  <td>oui</td>
+                  <td>14/01/2018</td>
+                  <td><content ID="statut-fonctionnel-02">Marcher</content></td>
+                  <td><content ID="statut-fonctionnel-02-value">Restriction modérée de la
+                    performance de marche sur de courtes distances (CIF : d4500.3)</content></td>
                   <td><content ID="statut-fonctionnel-02-commentaire">(texte libre)</content></td>
                 </tr>
                 <tr>
-                  <td><content ID="statut-fonctionnel-03">Désorienté</content></td>
-                  <td>non</td>
+                  <td>14/01/2018</td>
+                  <td><content ID="statut-fonctionnel-03">Autre statut fonctionnel : (texte libre)</content></td>
+                  <td><content ID="statut-fonctionnel-03-value">(texte libre)</content></td>
                   <td><content ID="statut-fonctionnel-03-commentaire">(texte libre)</content></td>
                 </tr>
-                <tr>
-                  <td><content ID="statut-fonctionnel-04">Agité</content></td>
-                  <td>non</td>
-                  <td><content ID="statut-fonctionnel-04-commentaire">(texte libre)</content></td>
-                </tr>
-                <tr>
-                  <td><content ID="statut-fonctionnel-05">Opposant</content></td>
-                  <td>non</td>
-                  <td><content ID="statut-fonctionnel-05-commentaire">(texte libre)</content></td>
-                </tr>
-                <tr>
-                  <td><content ID="statut-fonctionnel-06">Risque suicidaire</content></td>
-                  <td>non</td>
-                  <td><content ID="statut-fonctionnel-06-commentaire">(texte libre)</content></td>
-                </tr>
               </tbody>
             </table>
-            
-            <br/>
-            
-            <paragraph>Handicaps / Déficits</paragraph>
-            <table border="0">
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Observation</th>
-                  <th>Commentaire</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><content ID="statut-fonctionnel-07">visuel</content></td>
-                  <td>oui</td>
-                  <td><content ID="statut-fonctionnel-07-commentaire">(texte libre)</content></td>
-                </tr>
-                <tr>
-                  <td><content ID="statut-fonctionnel-08">auditif</content></td>
-                  <td>oui</td>
-                  <td><content ID="statut-fonctionnel-08-commentaire">(texte libre)</content></td>
-                </tr>
-                <tr>
-                  <td><content ID="statut-fonctionnel-09">langage</content></td>
-                  <td>oui</td>
-                  <td><content ID="statut-fonctionnel-09-commentaire">(texte libre)</content></td>
-                </tr>                
-              </tbody>
-            </table>
-            
-            <br/>
-            
-            <paragraph>Déplacements / transferts</paragraph>
-            <table border="0">
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Observation</th>
-                  <th>Commentaire</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><content ID="statut-fonctionnel-10">chute</content></td>
-                  <td>oui</td>
-                  <td><content ID="statut-fonctionnel-10-commentaire">(texte libre)</content></td>
-                </tr>
-                <tr>
-                  <td><content ID="statut-fonctionnel-11">déambulation</content></td>
-                  <td>oui</td>
-                  <td><content ID="statut-fonctionnel-11-commentaire">(texte libre)</content></td>
-                </tr>
-                <tr>
-                  <td><content ID="statut-fonctionnel-12">fugue</content></td>
-                  <td>non</td>
-                  <td><content ID="statut-fonctionnel-12-commentaire">(texte libre)</content></td>
-                </tr>    
-                <tr>
-                  <td><content ID="statut-fonctionnel-13">contention</content></td>
-                  <td>non</td>
-                  <td><content ID="statut-fonctionnel-13-commentaire">(texte libre)</content></td>
-                </tr>                
-              </tbody>
-            </table>
-              
-            <br/>
-              
-            <paragraph>Autres risques</paragraph>
-              <table border="0">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Observation</th>
-                    <th>Commentaire</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><content ID="statut-fonctionnel-14">risques d'escarre</content></td>
-                    <td>oui</td>
-                    <td><content ID="statut-fonctionnel-14-commentaire">(texte libre)</content></td>
-                  </tr>
-                  <tr>
-                    <td><content ID="statut-fonctionnel-15">risques de fausse route</content></td>
-                    <td>oui</td>
-                    <td><content ID="statut-fonctionnel-15-commentaire">(texte libre)</content></td>
-                  </tr>           
-                </tbody>
-              </table>
-         
           </text>
-          
-          <!-- [0..*] Entrée FR-Groupe-de-questionnaires-d-evaluation : Etat psychique du patient -->
+          <!-- [0..*] Entrée FR-Groupe-de-questionnaires-d-evaluation -->
           <entry typeCode="COMP" contextConductionInd="true">
             <organizer classCode="CLUSTER" moodCode="EVN">
               <!-- Result organizer (CCD) -->
@@ -3418,13 +2858,12 @@
               <!-- FR-Groupe-de-questionnaires-d-evaluation (FR CI-SIS) -->
               <templateId root="1.2.250.1.213.1.1.3.95"/>
               <id root="12DA3A06-18E7-40B7-9397-1FA5B1555683"/>
-              <code code="54511-1" displayName="Comportement" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <code nullFlavor="NA"/>
               <statusCode code="completed"/>
               <effectiveTime>
-                <low value="20240514"/>
+                <low value="20180114"/>
               </effectiveTime>
-              <!-- Créer une entrée FR-Evaluation par code du jdv-etat-psychique-cisis (1.2.250.1.213.1.1.5.790) -->
-              <!-- [1..*] Entrée FR-Evaluation (Etat psychique du patient : peut alerter) -->
+              <!-- [1..*] Entrée FR-Evaluation (LOINC : Score de performance ECOG) -->
               <component typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN" negationInd="false">
                   <!-- Result Observation (CCD) -->
@@ -3436,14 +2875,22 @@
                   <!-- FR-Evaluation (FR CI-SIS) -->
                   <templateId root="1.2.250.1.213.1.1.3.25"/>
                   <id root="2022BE76-7CC9-11EB-9439-0242AC130006"/>
-                  <code code="288575003" displayName="capable de communiquer"
-                    codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
+                  <code code="89247-1" displayName="Score de performance ECOG"
+                    codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
                   <text><reference value="#statut-fonctionnel-01"/></text>
                   <statusCode code="completed"/>
                   <effectiveTime>
-                    <low value="20240514"/>
+                    <low value="20180114"/>
                   </effectiveTime>
-                  <value xsi:type="BL" value="true"/>                    
+                  <!-- valeur issue du jdv-score-performance-ecog-cisis (1.2.250.1.213.1.1.5.784) -->
+                  <value xsi:type="CD" code="LA9622-7"
+                    displayName="Capable d’une activité identique 
+                    à celle précédant la maladie sans aucune restriction"
+                    codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+                    <originalText>
+                      <reference value="#statut-fonctionnel-01-value"/>
+                    </originalText>
+                  </value>                      
                   <!-- Entrée FR-Commentaire-ER -->
                   <entryRelationship typeCode="SUBJ" inversionInd="true">
                     <act classCode="ACT" moodCode="EVN">
@@ -3463,7 +2910,7 @@
                   </entryRelationship>
                 </observation>
               </component>
-              <!-- [1..*] Entrée FR-Evaluation (Etat psychique du patient : orienté) -->
+              <!-- [1..*] Entrée FR-Evaluation (ICF : Marcher) -->
               <component typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN" negationInd="false">
                   <!-- Result Observation (CCD) -->
@@ -3475,14 +2922,20 @@
                   <!-- FR-Evaluation (FR CI-SIS) -->
                   <templateId root="1.2.250.1.213.1.1.3.25"/>
                   <id root="D21D12B8-17EB-46C9-AA88-9CC0FEFEB210"/>
-                  <code code="247663003" displayName="bien orienté"
-                    codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
+                  <code code="d450" displayName="Marcher" codeSystem="2.16.840.1.113883.6.254"
+                    codeSystemName="CIF"/>
                   <text><reference value="#statut-fonctionnel-02"/></text>
                   <statusCode code="completed"/>
                   <effectiveTime>
-                    <low value="20240514"/>
+                    <low value="20180114"/>
                   </effectiveTime>
-                  <value xsi:type="BL" value="true"/>   
+                  <value xsi:type="CD" code="d4500.3"
+                    displayName="Restriction modérée de la performance de marche sur de courtes distances"
+                    codeSystem="2.16.840.1.113883.6.254" codeSystemName="CIF">
+                    <originalText>
+                      <reference value="#statut-fonctionnel-02-value"/>
+                    </originalText>
+                  </value>
                   <!-- Entrée FR-Commentaire-ER -->
                   <entryRelationship typeCode="SUBJ" inversionInd="true">
                     <act classCode="ACT" moodCode="EVN">
@@ -3502,7 +2955,7 @@
                   </entryRelationship>
                 </observation>
               </component>
-              <!-- [1..*] Entrée FR-Evaluation (Etat psychique du patient : désorienté) -->
+              <!-- [1..*] Entrée FR-Evaluation (texte libre) -->
               <component typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN" negationInd="false">
                   <!-- Result Observation (CCD) -->
@@ -3514,14 +2967,19 @@
                   <!-- FR-Evaluation (FR CI-SIS) -->
                   <templateId root="1.2.250.1.213.1.1.3.25"/>
                   <id root="FB97F8B7-7D3D-474A-B6A6-7D55D4DA3AFD"/>
-                  <code xsi:type="CD" code="62476001" displayName="désorienté(e)"
-                    codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>                    
+                  <!-- Autre type de statut fonctionnel -->
+                  <code xsi:type="CD" code="GEN-092.04.23" displayName="Autre statut fonctionnel"
+                    codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TerminologieCISIS"/>
                   <text><reference value="#statut-fonctionnel-03"/></text>
                   <statusCode code="completed"/>
                   <effectiveTime>
-                    <low value="20240514"/>
+                    <low value="20180114"/>
                   </effectiveTime>
-                  <value xsi:type="BL" value="false"/>
+                  <value xsi:type="CD">
+                    <originalText>
+                      <reference value="#statut-fonctionnel-03-value"/>
+                    </originalText>
+                  </value>
                   <!-- Entrée FR-Commentaire-ER -->
                   <entryRelationship typeCode="SUBJ" inversionInd="true">
                     <act classCode="ACT" moodCode="EVN">
@@ -3541,534 +2999,8 @@
                   </entryRelationship>
                 </observation>
               </component>
-              <!-- [1..*] Entrée FR-Evaluation (Etat psychique du patient : agité) -->
-              <component typeCode="COMP">
-                <observation classCode="OBS" moodCode="EVN" negationInd="false">
-                  <!-- Result Observation (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
-                  <!-- Survey Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
-                  <!-- Simple Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-                  <!-- FR-Evaluation (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.25"/>
-                  <id root="FB97F8B7-7D3D-474A-B6A6-7D55D4DA3AFE"/>
-                  <code xsi:type="CD" code="24199005" displayName="sensation d'agitation" codeSystem="2.16.840.1.113883.6.96"
-                    codeSystemName="SNOMED_CT"/>                    
-                  <text><reference value="#statut-fonctionnel-04"/></text>
-                  <statusCode code="completed"/>
-                  <effectiveTime>
-                    <low value="20240514"/>
-                  </effectiveTime>
-                  <value xsi:type="BL" value="false"/>
-                  <!-- Entrée FR-Commentaire-ER -->
-                  <entryRelationship typeCode="SUBJ" inversionInd="true">
-                    <act classCode="ACT" moodCode="EVN">
-                      <!-- Conformité Comment (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                      <!-- Conformité Comment Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                      <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.32"/>
-                      <code code="48767-8" displayName="Commentaire"
-                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                      <text>
-                        <reference value="#statut-fonctionnel-04-commentaire"/>
-                      </text>
-                      <statusCode code="completed"/>
-                    </act>
-                  </entryRelationship>
-                </observation>
-              </component>
-              <!-- [1..*] Entrée FR-Evaluation (Etat psychique du patient : opposant) -->
-              <component typeCode="COMP">
-                <observation classCode="OBS" moodCode="EVN" negationInd="false">
-                  <!-- Result Observation (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
-                  <!-- Survey Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
-                  <!-- Simple Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-                  <!-- FR-Evaluation (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.25"/>
-                  <id root="FB97F8B7-7D3D-474A-B6A6-7D55D4DA3AFF"/>
-                  <code xsi:type="CD" code="248043008" displayName="comportement non-conciliant"
-                    codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
-                  <text><reference value="#statut-fonctionnel-05"/></text>
-                  <statusCode code="completed"/>
-                  <effectiveTime>
-                    <low value="20240514"/>
-                  </effectiveTime>
-                  <value xsi:type="BL" value="false"/>
-                  <!-- Entrée FR-Commentaire-ER -->
-                  <entryRelationship typeCode="SUBJ" inversionInd="true">
-                    <act classCode="ACT" moodCode="EVN">
-                      <!-- Conformité Comment (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                      <!-- Conformité Comment Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                      <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.32"/>
-                      <code code="48767-8" displayName="Commentaire"
-                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                      <text>
-                        <reference value="#statut-fonctionnel-05-commentaire"/>
-                      </text>
-                      <statusCode code="completed"/>
-                    </act>
-                  </entryRelationship>
-                </observation>
-              </component>
-              <!-- [1..*] Entrée FR-Evaluation (Etat psychique du patient : risque suicidaire) -->
-              <component typeCode="COMP">
-                <observation classCode="OBS" moodCode="EVN" negationInd="false">
-                  <!-- Result Observation (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
-                  <!-- Survey Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
-                  <!-- Simple Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-                  <!-- FR-Evaluation (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.25"/>
-                  <id root="582BB12C-7B63-11EB-9439-0242AC130012"/>
-                  <code xsi:type="CD" code="425104003" displayName="comportement suicidaire"
-                    codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
-                  <text><reference value="#statut-fonctionnel-06"/></text>
-                  <statusCode code="completed"/>
-                  <effectiveTime>
-                    <low value="20240514"/>
-                  </effectiveTime>
-                  <value xsi:type="BL" value="false"/>
-                  <!-- Entrée FR-Commentaire-ER -->
-                  <entryRelationship typeCode="SUBJ" inversionInd="true">
-                    <act classCode="ACT" moodCode="EVN">
-                      <!-- Conformité Comment (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                      <!-- Conformité Comment Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                      <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.32"/>
-                      <code code="48767-8" displayName="Commentaire"
-                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                      <text>
-                        <reference value="#statut-fonctionnel-06-commentaire"/>
-                      </text>
-                      <statusCode code="completed"/>
-                    </act>
-                  </entryRelationship>
-                </observation>
-              </component>
             </organizer>
           </entry>          
-          
-          <!-- [0..*] Entrée FR-Groupe-de-questionnaires-d-evaluation : Handicaps / Déficits -->
-          <entry typeCode="COMP" contextConductionInd="true">
-            <organizer classCode="CLUSTER" moodCode="EVN">
-              <!-- Result organizer (CCD) -->
-              <templateId root="2.16.840.1.113883.10.20.1.32"/>
-              <!-- Survey Panel (IHE PCC) -->
-              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.7"/>
-              <!-- FR-Groupe-de-questionnaires-d-evaluation (FR CI-SIS) -->
-              <templateId root="1.2.250.1.213.1.1.3.95"/>
-              <id root="12DA3A06-18E7-40B7-9397-1FA5B1555684"/>
-              <code code="52621-0" displayName="Déficience auditive, visuelle ou de communication" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-              <statusCode code="completed"/>
-              <effectiveTime>
-                <low value="20240514"/>
-              </effectiveTime>
-              <!-- Créer une entrée FR-Evaluation par code du jdv-handicap-deficit-dlu-ehpad-cisis (1.2.250.1.213.1.1.5.791) -->
-              <!-- [1..*] Entrée FR-Evaluation (Handicaps / Déficits : visuel) -->
-              <component typeCode="COMP">
-                <observation classCode="OBS" moodCode="EVN" negationInd="false">
-                  <!-- Result Observation (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
-                  <!-- Survey Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
-                  <!-- Simple Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-                  <!-- FR-Evaluation (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.25"/>
-                  <id root="582BB12C-7B63-11EB-9439-0242AC130007"/>
-                  <code xsi:type="CD" code="397540003" displayName="malvoyance"
-                    codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
-                  <text><reference value="#statut-fonctionnel-07"/></text>
-                  <statusCode code="completed"/>
-                  <effectiveTime>
-                    <low value="20240514"/>
-                  </effectiveTime>
-                  <value xsi:type="BL" value="true"/>
-                  <!-- Entrée FR-Commentaire-ER -->
-                  <entryRelationship typeCode="SUBJ" inversionInd="true">
-                    <act classCode="ACT" moodCode="EVN">
-                      <!-- Conformité Comment (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                      <!-- Conformité Comment Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                      <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.32"/>
-                      <code code="48767-8" displayName="Commentaire"
-                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                      <text>
-                        <reference value="#statut-fonctionnel-07-commentaire"/>
-                      </text>
-                      <statusCode code="completed"/>
-                    </act>
-                  </entryRelationship>
-                </observation>
-              </component>
-              <!-- [1..*] Entrée FR-Evaluation (Handicaps / Déficits : auditif) -->
-              <component typeCode="COMP">
-                <observation classCode="OBS" moodCode="EVN" negationInd="false">
-                  <!-- Result Observation (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
-                  <!-- Survey Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
-                  <!-- Simple Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-                  <!-- FR-Evaluation (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.25"/>
-                  <id root="582BB12C-7B63-11EB-9439-0242AC130006"/>
-                  <code xsi:type="CD" code="15188001" displayName="perte auditive"
-                    codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
-                  <text><reference value="#statut-fonctionnel-08"/></text>
-                  <statusCode code="completed"/>
-                  <effectiveTime>
-                    <low value="20240514"/>
-                  </effectiveTime>
-                  <value xsi:type="BL" value="true"/>
-                  <!-- Entrée FR-Commentaire-ER -->
-                  <entryRelationship typeCode="SUBJ" inversionInd="true">
-                    <act classCode="ACT" moodCode="EVN">
-                      <!-- Conformité Comment (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                      <!-- Conformité Comment Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                      <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.32"/>
-                      <code code="48767-8" displayName="Commentaire"
-                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                      <text>
-                        <reference value="#statut-fonctionnel-08-commentaire"/>
-                      </text>
-                      <statusCode code="completed"/>
-                    </act>
-                  </entryRelationship>
-                </observation>
-              </component>
-              <!-- [1..*] Entrée FR-Evaluation (Handicaps / Déficits : langage) -->
-              <component typeCode="COMP">
-                <observation classCode="OBS" moodCode="EVN" negationInd="false">
-                  <!-- Result Observation (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
-                  <!-- Survey Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
-                  <!-- Simple Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-                  <!-- FR-Evaluation (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.25"/>
-                  <id root="FB97F8B7-7D3D-474A-B6A6-7D55D4DA3AFD"/>
-                  <code xsi:type="CD" code="62305002" displayName="trouble du langage"
-                    codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
-                  <text><reference value="#statut-fonctionnel-09"/></text>
-                  <statusCode code="completed"/>
-                  <effectiveTime>
-                    <low value="20240514"/>
-                  </effectiveTime>
-                  <value xsi:type="BL" value="true"/>
-                  <!-- Entrée FR-Commentaire-ER -->
-                  <entryRelationship typeCode="SUBJ" inversionInd="true">
-                    <act classCode="ACT" moodCode="EVN">
-                      <!-- Conformité Comment (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                      <!-- Conformité Comment Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                      <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.32"/>
-                      <code code="48767-8" displayName="Commentaire"
-                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                      <text>
-                        <reference value="#statut-fonctionnel-09-commentaire"/>
-                      </text>
-                      <statusCode code="completed"/>
-                    </act>
-                  </entryRelationship>
-                </observation>
-              </component>
-            </organizer>
-          </entry>          
-        
-          <!-- [0..*] Entrée FR-Groupe-de-questionnaires-d-evaluation : Déplacements / transferts -->
-          <entry typeCode="COMP" contextConductionInd="true">
-            <organizer classCode="CLUSTER" moodCode="EVN">
-              <!-- Result organizer (CCD) -->
-              <templateId root="2.16.840.1.113883.10.20.1.32"/>
-              <!-- Survey Panel (IHE PCC) -->
-              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.7"/>
-              <!-- FR-Groupe-de-questionnaires-d-evaluation (FR CI-SIS) -->
-              <templateId root="1.2.250.1.213.1.1.3.95"/>
-              <id root="12DA3A06-18E7-40B7-9397-1FA5B1555685"/>
-              <code code="32452-5" displayName="Observations sur la fonction motrice" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-              <statusCode code="completed"/>
-              <effectiveTime>
-                <low value="20240514"/>
-              </effectiveTime>
-              <!-- Créer une entrée FR-Evaluation par code du jdv-deplacement-cisis (1.2.250.1.213.1.1.5.792) -->
-              <!-- [1..*] Entrée FR-Evaluation (Déplacements / transferts : chute) -->
-              <component typeCode="COMP">
-                <observation classCode="OBS" moodCode="EVN" negationInd="false">
-                  <!-- Result Observation (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
-                  <!-- Survey Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
-                  <!-- Simple Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-                  <!-- FR-Evaluation (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.25"/>
-                  <id root="582BB12C-7B63-11EB-9439-0242AC130008"/>
-                  <code xsi:type="CD" code="161898004" displayName="chutes" codeSystem="2.16.840.1.113883.6.96"
-                    codeSystemName="SNOMED_CT"/>
-                  <text><reference value="#statut-fonctionnel-10"/></text>
-                  <statusCode code="completed"/>
-                  <effectiveTime>
-                    <low value="20240514"/>
-                  </effectiveTime>
-                  <value xsi:type="BL" value="true"/>
-                  <!-- Entrée FR-Commentaire-ER -->
-                  <entryRelationship typeCode="SUBJ" inversionInd="true">
-                    <act classCode="ACT" moodCode="EVN">
-                      <!-- Conformité Comment (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                      <!-- Conformité Comment Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                      <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.32"/>
-                      <code code="48767-8" displayName="Commentaire"
-                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                      <text>
-                        <reference value="#statut-fonctionnel-10-commentaire"/>
-                      </text>
-                      <statusCode code="completed"/>
-                    </act>
-                  </entryRelationship>
-                </observation>
-              </component>
-              <!-- [1..*] Entrée FR-Evaluation (Déplacements / transferts : déambulation) -->
-              <component typeCode="COMP">
-                <observation classCode="OBS" moodCode="EVN" negationInd="false">
-                  <!-- Result Observation (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
-                  <!-- Survey Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
-                  <!-- Simple Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-                  <!-- FR-Evaluation (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.25"/>
-                  <id root="582BB12C-7B63-11EB-9439-0242AC130009"/>
-                  <code xsi:type="CD" code="50239007" displayName="errance"
-                    codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
-                  <text><reference value="#statut-fonctionnel-11"/></text>
-                  <statusCode code="completed"/>
-                  <effectiveTime>
-                    <low value="20240514"/>
-                  </effectiveTime>
-                  <value xsi:type="BL" value="true"/>
-                  <!-- Entrée FR-Commentaire-ER -->
-                  <entryRelationship typeCode="SUBJ" inversionInd="true">
-                    <act classCode="ACT" moodCode="EVN">
-                      <!-- Conformité Comment (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                      <!-- Conformité Comment Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                      <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.32"/>
-                      <code code="48767-8" displayName="Commentaire"
-                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                      <text>
-                        <reference value="#statut-fonctionnel-11-commentaire"/>
-                      </text>
-                      <statusCode code="completed"/>
-                    </act>
-                  </entryRelationship>
-                </observation>                
-              </component>
-              <!-- [1..*] Entrée FR-Evaluation (Déplacements / transferts : fugue) -->
-              <component typeCode="COMP">
-                <observation classCode="OBS" moodCode="EVN" negationInd="false">
-                  <!-- Result Observation (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
-                  <!-- Survey Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
-                  <!-- Simple Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-                  <!-- FR-Evaluation (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.25"/>
-                  <id root="582BB12C-7B63-11EB-9439-0242AC130003"/>
-                  <code xsi:type="CD" code="248046000" displayName="fugue" codeSystem="2.16.840.1.113883.6.96"
-                    codeSystemName="SNOMED_CT"/>
-                  <text><reference value="#statut-fonctionnel-12"/></text>
-                  <statusCode code="completed"/>
-                  <effectiveTime>
-                    <low value="20240514"/>
-                  </effectiveTime>
-                  <value xsi:type="BL" value="false"/>
-                  <!-- Entrée FR-Commentaire-ER -->
-                  <entryRelationship typeCode="SUBJ" inversionInd="true">
-                    <act classCode="ACT" moodCode="EVN">
-                      <!-- Conformité Comment (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                      <!-- Conformité Comment Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                      <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.32"/>
-                      <code code="48767-8" displayName="Commentaire"
-                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                      <text>
-                        <reference value="#statut-fonctionnel-12-commentaire"/>
-                      </text>
-                      <statusCode code="completed"/>
-                    </act>
-                  </entryRelationship>
-                </observation>
-              </component>
-              <!-- [1..*] Entrée FR-Evaluation (Déplacements / transferts : contention) -->
-              <component typeCode="COMP">
-                <observation classCode="OBS" moodCode="EVN" negationInd="false">
-                  <!-- Result Observation (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
-                  <!-- Survey Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
-                  <!-- Simple Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-                  <!-- FR-Evaluation (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.25"/>
-                  <id root="582BB12C-7B63-11EB-9439-0242AC130003"/>
-                  <code xsi:type="CD" code="386423001" displayName="contention physique"
-                    codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
-                  <text><reference value="#statut-fonctionnel-13"/></text>
-                  <statusCode code="completed"/>
-                  <effectiveTime>
-                    <low value="20240514"/>
-                  </effectiveTime>
-                  <value xsi:type="BL" value="false"/>
-                  <!-- Entrée FR-Commentaire-ER -->
-                  <entryRelationship typeCode="SUBJ" inversionInd="true">
-                    <act classCode="ACT" moodCode="EVN">
-                      <!-- Conformité Comment (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                      <!-- Conformité Comment Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                      <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.32"/>
-                      <code code="48767-8" displayName="Commentaire"
-                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                      <text>
-                        <reference value="#statut-fonctionnel-13-commentaire"/>
-                      </text>
-                      <statusCode code="completed"/>
-                    </act>
-                  </entryRelationship>
-                </observation>
-              </component>
-            </organizer>
-          </entry>         
-        
-          <!-- [0..*] Entrée FR-Groupe-de-questionnaires-d-evaluation : Autres risques -->
-          <entry typeCode="COMP" contextConductionInd="true">
-            <organizer classCode="CLUSTER" moodCode="EVN">
-              <!-- Result organizer (CCD) -->
-              <templateId root="2.16.840.1.113883.10.20.1.32"/>
-              <!-- Survey Panel (IHE PCC) -->
-              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.7"/>
-              <!-- FR-Groupe-de-questionnaires-d-evaluation (FR CI-SIS) -->
-              <templateId root="1.2.250.1.213.1.1.3.95"/>
-              <id root="12DA3A06-18E7-40B7-9397-1FA5B1555686"/>
-              <code code="GEN-092.04.24" displayName="Autre type d'évaluation" codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TerminologieCISIS"/>
-              <statusCode code="completed"/>
-              <effectiveTime>
-                <low value="20240514"/>
-              </effectiveTime>
-              <!-- Créer une entrée FR-Evaluation par code du jdv-autre-risque-cisis (1.2.250.1.213.1.1.5.793) -->
-              <!-- [1..*] Entrée FR-Evaluation (Autres risques : risques d'escarre) -->
-              <component typeCode="COMP">
-                <observation classCode="OBS" moodCode="EVN" negationInd="false">
-                  <!-- Result Observation (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
-                  <!-- Survey Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
-                  <!-- Simple Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-                  <!-- FR-Evaluation (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.25"/>
-                  <id root="582BB12C-7B63-11EB-9439-0242AC130003"/>
-                  <code xsi:type="CD" code="285304000" displayName="à risque d'escarre"
-                    codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
-                  <text><reference value="#statut-fonctionnel-14"/></text>
-                  <statusCode code="completed"/>
-                  <effectiveTime>
-                    <low value="20240514"/>
-                  </effectiveTime>
-                  <value xsi:type="BL" value="true"/>
-                  <!-- Entrée FR-Commentaire-ER -->
-                  <entryRelationship typeCode="SUBJ" inversionInd="true">
-                    <act classCode="ACT" moodCode="EVN">
-                      <!-- Conformité Comment (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                      <!-- Conformité Comment Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                      <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.32"/>
-                      <code code="48767-8" displayName="Commentaire"
-                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                      <text>
-                        <reference value="#statut-fonctionnel-14-commentaire"/>
-                      </text>
-                      <statusCode code="completed"/>
-                    </act>
-                  </entryRelationship>
-                </observation>
-              </component>
-              <!-- [1..*] Entrée FR-Evaluation (Autres risques : risques de fausse route) -->
-              <component typeCode="COMP">
-                <observation classCode="OBS" moodCode="EVN" negationInd="false">
-                  <!-- Result Observation (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
-                  <!-- Survey Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.12.3.6"/>
-                  <!-- Simple Observation (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
-                  <!-- FR-Evaluation (FR CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.25"/>
-                  <id root="582BB12C-7B63-11EB-9439-0242AC130011"/>
-                  <code xsi:type="CD" code="249492002" displayName="fausse route alimentaire"
-                    codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
-                  <text><reference value="#statut-fonctionnel-15"/></text>
-                  <statusCode code="completed"/>
-                  <effectiveTime>
-                    <low value="20240514"/>
-                  </effectiveTime>
-                  <value xsi:type="BL" value="true"/>
-                  <!-- Entrée FR-Commentaire-ER -->
-                  <entryRelationship typeCode="SUBJ" inversionInd="true">
-                    <act classCode="ACT" moodCode="EVN">
-                      <!-- Conformité Comment (CCD) -->
-                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                      <!-- Conformité Comment Entry (IHE PCC) -->
-                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                      <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                      <templateId root="1.2.250.1.213.1.1.3.32"/>
-                      <code code="48767-8" displayName="Commentaire"
-                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                      <text>
-                        <reference value="#statut-fonctionnel-15-commentaire"/>
-                      </text>
-                      <statusCode code="completed"/>
-                    </act>
-                  </entryRelationship>
-                </observation>                
-              </component>
-            </organizer>
-          </entry>   
-          
         </section>
       </component>
 
@@ -4914,6 +3846,125 @@
         </section>
       </component>
 
+      <!-- [0..1] Section FR-Historique-des-grossesses -->
+      <component>
+        <section>
+          <!-- Conformité Pregnancy History Section (IHE PCC) -->
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.5.3.4"/>
+          <!-- Conformité FR-Historique-des-grossesses (FR CI-SIS) -->
+          <templateId root="1.2.250.1.213.1.1.2.77"/>
+          <id root="9612432A-A79C-44BC-BEC8-E323142C3A1B"/>
+          <code code="10162-6" displayName="Historique des grossesses"
+            codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Historique des grossesses</title>
+          <text>
+            <table border="0">
+              <thead>
+                <tr>
+                  <th>Observation</th>
+                  <th>Précision</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><content ID="grossesse-statut">Statut de grossesse</content></td>
+                  <td><content ID="grossesse-statut-value">patiente actuellement enceinte</content></td>
+                </tr>
+                <tr>
+                  <td><content ID="date-accouchement">Date prévisionnelle
+                    d'accouchement</content></td>
+                  <td>03/09/2024</td>
+                </tr>
+                <tr>
+                  <td><content ID="nb-enfants-vivants">Nb d'enfants vivants</content></td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td><content ID="nb-interruption-grossesse">Nombre d'interruptions de grossesse</content></td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <!-- Entrée FR-Observation-sur-la-grossesse : statut de grossesses -->
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <!-- Conformité Simple Observation (IHE PCC) -->
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+              <!-- Conformité Pregnancy Observation (IHE PCC) -->
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.5"/>
+              <!-- Conformité FR-Observation-sur-la-grossesse (FR CI-SIS) -->
+              <templateId root="1.2.250.1.213.1.1.3.53"/>
+              <id root="4FD525FD-8712-40F9-BF31-EF9A25069C25"/>
+              <code code="11449-6" displayName="Statut de grossesse"
+                codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <text><reference value="#grossesse-statut"/></text>
+              <statusCode code="completed"/>
+              <effectiveTime nullFlavor="NA"/>
+              <!-- valeur issue du jdv-statut-grossesse-cisis (1.2.250.1.213.1.1.5.671) -->
+              <value xsi:type="CD" code="77386006" displayName="enceinte"
+                codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT">
+                <originalText><reference value="#grossesse-statut-value"/></originalText>
+              </value>
+            </observation>
+          </entry>
+          <!-- Entrée FR-Observation-sur-la-grossesse : Date prévisionnelle d'accouchement -->
+          <entry typeCode="COMP">
+            <observation classCode="OBS" moodCode="EVN">
+              <!-- Conformité Simple Observation (IHE PCC) -->
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+              <!-- Conformité Pregnancy Observation (IHE PCC) -->
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.5"/>
+              <!-- Conformité FR-Observation-sur-la-grossesse (FR CI-SIS) -->
+              <templateId root="1.2.250.1.213.1.1.3.53"/>
+              <id root="4FD525FD-8712-40F9-BF31-EF9A25069C32"/>
+              <code code="11778-8" displayName="Date estimée de l'accouchement"
+                codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <text><reference value="#date-accouchement"/></text>
+              <statusCode code="completed"/>
+              <effectiveTime nullFlavor="NA"/>
+              <value xsi:type="IVL_TS" value="20240903"/>
+            </observation>
+          </entry>
+          <!-- Entrée FR-Observation-sur-la-grossesse : Nombre d'enfants vivants -->
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <!-- Conformité Simple Observation (IHE PCC) -->
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+              <!-- Conformité Pregnancy Observation (IHE PCC) -->
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.5"/>
+              <!-- Conformité FR-Observation-sur-la-grossesse (FR CI-SIS) -->
+              <templateId root="1.2.250.1.213.1.1.3.53"/>
+              <id root="4FD525FD-8712-40F9-BF31-EF9A25069C65"/>
+              <code code="11638-4" displayName="Nombre d'enfants vivants"
+                codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <text><reference value="#nb-enfants-vivants"/></text>
+              <statusCode code="completed"/>
+              <effectiveTime nullFlavor="NA"/>
+              <value xsi:type="INT" value="1"/>
+            </observation>
+          </entry>
+          <!-- Entrée FR-Observation-sur-la-grossesse : Nombre d'interruptions de grossesse -->
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <!-- Conformité Simple Observation (IHE PCC) -->
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13"/>
+              <!-- Conformité Pregnancy Observation (IHE PCC) -->
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.5"/>
+              <!-- Conformité FR-Observation-sur-la-grossesse (FR CI-SIS) -->
+              <templateId root="1.2.250.1.213.1.1.3.53"/>
+              <id root="4FD525FD-8712-40F9-BF31-EF9A25069C65"/>
+              <code code="11612-9" displayName="Nombre d'interruptions de grossesse"
+                codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <text><reference value="#nb-interruption-grossesse"/></text>
+              <statusCode code="completed"/>
+              <effectiveTime nullFlavor="NA"/>
+              <value xsi:type="INT" value="1"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+
       <!-- [0..1] Section FR-Plan-de-soins -->
       <component>
         <section>
@@ -4984,22 +4035,16 @@
               <tbody>
                 <tr>
                   <td>01/12/2024</td>
-                  <td>Aussi vite que possible</td>
-                  <td><content ID="plan-acte-01-code">Soins pallatifs</content></td>
+                  <td>Bénéfique pour le patient mais pas essentiel pour sa survie</td>
+                  <td><content ID="plan-acte-01-code">Pose d'une prothèse auditive implantable dans
+                      l'oreille moyenne</content></td>
                   <td><content ID="plan-acte-01-commentaire">(Texte libre)</content></td>
                 </tr>
                 <tr>
                   <td>01/12/2024</td>
-                  <td>Bénéfique pour le patient mais pas essentiel pour sa survie</td>
-                  <td><content ID="plan-acte-02-code">Pose d'une prothèse auditive implantable dans
-                      l'oreille moyenne</content></td>
-                  <td><content ID="plan-acte-02-commentaire">(Texte libre)</content></td>
-                </tr>
-                <tr>
-                  <td>01/12/2024</td>
                   <td>Aussi vite que possible</td>
-                  <td><content ID="plan-acte-03-code">Autre acte (texte libre)</content></td>
-                  <td><content ID="plan-acte-03-commentaire">(Texte libre)</content></td>
+                  <td><content ID="plan-acte-02-code">Autre acte (texte libre)</content></td>
+                  <td><content ID="plan-acte-02-commentaire">(Texte libre)</content></td>
                 </tr>
               </tbody>
             </table>
@@ -5120,6 +4165,8 @@
               <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
               <!-- Conformité Traitement au long cours -->
               <templateId root="1.2.250.1.213.1.1.3.42.3"/>
+              <!-- Conformité Traitement aigu -->
+              <templateId root="1.2.250.1.213.1.1.3.42.4"/>
               <id root="AADC9C14-F1CA-4177-B2C8-A5178D5B3CA0"/>
               <text><reference value="#plan-med-02-code"/></text>
               <statusCode code="completed"/>
@@ -5245,46 +4292,6 @@
 
           <!-- [0..*] Entrée FR-Acte (codé) -->
           <entry>
-            <procedure classCode="PROC" moodCode="INT" negationInd="false">
-              <!-- Conformité Procedure Entry (IHE PCC) -->
-              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
-              <!-- Conformité Plan of care activity (CCD) = acte prévu -->
-              <templateId root="2.16.840.1.113883.10.20.1.25"/>
-              <!-- Conformité FR-Acte (CI-SIS) -->
-              <templateId root="1.2.250.1.213.1.1.3.62"/>
-              <id root="A6BC7FD2-EC3F-4E01-B567-854B087D1D9B"/>
-              <!-- Code de l'acte -->
-              <code code="103735009"
-                displayName="Soins palliatifs"
-                codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/>
-              <text><reference value="#plan-acte-01-code"/></text>
-              <!-- valeur issue du jdv-hl7-v3-ActStatus-cisis (2.16.840.1.113883.1.11.15933) -->
-              <statusCode code="active"/>
-              <!-- Date de l'acte -->
-              <effectiveTime value="20241201"/>         
-              <!-- Priorité -->
-              <priorityCode code="A" displayName="Aussi vite que possible" 
-                codeSystem="2.16.840.1.113883.5.7" codeSystemName="HL7_ActPriority"/>
-              <!-- Entrée FR-Commentaire-ER -->
-              <entryRelationship typeCode="SUBJ" inversionInd="true">
-                <act classCode="ACT" moodCode="EVN">
-                  <!-- Conformité Comment (CCD) -->
-                  <templateId root="2.16.840.1.113883.10.20.1.40"/>
-                  <!-- Conformité Comment Entry (IHE PCC) -->
-                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
-                  <!-- Conformité FR-Commentaire-ER (CI-SIS) -->
-                  <templateId root="1.2.250.1.213.1.1.3.32"/>
-                  <code code="48767-8" displayName="Commentaire" codeSystem="2.16.840.1.113883.6.1"
-                    codeSystemName="LOINC"/>
-                  <text><reference value="#plan-acte-01-commentaire"/></text>
-                  <statusCode code="completed"/>
-                </act>
-              </entryRelationship>
-            </procedure>
-          </entry>
-          
-          <!-- [0..*] Entrée FR-Acte (codé) -->
-          <entry>
             <procedure classCode="PROC" moodCode="INT">
               <!-- Conformité Procedure Entry (IHE PCC) -->
               <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19"/>
@@ -5292,12 +4299,12 @@
               <templateId root="2.16.840.1.113883.10.20.1.25"/>
               <!-- Conformité FR-Acte (CI-SIS) -->
               <templateId root="1.2.250.1.213.1.1.3.62"/>
-              <id root="A6BC7FD2-EC3F-4E01-B567-854B087D1D9B"/>
+              <id root="F64042D0-76E2-4D9B-B17E-73F1AFC1EEB4"/>
               <!-- Code de l'acte -->
               <code code="CBLA001"
                 displayName="Pose d'une prothèse auditive implantable dans l'oreille moyenne"
                 codeSystem="1.2.250.1.215.300.1" codeSystemName="CCAM"/>
-              <text><reference value="#plan-acte-02-code"/></text>
+              <text><reference value="#plan-acte-01-code"/></text>
               <!-- valeur issue du jdv-hl7-v3-ActStatus-cisis (2.16.840.1.113883.1.11.15933) -->
               <statusCode code="active"/>
               <!-- Date de l'acte -->
@@ -5316,7 +4323,9 @@
                   <templateId root="1.2.250.1.213.1.1.3.32"/>
                   <code code="48767-8" displayName="Commentaire" codeSystem="2.16.840.1.113883.6.1"
                     codeSystemName="LOINC"/>
-                  <text><reference value="#plan-acte-02-commentaire"/></text>
+                  <text>
+                    <reference value="#plan-acte-01-commentaire"/>
+                  </text>
                   <statusCode code="completed"/>
                 </act>
               </entryRelationship>
@@ -5332,13 +4341,15 @@
               <templateId root="2.16.840.1.113883.10.20.1.29"/>
               <!-- Conformité FR-Acte (CI-SIS) -->
               <templateId root="1.2.250.1.213.1.1.3.62"/>
-              <id root="A6BC7FD2-EC3F-4E01-B567-854B087D1D9B"/>
+              <id root="56B6E185-F780-4791-AABE-CE32132F3C56"/>
               <!-- Code de l'acte -->
               <code code="GEN-092.04.13" displayName="Autre acte"
                 codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TerminologieCISIS">
-                <originalText><reference value="#plan-acte-03-code"/></originalText>
+                <originalText>
+                  <reference value="#plan-acte-02-code"/>
+                </originalText>
               </code>
-              <text><reference value="#plan-acte-03-code"/></text>
+              <text><reference value="#plan-acte-02-code"/></text>
               <!-- valeur issue du jdv-hl7-v3-ActStatus-cisis (2.16.840.1.113883.1.11.15933) -->
               <statusCode code="active"/>
               <!-- Date de l'acte -->
@@ -5357,7 +4368,9 @@
                   <templateId root="1.2.250.1.213.1.1.3.32"/>
                   <code code="48767-8" displayName="Commentaire" codeSystem="2.16.840.1.113883.6.1"
                     codeSystemName="LOINC"/>
-                  <text><reference value="#plan-acte-03-commentaire"/></text>
+                  <text>
+                    <reference value="#plan-acte-02-commentaire"/>
+                  </text>
                   <statusCode code="completed"/>
                 </act>
               </entryRelationship>
@@ -5375,7 +4388,7 @@
               <templateId root="1.2.250.1.213.1.1.3.58"/>
               <id root="4AA6DCFC-6628-42E7-8D6F-68621568F584"/>
               <!-- Type de Rencontre : Valeur issue du jdv-hl7-v3-ActEncounterCode-cisis (2.16.840.1.113883.1.11.13955) -->
-              <code code="AMB" displayName="Ambulatoire (hors établissement)"
+              <code code="AMB" displayName="Ambulatoire"
                 codeSystem="2.16.840.1.113883.5.4" codeSystemName="HL7_ActCode"/>
               <text><reference value="#plan-rencontre-01-code"/></text>
               <!-- Date de la rencontre -->
@@ -6028,17 +5041,16 @@
               <tbody>
                 <tr>
                   <td>29/03/2024</td>
-                  <td><content ID="resultat-biologie-01">Le patient porte-t-il une bactérie
-                    multirésistante ?</content></td>
-                  <td>Oui</td>
-                  <td></td>
-                  <td></td>
+                  <td><content ID="resultat-biologie-01">CRP</content></td>
+                  <td> &lt;1.0 mg/L </td>
+                  <td>Normal</td>
+                  <td>&lt;6.0 mg/L </td>
                   <td><content ID="resultat-biologie-01-commentaire">(Texte libre)</content></td>
                 </tr>
               </tbody>
             </table>
             
-            <paragraph><content styleCode="Emphasis" ID="resultat-02">Imagerie :</content></paragraph>
+            <paragraph><content styleCode="Emphasis">Imagerie :</content></paragraph>
             <table border="0">
               <thead>
                 <tr>
@@ -6052,10 +5064,10 @@
               <tbody>
                 <tr>
                   <td>29/03/2024</td>
-                  <td><content ID="resultat-imagerie-02">CT rachis dorsal avec contraste IV</content></td>
-                  <td><content ID="resultat-imagerie-02-resultat">Pas d'embolie pulmonaire proximale</content></td>
-                  <td><content ID="resultat-imagerie-02-localisation">Thorax entier</content></td>
-                  <td><content ID="resultat-imagerie-02-commentaire">(Texte libre)</content></td>
+                  <td><content ID="resultat-imagerie-01">CT rachis dorsal avec contraste IV</content></td>
+                  <td><content ID="resultat-imagerie-01-resultat">Pas d'embolie pulmonaire proximale</content></td>
+                  <td><content ID="resultat-imagerie-01-localisation">Thorax entier</content></td>
+                  <td><content ID="resultat-imagerie-01-commentaire">(Texte libre)</content></td>
                 </tr>
               </tbody>
             </table>
@@ -6071,7 +5083,7 @@
                 codeSystem="2.16.840.1.113883.6.1"/>
               <statusCode code="completed"/>
               <effectiveTime value="20240329"/>
-              <!-- [0..*] Laboratoire exécutant -->
+              <!-- Laboratoire exécutant -->
               <performer typeCode="PRF">
                 <templateId root="1.3.6.1.4.1.19376.1.3.3.1.7"/>
                 <time>
@@ -6117,7 +5129,7 @@
                   </representedOrganization>
                 </assignedEntity>
               </performer>
-              <!-- [0..*] Auteur -->
+              <!-- Auteur -->
               <author>
                 <time value="20210104160527+0100"/>
                 <assignedAuthor>
@@ -6166,12 +5178,13 @@
                   <!-- Conformité FR-Resultat (FR CI-SIS) -->
                   <templateId root="1.2.250.1.213.1.1.3.209"/>
                   <id root="8D40D39D-3574-496A-91EA-B7BE236ABD1A"/>
-                  <code code="U83.71" displayName="Bactérie multirésistante [BMR]"
-                    codeSystem="2.16.840.1.113883.6.3" codeSystemName="CIM10FRPMSI"/>
+                  <code code="1988-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                    displayName="C Réactive protéine [Masse/Volume] Sérum/Plasma ; Numérique"/>
                   <text><reference value="#resultat-biologie-01"/></text>
                   <statusCode code="completed"/>
                   <effectiveTime value="20240329"/>
-                  <value xsi:type="BL" value="false"/>                  
+                  <value xsi:type="ED">&lt;1.0 mg/L</value>
+                  
                   <!-- Entrée FR-Commentaire-ER -->
                   <entryRelationship typeCode="COMP" inversionInd="true">
                     <act classCode="ACT" moodCode="EVN">
@@ -6188,7 +5201,16 @@
                       </text>
                       <statusCode code="completed"/>
                     </act>
-                  </entryRelationship>                  
+                  </entryRelationship>
+                  <referenceRange typeCode="REFV">
+                    <observationRange>
+                      <value xsi:type="IVL_PQ">
+                        <low value="0.0" unit="mg/L" />
+                        <high value="6.0" unit="mg/L" />
+                      </value>
+                      <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" />
+                    </observationRange>
+                  </referenceRange>
                 </observation>
               </component>
             </organizer>
@@ -6201,15 +5223,13 @@
               <templateId root="1.2.250.1.213.1.1.3.208"/>
               <id root="D5C3639B-2A68-4C87-8019-CBD941B7B429"/>
               <code code="18748-4" displayName="Imagerie" codeSystemName="LOINC"
-                codeSystem="2.16.840.1.113883.6.1">
-                <originalText>
-                  <reference value="#resultat-02"/>
-                </originalText>
-              </code>
+                codeSystem="2.16.840.1.113883.6.1"/>                
               <statusCode code="completed"/>
               <effectiveTime value="20240329"/>
               <!-- Laboratoire exécutant -->
               <performer typeCode="PRF">
+                <templateId root="1.3.6.1.4.1.19376.1.3.3.1.7"/>
+                <time value="20210108111700+0100"/>
                 <assignedEntity>
                   <id root="1.2.250.1.71.4.2.1" extension="801234560801"/>
                   <code code="G15_10/SM44" displayName="Médecin - Radio-diagnostic (SM)"
@@ -6306,17 +5326,17 @@
                   <code code="24979-7" 
                     displayName="CT rachis dorsal avec contraste IV"   
                     codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
-                  <text><reference value="#resultat-imagerie-02"/></text>
+                  <text><reference value="#resultat-imagerie-01"/></text>
                   <statusCode code="completed"/>
                   <effectiveTime value="20240329"/>
                   <value xsi:type="CD">
-                    <originalText><reference value="#resultat-imagerie-02-resultat"/></originalText>
+                    <originalText><reference value="#resultat-imagerie-01-resultat"/></originalText>
                   </value>                  
                   <!-- [0..1] Localisation anatomique -->
                   <targetSiteCode xsi:type="CD" code="302551006" displayName="thorax entier"
                     codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT">
                     <originalText mediaType="text/xml">
-                      <reference value="#resultat-imagerie-02-localisation"/>
+                      <reference value="#resultat-imagerie-01-localisation"/>
                     </originalText>                
                   </targetSiteCode>                  
                   <!-- Entrée FR-Commentaire-ER -->
@@ -6331,7 +5351,7 @@
                       <code code="48767-8" displayName="Commentaire"
                         codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
                       <text>
-                        <reference value="#resultat-imagerie-02-commentaire"/>
+                        <reference value="#resultat-imagerie-01-commentaire"/>
                       </text>
                       <statusCode code="completed"/>
                     </act>
@@ -6389,8 +5409,8 @@
                   <text><reference value="#doc1"/></text>
                   <statusCode code="completed"/>
                   <effectiveTime nullFlavor="NA"/>
-                  <value xsi:type="CD" code="DLU_006" displayName="Attestation de la carte vitale"
-                    codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TerminologieCISIS"/>
+                  <value xsi:type="CD" code="ATTEST-DROITS-AM" displayName="Attestation de droits à l’assurance maladie"
+                    codeSystem="1.2.250.1.213.1.1.4.12" codeSystemName="TRE_A05-TypeDocComplementaire"/>
                 </observation>
               </component>
               <!-- [1..1] Entrée ObservationMedia -->
@@ -6426,8 +5446,8 @@
                   <text><reference value="#doc2"/></text>
                   <statusCode code="completed"/>
                   <effectiveTime nullFlavor="NA"/>
-                  <value xsi:type="CD" code="DLU_007" displayName="Attestation de mutuelle"
-                    codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TerminologieCISIS"/>
+                  <value xsi:type="CD" code="ATTEST-ASS-COMPL" displayName="Attestation assurance complémentaire"
+                    codeSystem="1.2.250.1.213.1.1.4.12" codeSystemName="TRE_A05-TypeDocComplementaire"/>
                 </observation>
               </component>
               <!-- [1..1] Entrée ObservationMedia -->
