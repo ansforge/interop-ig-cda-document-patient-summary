@@ -1,0 +1,4 @@
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
+https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis,20260916095454,active,"1.2.250.1.213.1.1.5.793",JdvAutreRisqueCisis,JDV Autre Risque CISIS,"JDV Autre Risque CISIS","StructureDefinition/fr-cda-evaluation-autres-risques-dlu","SCT"
+https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis,20260916095454,active,"1.2.250.1.213.1.1.5.792",JdvDeplacementCisis,JDV Deplacement CISIS,"JDV Deplacement CISIS","StructureDefinition/fr-cda-evaluation-deplacements-dlu","SCT"
+https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis,20260916095454,active,"1.2.250.1.213.1.1.5.790",JdvEtatPsychiqueCisis,JDV Etat Psychique CISIS,"JDV Etat Psychique CISIS","StructureDefinition/fr-cda-evaluation-etat-psychique-dlu","SCT"

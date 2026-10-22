@@ -1,0 +1,20 @@
+{
+  "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/ImplementationGuide/ans.cda.fr.fr-patient-summary",
+  "name" : "CDAFRPatientSummary",
+  "title" : "Volet de Synthèse Médicale (International Patient Summary - CDA)",
+  "description" : "Volet de Synthèse Médicale (International Patient Summary) - Spécifications CDA",
+  "status" : "draft",
+  "package-id" : "ans.cda.fr.fr-patient-summary",
+  "ig-ver" : "0.1.0",
+  "date" : "Thu, 22 Oct, 2026 08:20:09 +0000",
+  "dateISO8601" : "2026-10-22T08:20:09+00:00",
+  "errs" : 123,
+  "warnings" : 560,
+  "hints" : 1734,
+  "broken-links" : 0,
+  "suppressed-hints" : 408,
+  "suppressed-warnings" : 0,
+  "version" : "5.0.0",
+  "tool" : "6.0.0-snapshot1 (3)",
+  "maxMemory" : 3317697536
+}

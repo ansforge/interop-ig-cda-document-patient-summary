@@ -1,0 +1,975 @@
+{
+  "date" : "Thu, 22 Oct, 2026 08:20:09 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-ans.cda.fr.fr-patient-summary.json",
+    "size" : 13244,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 30,
+      "length" : 288
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 16
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 81
+    },
+    {
+      "activity" : "validate",
+      "start" : 37,
+      "length" : 2937
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 75,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 75,
+      "length" : 117
+    },
+    {
+      "activity" : "generate2",
+      "start" : 87,
+      "length" : 158
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 115,
+      "length" : 14
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 138,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-fr-cda-clinical-document-ips.json",
+    "size" : 32592,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 29,
+      "length" : 12
+    },
+    {
+      "activity" : "load",
+      "start" : 30,
+      "length" : 27
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 30,
+      "length" : 396
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 345
+    },
+    {
+      "activity" : "validate",
+      "start" : 32,
+      "length" : 2550
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 39,
+      "length" : 2
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 39,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 75,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 75,
+      "length" : 1546
+    },
+    {
+      "activity" : "generate2",
+      "start" : 87,
+      "length" : 6561
+    },
+    {
+      "activity" : "generate2",
+      "start" : 100,
+      "length" : 2435
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 115,
+      "length" : 54
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 138,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 138,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-fr-cda-evaluation-autres-risques-dlu.json",
+    "size" : 1914,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 29,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 30,
+      "length" : 7
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 30,
+      "length" : 56
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 46
+    },
+    {
+      "activity" : "validate",
+      "start" : 35,
+      "length" : 335
+    },
+    {
+      "activity" : "validate",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 39,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 75,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 77,
+      "length" : 263
+    },
+    {
+      "activity" : "generate2",
+      "start" : 94,
+      "length" : 1466
+    },
+    {
+      "activity" : "generate2",
+      "start" : 103,
+      "length" : 475
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 115,
+      "length" : 14
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 138,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-fr-cda-evaluation-deplacements-dlu.json",
+    "size" : 1932,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 29,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 30,
+      "length" : 6
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 30,
+      "length" : 49
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 34
+    },
+    {
+      "activity" : "validate",
+      "start" : 35,
+      "length" : 285
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 39,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 77,
+      "length" : 242
+    },
+    {
+      "activity" : "generate2",
+      "start" : 95,
+      "length" : 974
+    },
+    {
+      "activity" : "generate2",
+      "start" : 103,
+      "length" : 397
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 115,
+      "length" : 11
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 138,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-fr-cda-evaluation-etat-psychique-dlu.json",
+    "size" : 1935,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 29,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 30,
+      "length" : 6
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 30,
+      "length" : 53
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 32
+    },
+    {
+      "activity" : "validate",
+      "start" : 36,
+      "length" : 264
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 77,
+      "length" : 228
+    },
+    {
+      "activity" : "generate2",
+      "start" : 96,
+      "length" : 966
+    },
+    {
+      "activity" : "generate2",
+      "start" : 104,
+      "length" : 313
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 115,
+      "length" : 9
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 138,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 138,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-fr-cda-groupe-evaluation-autres-risques-dlu.json",
+    "size" : 2797,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 29,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 30,
+      "length" : 6
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 30,
+      "length" : 23
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 22
+    },
+    {
+      "activity" : "validate",
+      "start" : 36,
+      "length" : 122
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 39,
+      "length" : 2
+    },
+    {
+      "activity" : "translate",
+      "start" : 75,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 78,
+      "length" : 128
+    },
+    {
+      "activity" : "generate2",
+      "start" : 97,
+      "length" : 407
+    },
+    {
+      "activity" : "generate2",
+      "start" : 104,
+      "length" : 118
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 115,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-fr-cda-groupe-evaluation-deplacements-dlu.json",
+    "size" : 2799,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 29,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 30,
+      "length" : 6
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 30,
+      "length" : 23
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 21
+    },
+    {
+      "activity" : "validate",
+      "start" : 36,
+      "length" : 146
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 40,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 78,
+      "length" : 131
+    },
+    {
+      "activity" : "generate2",
+      "start" : 98,
+      "length" : 400
+    },
+    {
+      "activity" : "generate2",
+      "start" : 104,
+      "length" : 116
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 115,
+      "length" : 4
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 138,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-fr-cda-groupe-evaluation-etat-psychique-dlu.json",
+    "size" : 2784,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 30,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 30,
+      "length" : 7
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 30,
+      "length" : 23
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 21
+    },
+    {
+      "activity" : "validate",
+      "start" : 36,
+      "length" : 137
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 40,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 78,
+      "length" : 124
+    },
+    {
+      "activity" : "generate2",
+      "start" : 98,
+      "length" : 466
+    },
+    {
+      "activity" : "generate2",
+      "start" : 104,
+      "length" : 176
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 115,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-fr-cda-groupe-evaluation-handicaps-dlu.json",
+    "size" : 2488,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 30,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 30,
+      "length" : 5
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 31,
+      "length" : 20
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 21
+    },
+    {
+      "activity" : "validate",
+      "start" : 36,
+      "length" : 149
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 39,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 40,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 75,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 78,
+      "length" : 115
+    },
+    {
+      "activity" : "generate2",
+      "start" : 99,
+      "length" : 443
+    },
+    {
+      "activity" : "generate2",
+      "start" : 104,
+      "length" : 123
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 115,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-fr-cda-groupe-evaluation-score-dlu.json",
+    "size" : 2439,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 30,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 30,
+      "length" : 5
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 31,
+      "length" : 20
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 17
+    },
+    {
+      "activity" : "validate",
+      "start" : 36,
+      "length" : 136
+    },
+    {
+      "activity" : "validate",
+      "start" : 40,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 78,
+      "length" : 118
+    },
+    {
+      "activity" : "generate2",
+      "start" : 99,
+      "length" : 467
+    },
+    {
+      "activity" : "generate2",
+      "start" : 105,
+      "length" : 113
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 115,
+      "length" : 4
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 138,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/resources/Binary-patient-summary.xml",
+    "size" : 1520984,
+    "processes" : [{
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 40,
+      "length" : 19799
+    },
+    {
+      "activity" : "translate",
+      "start" : 75,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 78,
+      "length" : 2748
+    },
+    {
+      "activity" : "generate2",
+      "start" : 100,
+      "length" : 460
+    },
+    {
+      "activity" : "makeDependencies",
+      "start" : 109,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/resources/Binary-patient-summary-dlu.xml",
+    "size" : 1572059,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 59,
+      "length" : 15614
+    },
+    {
+      "activity" : "translate",
+      "start" : 75,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 81,
+      "length" : 2815
+    },
+    {
+      "activity" : "generate2",
+      "start" : 100,
+      "length" : 408
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 992,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 100,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 4120,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/data/features.yml",
+    "size" : 186,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 100,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/changelog.md",
+    "size" : 4616,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 100,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/translationinfo.md",
+    "size" : 59,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cda.md",
+    "size" : 3729,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cas-usage.md",
+    "size" : 3280,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 100,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 5765,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 100,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/implementations.md",
+    "size" : 119,
+    "processes" : [{
+      "activity" : "loadInfo",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/fonctionnel.md",
+    "size" : 233,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/exigences-specifiques.md",
+    "size" : 4872,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 100,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/autres_ressources.md",
+    "size" : 193
+  },
+  {
+    "name" : "/input/pagecontent/annexe-downloads.md",
+    "size" : 1224,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 100,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/securite.md",
+    "size" : 900,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images",
+    "size" : 0,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/Cas-d-usage-IPS.png",
+    "size" : 1499416,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 100,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/input/images/ci-sis-logo.png",
+    "size" : 61365,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 100,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/anImage.png",
+    "size" : 36288,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 75,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 216
+  },
+  {
+    "name" : "/temp/pages/_includes/fragment-artifacts-table.html",
+    "size" : 3443,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 100,
+      "length" : 1
+    }]
+  }]
+}

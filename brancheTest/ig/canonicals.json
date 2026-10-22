@@ -1,0 +1,14 @@
+[{
+  "id" : "ans.cda.fr.fr-patient-summary",
+  "type" : "ImplementationGuide",
+  "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/ImplementationGuide/ans.cda.fr.fr-patient-summary",
+  "version" : "0.1.0",
+  "name" : "CDAFRPatientSummary"
+},
+{
+  "id" : "fr-cda-clinical-document-ips",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-clinical-document-ips",
+  "version" : "0.1.0",
+  "name" : "FRCDAClinicalDocumentIPS"
+}]

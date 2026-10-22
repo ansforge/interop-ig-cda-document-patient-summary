@@ -1,0 +1,47 @@
+# ans.cda.fr.fr-patient-summary#0.1.0: FR Patient Summary (CDA)(en)
+
+## Pages
+
+* [Accueil](index.md)
+* [Introduction](spec-technique-intro.md)
+* [Téléchargements et usages](annexe-downloads.md)
+* [Sécurité](annexe-securite.md)
+* [Flux de consommation](spec-technique-flux-consommation.md)
+* [Alimentation](spec-fonctionnelle-alimentation.md)
+* [Informations sur la traduction](translationinfo.md)
+* [Vue d'ensemble](spec-fonctionnelle-intro.md)
+* [Vue d'ensemble](spec-technique-vue-ensemble.md)
+* [Artifacts Summary](artifacts.md)
+* [Autres Ressources](autres_ressources.md)
+* [Historique des versions](change-log.md)
+* [Flux d'alimentation](spec-technique-flux-alimentation.md)
+
+## Resources
+
+### CodeSystems
+
+* [Compétences CodeSystem](CodeSystem-competence-code-system.md)
+* [Type de carte](CodeSystem-type-carte-code-system.md)
+
+### ValueSets
+
+* [EyeColor Value Set](ValueSet-EyeColorVS.md)
+* [Melting Pot Value Set](ValueSet-MeltingPotVS.md)
+* [ModifiedAdministrativeGender](ValueSet-ModifiedAdministrativeGender.md)
+* [Type Carte Value Set](ValueSet-TypeCarteVS.md)
+
+### Resource Profiles
+
+* [Patient français](StructureDefinition-fr-patient.md)
+
+### Extensions
+
+* [EyeColor](StructureDefinition-EyeColor.md)
+
+### ImplementationGuides
+
+* [FR Patient Summary (CDA)](ImplementationGuide-ans.cda.fr.fr-patient-summary.md)
+
+### Examples
+
+* [frpatient-exemple (Patient)](Patient-frpatient-exemple.md)
