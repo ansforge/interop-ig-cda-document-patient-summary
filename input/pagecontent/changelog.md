@@ -8,9 +8,11 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/). La ve
 - Contraintes propres au DLU directement dans le profil IPS (même modèle et mêmes templateId que l'IPS-FR), sans profil de section dédié : invariant `dlu-traitement-type` sur la section Traitements (traitement au long cours ou aigu) ; section Statut fonctionnel avec slices de groupes d'évaluations (état psychique, handicaps / déficits, déplacements / transferts, autres risques, scores ADL et GIR) et invariant `dlu-statut-fonctionnel-evaluations` (les trois groupes LOINC sont obligatoires dès que l'un est fourni) ; profils de groupes et d'évaluations liés aux jeux de valeurs `jdv-etat-psychique-cisis`, `jdv-deplacement-cisis` et `jdv-autre-risque-cisis`
 - Exemple CDA `Binary-patient-summary-dlu.xml` (synthèse médicale DLU, issu des exemples de l'outil testContenuCDA de l'ANS), référencé dans `sushi-config.yaml`, la page CDA et la page Téléchargements
 - `sushi-config.yaml` : groupe de ressources « Eléments CDA propres à la synthèse médicale du DLU »
+- Page CDA : tableau des caractéristiques du document IPS-FR (version 2024.01, templateId, code LOINC `60591-5`, titre), liste des spécifications de référence, lien vers l'exemple XDM IPS-FR_2024.01_DLU, section « Vérification de la conformité » (schématron `CI-SIS_IPS-FR_2024.01.sch` de TestContenuCDA) et section « Référence » (spécification CI-SIS Volet Contenus IPS-FR 2024.01)
 
 #### Modifié
 
+- Page CDA : reformulation de l'introduction, de la vue d'ensemble et des descriptions des exemples CDA et XDM
 - Profil IPS : `templateId` « Conformité au CI-SIS » et « Conformité IHE PCC IPS » en cardinalité 1..1 ; libellé du `templateId` IPS-FR aligné sur la version 2024.01.
 - Profil IPS : participants (médecin traitant, contact EHPAD, établissements de préférence et de référence, autre professionnel de santé, autre correspondant) avec `functionCode` complété (`codeSystem`, `displayName`, `originalText`) et libellés indiquant les participants propres au DLU.
 - Profil IPS : slicing des `participant` par `functionCode.code` et `typeCode` (au lieu de `url`).
