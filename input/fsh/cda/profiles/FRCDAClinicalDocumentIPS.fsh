@@ -123,13 +123,78 @@ contactEHPAD 0..1 and etabPreference 0..1 and etabReference 0..* and autrePS 0..
 * component.structuredBody.component[sectionDirectivesAnticipees].section only FRCDASectionDirectivesAnticipees
 * component.structuredBody.component[sectionResultats].section only FRCDASectionResultats
 * component.structuredBody.component[sectionDocumentsAjoutes].section only FRCDASectionDocumentsAjoutes
+
+// Entrées de chaque section : les slices sont hérités des profils de section de l'IG core ; les contraindre ici les fait apparaître dans l'arbre
+// Problèmes actifs
+* component.structuredBody.component[sectionProblemesActifs].section.entry[frListeDesProblemes] ^short = "Entrée Liste des problèmes"
+* component.structuredBody.component[sectionProblemesActifs].section.entry[frListeDesProblemes].act only FRCDAListeDesProblemes
+// Antécédents médicaux
+* component.structuredBody.component[sectionAntecedentsMedicaux].section.entry[frListeDesProblemes] ^short = "Entrée Liste des problèmes"
+* component.structuredBody.component[sectionAntecedentsMedicaux].section.entry[frListeDesProblemes].act only FRCDAListeDesProblemes
+// Historique des actes
+* component.structuredBody.component[sectionHistoriqueDesActes].section.entry[frActe] ^short = "Entrée Acte"
+* component.structuredBody.component[sectionHistoriqueDesActes].section.entry[frActe].procedure only FRCDAActe
+* component.structuredBody.component[sectionHistoriqueDesActes].section.entry[frReferencesExternes] ^short = "Entrée Références externes"
+* component.structuredBody.component[sectionHistoriqueDesActes].section.entry[frReferencesExternes].act only FRCDAReferencesExternes
+// Allergies et hypersensibilités
+* component.structuredBody.component[sectionAllergiesEtHypersensibilites].section.entry[frListeDesAllergiesEtHypersensibilites] ^short = "Entrée Liste des allergies et hypersensibilités"
+* component.structuredBody.component[sectionAllergiesEtHypersensibilites].section.entry[frListeDesAllergiesEtHypersensibilites].act only FRCDAListeDesAllergiesEtHypersensibilites
+// Effets indésirables
+* component.structuredBody.component[sectionEffetsIndesirables].section.entry[frEffetIndesirable] ^short = "Entrée Effet indésirable"
+* component.structuredBody.component[sectionEffetsIndesirables].section.entry[frEffetIndesirable].observation only FRCDAEffetIndesirable
+// Traitements
+* component.structuredBody.component[sectionTraitements].section.entry[frTraitement] ^short = "Entrée Traitement"
+* component.structuredBody.component[sectionTraitements].section.entry[frTraitement].substanceAdministration only FRCDATraitement
+// Dispositifs médicaux
+* component.structuredBody.component[sectionDispositifsMedicaux].section.entry[frDispositifMedical] ^short = "Entrée Dispositif médical"
+* component.structuredBody.component[sectionDispositifsMedicaux].section.entry[frDispositifMedical].supply only FRCDADispositifMedical
+// Signes vitaux
+* component.structuredBody.component[sectionSignesVitaux].section.entry[frSignesVitaux] ^short = "Entrée Signes vitaux"
+* component.structuredBody.component[sectionSignesVitaux].section.entry[frSignesVitaux].organizer only FRCDASignesVitaux
+// Habitus, mode de vie
+* component.structuredBody.component[sectionHabitusModeDeVie].section.entry[frHabitusModeDeVie] ^short = "Entrée Habitus, Mode de vie"
+* component.structuredBody.component[sectionHabitusModeDeVie].section.entry[frHabitusModeDeVie].observation only FRCDAHabitusModeDeVie
+// Antécédents familiaux
+* component.structuredBody.component[sectionAntecedentFamiliaux].section.entry[frAntecedentsFamiliaux] ^short = "Entrée Antécédents familiaux"
+* component.structuredBody.component[sectionAntecedentFamiliaux].section.entry[frAntecedentsFamiliaux].organizer only FRCDAAntecedentsFamiliaux
+// Vaccinations
+* component.structuredBody.component[sectionVaccinations].section.entry[frVaccination] ^short = "Entrée Vaccination"
+* component.structuredBody.component[sectionVaccinations].section.entry[frVaccination].substanceAdministration only FRCDAVaccination
+// Historique des grossesses
+* component.structuredBody.component[sectionHistoriqueDesGrossesses].section.entry[frObservationSurLaGrossesse] ^short = "Entrée Observation sur la grossesse"
+* component.structuredBody.component[sectionHistoriqueDesGrossesses].section.entry[frObservationSurLaGrossesse].observation only FRCDAObservationSurLaGrossesse
+* component.structuredBody.component[sectionHistoriqueDesGrossesses].section.entry[frHistoriqueDeLaGrossesse] ^short = "Entrée Historique des grossesses"
+* component.structuredBody.component[sectionHistoriqueDesGrossesses].section.entry[frHistoriqueDeLaGrossesse].organizer only FRCDAHistoriqueDeLaGrossesse
+// Plan de soins
+* component.structuredBody.component[sectionPlanDeSoins].section.entry[frActe] ^short = "Entrée Acte"
+* component.structuredBody.component[sectionPlanDeSoins].section.entry[frActe].procedure only FRCDAActe
+* component.structuredBody.component[sectionPlanDeSoins].section.entry[frDemandeDExamenOuDeSuivi] ^short = "Entrée Demande d'examen ou de suivi"
+* component.structuredBody.component[sectionPlanDeSoins].section.entry[frDemandeDExamenOuDeSuivi].observation only FRCDADemandeDExamenOuDeSuivi
+* component.structuredBody.component[sectionPlanDeSoins].section.entry[frTraitement] ^short = "Entrée Traitement"
+* component.structuredBody.component[sectionPlanDeSoins].section.entry[frTraitement].substanceAdministration only FRCDATraitement
+* component.structuredBody.component[sectionPlanDeSoins].section.entry[frVaccinRecommande] ^short = "Entrée Vaccin recommandé"
+* component.structuredBody.component[sectionPlanDeSoins].section.entry[frVaccinRecommande].substanceAdministration only FRCDAVaccinRecommande
+* component.structuredBody.component[sectionPlanDeSoins].section.entry[frRencontre] ^short = "Entrée Rencontre"
+* component.structuredBody.component[sectionPlanDeSoins].section.entry[frRencontre].encounter only FRCDARencontre
+// Directives anticipées
+* component.structuredBody.component[sectionDirectivesAnticipees].section.entry[frDirectiveAnticipee] ^short = "Entrée Directive anticipée"
+* component.structuredBody.component[sectionDirectivesAnticipees].section.entry[frDirectiveAnticipee].observation only FRCDADirectiveAnticipee
+// Résultats
+* component.structuredBody.component[sectionResultats].section.entry[frResultats] ^short = "Entrée Résultats"
+* component.structuredBody.component[sectionResultats].section.entry[frResultats].organizer only FRCDAResultats
+// Documents ajoutés
+* component.structuredBody.component[sectionDocumentsAjoutes].section.entry[frSimpleObservation] ^short = "Entrée Simple observation"
+* component.structuredBody.component[sectionDocumentsAjoutes].section.entry[frSimpleObservation].observation only FRCDASimpleObservation
+* component.structuredBody.component[sectionDocumentsAjoutes].section.entry[frDocumentAttache] ^short = "Entrée Document attaché"
+* component.structuredBody.component[sectionDocumentsAjoutes].section.entry[frDocumentAttache].organizer only FRCDADocumentAttache
+
 // Contraintes propres à la synthèse médicale du DLU (même modèle, mêmes templateId que l'IPS-FR)
 // Traitements : un traitement au long cours (42.3) ou aigu (42.4) par entrée
 * component.structuredBody.component[sectionTraitements] obeys dlu-traitement-type
 // Statut fonctionnel : groupes d'évaluations propres au DLU
 * component.structuredBody.component[sectionStatutFonctionnel] obeys dlu-statut-fonctionnel-evaluations
-* component.structuredBody.component[sectionStatutFonctionnel].section.entry ^slicing.discriminator.type = #value
-* component.structuredBody.component[sectionStatutFonctionnel].section.entry ^slicing.discriminator.path = "organizer.code.code"
+* component.structuredBody.component[sectionStatutFonctionnel].section.entry ^slicing.discriminator.type = #profile
+* component.structuredBody.component[sectionStatutFonctionnel].section.entry ^slicing.discriminator.path = "organizer"
 * component.structuredBody.component[sectionStatutFonctionnel].section.entry ^slicing.rules = #open
 * component.structuredBody.component[sectionStatutFonctionnel].section.entry contains
     etatPsychique 0..1 and
