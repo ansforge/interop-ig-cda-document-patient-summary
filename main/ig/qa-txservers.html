@@ -1,0 +1,1269 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>CDAFRPatientSummary : Terminology Server Report</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    span.toggle  { font-size: 10px }
+  </style>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Terminology Server Report for CDAFRPatientSummary</h1>
+ <p>Generated Fri Oct 30 10:20:56 UTC 2026, FHIR version 5.0.0 for ans.cda.fr.fr-patient-summary#0.1.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/cda/fr-patient-summary">https://interop.esante.gouv.fr/ig/cda/fr-patient-summary</a> (<a href="https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/history.html">history</a>))</p>
+<p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
+<h2>Terminology Parameters</h2>
+<ul>
+  <li>
+    <b>system-version</b>
+:     <code>http://snomed.info/sct|http://snomed.info/sct/11000315107</code>
+  </li>
+  <li>
+    <b>displayLanguage</b>
+:     <code>fr-FR</code>
+  </li>
+</ul>
+<h2>Tx Manager report for 'https://tx.fhir.org/tx-reg'</h2>
+<p>
+  <b>Decisions</b>
+</p>
+<table class="grid">
+  <tr>
+    <td>
+      <b>Message</b>
+    </td>
+    <td>
+      <b>Server</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Systems</b>
+    </td>
+    <td>
+      <b>Choices</b>
+    </td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:iso:std:iso:3166</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>[urn:iso:std:iso:3166]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0</td>
+    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
+    <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|https://tx.healthall.co.kr/fhir/r5, [urn:iso:std:iso:3166 in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [urn:iso:std:iso:3166:-2 in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5]</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/elementdefinition-types|5.0.0</td>
+    <td>[http://hl7.org/fhir/fhir-types|5.0.0, http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0]</td>
+    <td>[[http://hl7.org/fhir/fhir-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5, [http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5]</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/elementdefinition-types|5.0.0</td>
+    <td>[http://hl7.org/fhir/fhir-types|5.0.0, http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0]</td>
+    <td>[[http://hl7.org/fhir/fhir-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5, [http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5]</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/elementdefinition-types|5.0.0</td>
+    <td>[http://hl7.org/fhir/fhir-types|5.0.0, http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0]</td>
+    <td>[[http://hl7.org/fhir/fhir-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5, [http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5]</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/elementdefinition-types|5.0.0</td>
+    <td>[http://hl7.org/fhir/fhir-types|5.0.0, http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0]</td>
+    <td>[[http://hl7.org/fhir/fhir-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5, [http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5]</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/elementdefinition-types|5.0.0</td>
+    <td>[http://hl7.org/fhir/fhir-types|5.0.0, http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0]</td>
+    <td>[[http://hl7.org/fhir/fhir-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5, [http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5]</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/elementdefinition-types|5.0.0</td>
+    <td>[http://hl7.org/fhir/fhir-types|5.0.0, http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0]</td>
+    <td>[[http://hl7.org/fhir/fhir-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5, [http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5]</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/elementdefinition-types|5.0.0</td>
+    <td>[http://hl7.org/fhir/fhir-types|5.0.0, http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0]</td>
+    <td>[[http://hl7.org/fhir/fhir-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5, [http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:ietf:bcp:47</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>urn:uuid:9cd3a74e-36bd-3f17-90c9-df7c9eeb62cf|1</td>
+    <td>urn:ietf:bcp:47</td>
+    <td>[urn:ietf:bcp:47 in fr]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://term.tehik.ee/fhir|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:ietf:bcp:47</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/all-languages|5.0.0</td>
+    <td>urn:ietf:bcp:47</td>
+    <td>[urn:ietf:bcp:47 in fr]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://term.tehik.ee/fhir|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0</td>
+    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
+    <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm in fr]: authoritative = , candidates=http://tx.fhir.org/r5|https://tx.healthall.co.kr/fhir/r5, [urn:iso:std:iso:3166 in fr]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [urn:iso:std:iso:3166:-2 in fr]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:ietf:bcp:47</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>urn:uuid:9cd3a74e-36bd-3f17-90c9-df7c9eeb62cf|1</td>
+    <td>urn:ietf:bcp:47</td>
+    <td>[urn:ietf:bcp:47 in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://term.tehik.ee/fhir|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:ietf:bcp:47</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/all-languages|5.0.0</td>
+    <td>urn:ietf:bcp:47</td>
+    <td>[urn:ietf:bcp:47 in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://term.tehik.ee/fhir|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unitsofmeasure.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>[http://unitsofmeasure.org]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unitsofmeasure.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>[http://unitsofmeasure.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unitsofmeasure.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>[http://unitsofmeasure.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Found partially authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>https://interop.esante.gouv.fr/ig/cda/document-core/ValueSet/fr-valueset-statut-du-probleme|0.1.0</td>
+    <td>[http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0, http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1, http://snomed.info/sct]</td>
+    <td>[[http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Found partially authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>https://interop.esante.gouv.fr/ig/cda/document-core/ValueSet/fr-valueset-statut-du-probleme|0.1.0</td>
+    <td>[http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0, http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1, http://snomed.info/sct]</td>
+    <td>[[http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-health-status-code-cisis|20260916095455</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-health-status-code-cisis|20260916095455</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Found partially authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis|20260916095455</td>
+    <td>[http://terminology.hl7.org/CodeSystem/condition-ver-status|2.0.1, http://snomed.info/sct]</td>
+    <td>[[http://terminology.hl7.org/CodeSystem/condition-ver-status|2.0.1 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Found partially authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis|20260916095455</td>
+    <td>[http://terminology.hl7.org/CodeSystem/condition-ver-status|2.0.1, http://snomed.info/sct]</td>
+    <td>[[http://terminology.hl7.org/CodeSystem/condition-ver-status|2.0.1 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis|20260916095457</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Found partially authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>https://interop.esante.gouv.fr/ig/cda/document-core/ValueSet/fr-valueset-statut-du-probleme|0.1.0</td>
+    <td>[http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0, http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1, http://snomed.info/sct]</td>
+    <td>[[http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Found partially authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>https://interop.esante.gouv.fr/ig/cda/document-core/ValueSet/fr-valueset-statut-du-probleme|0.1.0</td>
+    <td>[http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0, http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1, http://snomed.info/sct]</td>
+    <td>[[http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-health-status-code-cisis|20260916095455</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-health-status-code-cisis|20260916095455</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Found partially authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis|20260916095455</td>
+    <td>[http://terminology.hl7.org/CodeSystem/condition-ver-status|2.0.1, http://snomed.info/sct]</td>
+    <td>[[http://terminology.hl7.org/CodeSystem/condition-ver-status|2.0.1 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Found partially authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis|20260916095455</td>
+    <td>[http://terminology.hl7.org/CodeSystem/condition-ver-status|2.0.1, http://snomed.info/sct]</td>
+    <td>[[http://terminology.hl7.org/CodeSystem/condition-ver-status|2.0.1 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Found partially authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>https://interop.esante.gouv.fr/ig/cda/document-core/ValueSet/fr-valueset-statut-du-probleme|0.1.0</td>
+    <td>[http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0, http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1, http://snomed.info/sct]</td>
+    <td>[[http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-health-status-code-cisis|20260916095455</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Found partially authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis|20260916095455</td>
+    <td>[http://terminology.hl7.org/CodeSystem/condition-ver-status|2.0.1, http://snomed.info/sct]</td>
+    <td>[[http://terminology.hl7.org/CodeSystem/condition-ver-status|2.0.1 in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis|20260916095457</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://loinc.org</td>
+    <td>[http://loinc.org]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis|20260916095457</td>
+    <td>[http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis|20260916095457</td>
+    <td>[http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis|20260916095457</td>
+    <td>[http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>urn:oid:2.16.840.1.113883.4.642.4.1373</td>
+    <td>[urn:oid:2.16.840.1.113883.4.642.4.1373]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>urn:oid:2.16.840.1.113883.4.642.4.1373</td>
+    <td>[urn:oid:2.16.840.1.113883.4.642.4.1373]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>urn:oid:2.16.840.1.113883.4.642.4.1373</td>
+    <td>[urn:oid:2.16.840.1.113883.4.642.4.1373 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>urn:oid:2.16.840.1.113883.4.642.4.1373</td>
+    <td>[urn:oid:2.16.840.1.113883.4.642.4.1373 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-evenement-indesirable-previsible-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis|20260916095457</td>
+    <td>[http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>urn:oid:2.16.840.1.113883.4.642.4.1254</td>
+    <td>[urn:oid:2.16.840.1.113883.4.642.4.1254]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>urn:oid:2.16.840.1.113883.4.642.4.1254</td>
+    <td>[urn:oid:2.16.840.1.113883.4.642.4.1254]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>urn:oid:2.16.840.1.113883.4.642.4.1254</td>
+    <td>[urn:oid:2.16.840.1.113883.4.642.4.1254 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>urn:oid:2.16.840.1.113883.4.642.4.1254</td>
+    <td>[urn:oid:2.16.840.1.113883.4.642.4.1254 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-imputabilite-cisis|20260716085851</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-imputabilite-cisis|20260716085851</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-gravite-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-gravite-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-cim11-mms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-evolution-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-evolution-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-origine-effet-indesirable-cisis|20260916095453</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>[http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/sid/icf</td>
+    <td>[http://hl7.org/fhir/sid/icf]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/sid/icf</td>
+    <td>[http://hl7.org/fhir/sid/icf in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>[http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/sid/icf</td>
+    <td>[http://hl7.org/fhir/sid/icf in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>[http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/sid/icf</td>
+    <td>[http://hl7.org/fhir/sid/icf in fr-FR]: authoritative = http://tx.fhir.org/r5, candidates=http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-signe-vital-cisis|20260916095457</td>
+    <td>http://loinc.org</td>
+    <td>[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unitsofmeasure.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>[http://unitsofmeasure.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-signe-vital-cisis|20260916095457</td>
+    <td>http://loinc.org</td>
+    <td>[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unitsofmeasure.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>[http://unitsofmeasure.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-social-history-code-cisis|20260916095455</td>
+    <td>http://loinc.org</td>
+    <td>[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-social-history-code-cisis|20260916095455</td>
+    <td>http://loinc.org</td>
+    <td>[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-social-history-code-cisis|20260916095455</td>
+    <td>http://loinc.org</td>
+    <td>[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-social-history-code-cisis|20260916095455</td>
+    <td>http://loinc.org</td>
+    <td>[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis|20260916095457</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis|20260916095457</td>
+    <td>[http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-standardterms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-standardterms]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-standardterms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-standardterms]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-standardterms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-standardterms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>https://smt.esante.gouv.fr/terminologie-standardterms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-standardterms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-immunization-route-code-cisis--0|20260916095454</td>
+    <td>https://smt.esante.gouv.fr/terminologie-standardterms</td>
+    <td>[https://smt.esante.gouv.fr/terminologie-standardterms in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-immunization-approach-site-code-cisis|20260916095452</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-directive-anticipee-cisis|20260916095456</td>
+    <td>[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis, http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis in fr-FR]: authoritative = , candidates=, [http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-directive-anticipee-cisis|20260916095456</td>
+    <td>[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis, http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis in fr-FR]: authoritative = , candidates=, [http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-directive-anticipee-cisis|20260916095456</td>
+    <td>[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis, http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis in fr-FR]: authoritative = , candidates=, [http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-directive-anticipee-cisis|20260916095456</td>
+    <td>[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis, http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis in fr-FR]: authoritative = , candidates=, [http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-directive-anticipee-cisis|20260916095456</td>
+    <td>[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis, http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis in fr-FR]: authoritative = , candidates=, [http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-directive-anticipee-cisis|20260916095456</td>
+    <td>[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis, http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis in fr-FR]: authoritative = , candidates=, [http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-directive-anticipee-cisis|20260916095456</td>
+    <td>[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis, http://loinc.org, http://snomed.info/sct]</td>
+    <td>[[https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis in fr-FR]: authoritative = , candidates=, [http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-resultat-type-cisis|20260916095454</td>
+    <td>http://loinc.org</td>
+    <td>[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-resultat-type-cisis|20260916095454</td>
+    <td>http://loinc.org</td>
+    <td>[http://loinc.org in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis|20260916095454</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/11000315107 in fr-FR]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0</td>
+    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
+    <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm in en-US]: authoritative = , candidates=http://tx.fhir.org/r5|https://tx.healthall.co.kr/fhir/r5, [urn:iso:std:iso:3166 in en-US]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5, [urn:iso:std:iso:3166:-2 in en-US]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:iso:std:iso:3166</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td></td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>[urn:iso:std:iso:3166 in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:iso:std:iso:3166</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td></td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>[urn:iso:std:iso:3166 in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:iso:std:iso:3166</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td></td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>[urn:iso:std:iso:3166 in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td></td>
+    <td>urn:iso:std:iso:3166:-2</td>
+    <td>[urn:iso:std:iso:3166:-2 in fr-FR]: authoritative = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://tx.hl7.cz/r5|https://tx.healthall.co.kr/fhir/r5</td>
+  </tr>
+</table>
+<h2>Primary Server: https://tx.fhir.org/r5</h2>
+<a href="https://tx.fhir.org/r5"></a>
+<p>Use Count: 135. Code Systems used: </p>
+<table class="grid">
+  <tr>
+    <th>
+      <b>System</b>
+    </th>
+    <th>
+      <b>#Exp.</b>
+    </th>
+    <th>
+      <b>#Val.</b>
+    </th>
+    <th>
+      <b>Details</b>
+    </th>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/CodeSystem/fhirpath-types|5.0.0</td>
+    <td>0</td>
+    <td>7</td>
+    <td>
+      <a href="http://hl7.org/fhir/R5/codesystem-fhirpath-types.html">FHIRPath Types</a>
+    </td>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/fhir-types|5.0.0</td>
+    <td>0</td>
+    <td>7</td>
+    <td>
+      <a href="http://hl7.org/fhir/R5/codesystem-fhir-types.html">All FHIR Types</a>
+    </td>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/sid/icf</td>
+    <td>0</td>
+    <td>4</td>
+    <td>
+      <a href="http://terminology.hl7.org/5.2.0/CodeSystem-ICF.html">International Classification of Functioning, Disability and Health</a>
+    </td>
+  </tr>
+  <tr>
+    <td>http://snomed.info/sct</td>
+    <td>0</td>
+    <td>10</td>
+    <td>
+      <a href="https://interop.esante.gouv.fr/terminologies/1.14.0/CodeSystem-900000000000207008-20260901.html">SNOMED CT core</a>
+    </td>
+  </tr>
+  <tr>
+    <td>http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1</td>
+    <td>0</td>
+    <td>5</td>
+    <td>
+      <a href="http://terminology.hl7.org/7.5.0/CodeSystem-allergyintolerance-clinical.html">AllergyIntolerance Clinical Status Codes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>http://terminology.hl7.org/CodeSystem/condition-clinical|3.0.0</td>
+    <td>0</td>
+    <td>5</td>
+    <td>
+      <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>http://terminology.hl7.org/CodeSystem/condition-ver-status|2.0.1</td>
+    <td>0</td>
+    <td>5</td>
+    <td>
+      <a href="http://terminology.hl7.org/7.5.0/CodeSystem-condition-ver-status.html">ConditionVerificationStatus</a>
+    </td>
+  </tr>
+  <tr>
+    <td>https://smt.esante.gouv.fr/terminologie-cim11-mms</td>
+    <td>0</td>
+    <td>10</td>
+    <td>
+      <a href="https://interop.esante.gouv.fr/terminologies/1.14.0/CodeSystem-terminologie-cim11-mms.html">Classification internationale des maladies et des problèmes de santé connexes - 11ème révision</a>
+    </td>
+  </tr>
+  <tr>
+    <td>https://smt.esante.gouv.fr/terminologie-standardterms</td>
+    <td>0</td>
+    <td>3</td>
+    <td>
+      <a href="https://interop.esante.gouv.fr/terminologies/1.14.0/CodeSystem-terminologie-standardterms.html">Standard Terms Data Base Dictionnaire européen multilingue de termes normalisés descripteurs de médicaments</a>
+    </td>
+  </tr>
+  <tr>
+    <td>urn:iso:std:iso:3166:-2</td>
+    <td>1</td>
+    <td>0</td>
+    <td>
+      <a href="http://terminology.hl7.org/5.2.0/CodeSystem-ISO3166Part2.html">ISO 3166-2 Codes for the representation of names of countries and their subdivisions — Part 2: Country subdivision code</a>
+    </td>
+  </tr>
+  <tr>
+    <td>urn:oid:2.16.840.1.113883.4.642.4.1254</td>
+    <td>0</td>
+    <td>2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>urn:oid:2.16.840.1.113883.4.642.4.1373</td>
+    <td>0</td>
+    <td>2</td>
+    <td></td>
+  </tr>
+</table>
+</body>
+</html>

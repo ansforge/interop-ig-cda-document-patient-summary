@@ -1,0 +1,44 @@
+{
+  "codeSystems" : [{
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-autre-risque-cisis",
+    "version" : "20260916095454",
+    "status" : "active",
+    "name" : "JdvAutreRisqueCisis",
+    "title" : "JDV Autre Risque CISIS",
+    "description" : "JDV Autre Risque CISIS",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.793"],
+    "sources" : ["1.2.250.1.213.1.1.5.793"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-cda-evaluation-autres-risques-dlu.html" : "CDA - Evaluation : autre risque (DLU)"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-deplacement-cisis",
+    "version" : "20260916095454",
+    "status" : "active",
+    "name" : "JdvDeplacementCisis",
+    "title" : "JDV Deplacement CISIS",
+    "description" : "JDV Deplacement CISIS",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.792"],
+    "sources" : ["1.2.250.1.213.1.1.5.792"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-cda-evaluation-deplacements-dlu.html" : "CDA - Evaluation : déplacement / transfert (DLU)"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-etat-psychique-cisis",
+    "version" : "20260916095454",
+    "status" : "active",
+    "name" : "JdvEtatPsychiqueCisis",
+    "title" : "JDV Etat Psychique CISIS",
+    "description" : "JDV Etat Psychique CISIS",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.790"],
+    "sources" : ["1.2.250.1.213.1.1.5.790"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-cda-evaluation-etat-psychique-dlu.html" : "CDA - Evaluation : état psychique (DLU)"
+  }]
+}
