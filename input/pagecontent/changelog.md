@@ -9,6 +9,7 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/). La ve
 - Exemple CDA `Binary-patient-summary-dlu.xml` (synthèse médicale DLU, issu des exemples de l'outil testContenuCDA de l'ANS), référencé dans `sushi-config.yaml`, la page CDA et la page Téléchargements
 - `sushi-config.yaml` : groupe de ressources « Eléments CDA propres à la synthèse médicale du DLU »
 - Page CDA : tableau des caractéristiques du document IPS-FR (version 2024.01, templateId, code LOINC `60591-5`, titre), liste des spécifications de référence, lien vers l'exemple XDM IPS-FR_2024.01_DLU, section « Vérification de la conformité » (schématron `CI-SIS_IPS-FR_2024.01.sch` de TestContenuCDA) et section « Référence » (spécification CI-SIS Volet Contenus IPS-FR 2024.01)
+- Profil IPS : contraintes sur les entrées de chaque section (Problèmes actifs, Antécédents médicaux, Historique des actes, Allergies et hypersensibilités, Effets indésirables, Traitements, Dispositifs médicaux, Signes vitaux, Habitus et mode de vie, Antécédents familiaux, Vaccinations, Historique des grossesses, Plan de soins, Directives anticipées, Résultats, Documents ajoutés) : libellé court et type restreint au profil d'entrée correspondant pour les slices hérités de l'IG core
 
 #### Modifié
 
@@ -26,6 +27,10 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/). La ve
 - Exemple CDA DLU `Binary-patient-summary-dlu.xml` : libellés SNOMED CT `désorientation` (code 62476001) et `en fugue` (code 248046000) dans le statut fonctionnel
 - `sushi-config.yaml` : la dépendance `ans.cda.fr.document-core` est déclarée avec l'URL de sa ressource `ImplementationGuide`.
 - Profil `FRCDAGroupeEvaluationHandicapsDLU` : libellé du code du groupe « Déficience auditive, visuelle ou de communication » corrigé.
+
+#### Corrigé
+
+- Profil IPS : slicing des `entry` de la section Statut fonctionnel par `profile` sur `organizer` (au lieu de la valeur de `organizer.code.code`)
 
 #### Retiré
 
