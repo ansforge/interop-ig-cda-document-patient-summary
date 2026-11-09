@@ -54,8 +54,6 @@ pages:
         title: Fonctionnel
         cas-usage.md:
             title: Cas d'usage
-        exigences-specifiques.md:
-            title: Exigences spécifiques
     implementations.md:
         title: Implémentations
         cda.md:
@@ -76,7 +74,7 @@ menu:
     Fonctionnel:
         Cas d'usage: cas-usage.html
         Modèle logique métier: new-tab https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/StructureDefinition-fr-lm-patient-summary-document.html
-        Exigences spécifiques: exigences-specifiques.html
+        Exigences spécifiques: new-tab https://interop.esante.gouv.fr/ig/document-core/exigencesSpecifiques.html
     Implémentations:
         CDA: cda.html
         Mapping ML/CDA/FHIR: new-tab https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/mapping.html
