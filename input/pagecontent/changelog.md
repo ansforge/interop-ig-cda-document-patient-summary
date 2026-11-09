@@ -13,6 +13,7 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/). La ve
 
 #### Modifié
 
+- Page Fonctionnel et menu « Fonctionnel » : le lien « Exigences spécifiques » pointe désormais vers la page de l'IG document-core (`https://interop.esante.gouv.fr/ig/document-core/exigencesSpecifiques.html`)
 - Page CDA : reformulation de l'introduction, de la vue d'ensemble et des descriptions des exemples CDA et XDM
 - Profil IPS : `templateId` « Conformité au CI-SIS » et « Conformité IHE PCC IPS » en cardinalité 1..1 ; libellé du `templateId` IPS-FR aligné sur la version 2024.01.
 - Profil IPS : participants (médecin traitant, contact EHPAD, établissements de préférence et de référence, autre professionnel de santé, autre correspondant) avec `functionCode` complété (`codeSystem`, `displayName`, `originalText`) et libellés indiquant les participants propres au DLU.
@@ -35,3 +36,4 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/). La ve
 #### Retiré
 
 - Profil IPS : la slice `sectionDirectivesAnticipees` est désactivée (commentée), ainsi que sa contrainte `section only`.
+- Page « Exigences spécifiques » (`exigences-specifiques.md`) supprimée de cet IG, retirée des pages et du menu de `sushi-config.yaml`
