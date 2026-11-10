@@ -1,0 +1,70 @@
+[{
+  "id" : "ans.cda.fr.fr-patient-summary",
+  "type" : "ImplementationGuide",
+  "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/ImplementationGuide/ans.cda.fr.fr-patient-summary",
+  "version" : "0.1.0",
+  "name" : "CDAFRPatientSummary"
+},
+{
+  "id" : "fr-cda-clinical-document-ips",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-clinical-document-ips",
+  "version" : "0.1.0",
+  "name" : "FRCDAClinicalDocumentIPS"
+},
+{
+  "id" : "fr-cda-evaluation-autres-risques-dlu",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-evaluation-autres-risques-dlu",
+  "version" : "0.1.0",
+  "name" : "FRCDAEvaluationAutresRisquesDLU"
+},
+{
+  "id" : "fr-cda-evaluation-deplacements-dlu",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-evaluation-deplacements-dlu",
+  "version" : "0.1.0",
+  "name" : "FRCDAEvaluationDeplacementsDLU"
+},
+{
+  "id" : "fr-cda-evaluation-etat-psychique-dlu",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-evaluation-etat-psychique-dlu",
+  "version" : "0.1.0",
+  "name" : "FRCDAEvaluationEtatPsychiqueDLU"
+},
+{
+  "id" : "fr-cda-groupe-evaluation-autres-risques-dlu",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-groupe-evaluation-autres-risques-dlu",
+  "version" : "0.1.0",
+  "name" : "FRCDAGroupeEvaluationAutresRisquesDLU"
+},
+{
+  "id" : "fr-cda-groupe-evaluation-deplacements-dlu",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-groupe-evaluation-deplacements-dlu",
+  "version" : "0.1.0",
+  "name" : "FRCDAGroupeEvaluationDeplacementsDLU"
+},
+{
+  "id" : "fr-cda-groupe-evaluation-etat-psychique-dlu",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-groupe-evaluation-etat-psychique-dlu",
+  "version" : "0.1.0",
+  "name" : "FRCDAGroupeEvaluationEtatPsychiqueDLU"
+},
+{
+  "id" : "fr-cda-groupe-evaluation-handicaps-dlu",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-groupe-evaluation-handicaps-dlu",
+  "version" : "0.1.0",
+  "name" : "FRCDAGroupeEvaluationHandicapsDLU"
+},
+{
+  "id" : "fr-cda-groupe-evaluation-score-dlu",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/cda/fr-patient-summary/StructureDefinition/fr-cda-groupe-evaluation-score-dlu",
+  "version" : "0.1.0",
+  "name" : "FRCDAGroupeEvaluationScoreDLU"
+}]
