@@ -28,6 +28,7 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/). La ve
 - Exemple CDA DLU `Binary-patient-summary-dlu.xml` : libellés SNOMED CT `désorientation` (code 62476001) et `en fugue` (code 248046000) dans le statut fonctionnel
 - `sushi-config.yaml` : la dépendance `ans.cda.fr.document-core` est déclarée avec l'URL de sa ressource `ImplementationGuide`.
 - Profil `FRCDAGroupeEvaluationHandicapsDLU` : libellé du code du groupe « Déficience auditive, visuelle ou de communication » corrigé.
+- `ig.ini` : le template de l'IG passe de `ans.fr.template#current` à la branche `cda` du dépôt `ansforge/IG-template`
 
 #### Corrigé
 
