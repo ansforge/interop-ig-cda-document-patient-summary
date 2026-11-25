@@ -38,3 +38,4 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/). La ve
 
 - Profil IPS : la slice `sectionDirectivesAnticipees` est désactivée (commentée), ainsi que sa contrainte `section only`.
 - Page « Exigences spécifiques » (`exigences-specifiques.md`) supprimée de cet IG, retirée des pages et du menu de `sushi-config.yaml`
+- Pages « Fonctionnel » (`fonctionnel.md`) et « Cas d'usage » (`cas-usage.md`) supprimées, l'IG étant centré sur le CDA
