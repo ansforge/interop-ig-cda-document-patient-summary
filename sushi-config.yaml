@@ -52,8 +52,6 @@ pages:
         title: Accueil
     fonctionnel.md:
         title: Fonctionnel
-        cas-usage.md:
-            title: Cas d'usage
     implementations.md:
         title: Implémentations
         cda.md:
@@ -72,7 +70,7 @@ pages:
 menu:
     Accueil: index.html
     Fonctionnel:
-        Cas d'usage: cas-usage.html
+        Cas d'usage: new-tab https://ansforge.github.io/interop-ig-fhir-document-patient-summary/main/ig/fr/cas-usage.html
         Modèle logique métier: new-tab https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/StructureDefinition-fr-lm-patient-summary-document.html
         Exigences spécifiques: new-tab https://interop.esante.gouv.fr/ig/document-core/exigencesSpecifiques.html
     Implémentations:
