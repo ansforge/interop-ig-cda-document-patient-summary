@@ -38,8 +38,6 @@ parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/Code
     translation-sources:
       - input/translations/en
 
-# L'IG FHIR de la Synthèse Médicale est publié séparément (IG "interop-ig-fhir-document-patient-summary").
-# Cet IG (CDA) renvoie vers le modèle logique métier et le mapping ML/CDA/FHIR conservés dans l'IG FHIR.
 dependencies:
   hl7.cda.uv.core: 2.0.3-sd
   ans.fr.terminologies: latest
@@ -50,10 +48,6 @@ dependencies:
 pages:
     index.md:
         title: Accueil
-    fonctionnel.md:
-        title: Fonctionnel
-        cas-usage.md:
-            title: Cas d'usage
     implementations.md:
         title: Implémentations
         cda.md:
@@ -71,13 +65,8 @@ pages:
 
 menu:
     Accueil: index.html
-    Fonctionnel:
-        Cas d'usage: cas-usage.html
-        Modèle logique métier: new-tab https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/StructureDefinition-fr-lm-patient-summary-document.html
-        Exigences spécifiques: new-tab https://interop.esante.gouv.fr/ig/document-core/exigencesSpecifiques.html
     Implémentations:
         CDA: cda.html
-        Mapping ML/CDA/FHIR: new-tab https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/mapping.html
     Ressources de conformité: artifacts.html
     Autres ressources:
         "IG FHIR IPS FR": new-tab https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/index.html

@@ -27,30 +27,13 @@ Le Cadre d'interopérabilité des Systèmes d'Information de Santé (CI-SIS) fix
 * compréhensibles par les professionnels des secteurs sanitaire et médico-social et les patients/usagers,
 * exploitables par les SI pour permettre la mise en œuvre de services à valeurs ajoutées à partir des données structurées contenues dans ces documents.
 
-**Ce guide** (FR Patient Summary CDA) **spécifie l'implémentation en CDA de la synthèse médicale**. Il est complété par le modèle logique métier de la synthèse médicale et par le mapping entre ce modèle logique, CDA et FHIR, tous deux publiés dans le guide FHIR de la Synthèse Médicale.
+**Ce guide** (FR Patient Summary CDA) **spécifie l'implémentation en CDA de la synthèse médicale**.
 
 #### Implémentation CDA
 
 Ce guide spécifie le modèle de la Synthèse médicale dans le format CDA R2 niveau 3, conforme à l'International Patient Summary. L'implémentation CDA transmet les données modélisées avec une sérialisation XML normalisée, compatible avec les systèmes d'information existants.
 
 Les profils CDA et les exemples sont présentés dans la page [Implémentation CDA](cda.html).
-
-#### Modèle logique métier
-
-Le modèle logique métier de la synthèse médicale n'est pas publié dans ce guide : il est publié dans le guide FHIR de la Synthèse Médicale, en complément de l'implémentation FHIR : [Modèle logique - Document Patient Summary](https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/StructureDefinition-fr-lm-patient-summary-document.html). Il formalise l'ensemble des données cliniques et administratives que doit contenir une synthèse médicale.
-
-Il est aligné avec les modèles métier européens (EHDS) et élaboré à partir de :
-
-* La norme NF EN ISO 27269:2022 de l'International Patient Summary (IPS)
-* Les eHN Guidelines V3.3 de juin 2023 : Spécifications fonctionnelles européennes du Patient Summary
-* Le document de la HAS 2024 "Harmonisation de synthèses médicales en vue de leur numérisation" de mars 2024
-* Les spécifications de la Délégation au numérique en santé (DNS) du Ministère de la Santé
-
-#### Mapping modèle logique et CDA/FHIR
-
-Un mapping détaillé, publié dans le guide FHIR de la Synthèse Médicale, établit la correspondance entre les éléments du modèle logique métier, les éléments du CDA et leur représentation en FHIR, assurant la cohérence sémantique de l'implémentation. Voir la page [Mapping ML/CDA/FHIR](https://interop.esante.gouv.fr/ig/fhir/fr-patient-summary/mapping.html).
-
-L'implémentation FHIR de la Synthèse médicale ne fait pas partie de ce guide : elle fait l'objet d'un guide d'implémentation distinct (interop-ig-fhir-document-patient-summary), qui s'appuie sur le même modèle logique métier et sur ce mapping.
 
 ### Gouvernance
 
