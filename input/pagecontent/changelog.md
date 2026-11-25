@@ -29,6 +29,7 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/). La ve
 - `sushi-config.yaml` : la dépendance `ans.cda.fr.document-core` est déclarée avec l'URL de sa ressource `ImplementationGuide`.
 - Profil `FRCDAGroupeEvaluationHandicapsDLU` : libellé du code du groupe « Déficience auditive, visuelle ou de communication » corrigé.
 - `ig.ini` : le template de l'IG passe de `ans.fr.template#current` à la branche `cda` du dépôt `ansforge/IG-template`
+- Page Fonctionnel et menu « Fonctionnel » : le lien « Cas d'usage » pointe désormais vers la page de l'IG FHIR IPS (`https://ansforge.github.io/interop-ig-fhir-document-patient-summary/main/ig/fr/cas-usage.html`), ouverte dans un nouvel onglet dans le menu
 
 #### Corrigé
 
@@ -38,3 +39,4 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/). La ve
 
 - Profil IPS : la slice `sectionDirectivesAnticipees` est désactivée (commentée), ainsi que sa contrainte `section only`.
 - Page « Exigences spécifiques » (`exigences-specifiques.md`) supprimée de cet IG, retirée des pages et du menu de `sushi-config.yaml`
+- Page « Cas d'usage » (`cas-usage.md`) et image `Cas-d-usage-IPS.png` supprimées de cet IG, retirées des pages de `sushi-config.yaml`
