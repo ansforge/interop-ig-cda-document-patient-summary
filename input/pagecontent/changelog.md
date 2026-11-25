@@ -39,3 +39,7 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/). La ve
 - Profil IPS : la slice `sectionDirectivesAnticipees` est désactivée (commentée), ainsi que sa contrainte `section only`.
 - Page « Exigences spécifiques » (`exigences-specifiques.md`) supprimée de cet IG, retirée des pages et du menu de `sushi-config.yaml`
 - Pages « Fonctionnel » (`fonctionnel.md`) et « Cas d'usage » (`cas-usage.md`) supprimées, l'IG étant centré sur le CDA
+- `sushi-config.yaml` : menu « Fonctionnel » (Cas d'usage, Modèle logique métier, Exigences spécifiques) retiré du menu et des pages, ainsi que l'entrée « Mapping ML/CDA/FHIR » du menu « Implémentations »
+- Page Implémentations : lien vers le mapping ML / CDA / FHIR retiré
+- Page d'accueil : sections « Modèle logique métier » et « Mapping modèle logique et CDA/FHIR » retirées, la présentation du guide ne renvoyant plus vers le modèle logique ni le mapping
+- Image `Cas-d-usage-IPS.png` supprimée
